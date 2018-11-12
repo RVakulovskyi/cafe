@@ -1,9 +1,9 @@
-<project xmlns:sf="antlib:com.salesforce" default="sf" basedir=".">
+<project name="Svitla CI Salesforce" xmlns:sf="antlib:com.salesforce" default="Build" basedir=".">
   <target name="Build">
     <echo>Continuous Integration Build</echo>
     <taskdef resource="net/sf/antcontrib/antlib.xml" />
     <property environment="env" />         
-     <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="500" pollWaitMillis="5000" deployRoot="../src" testLevel="RunLocalTests" checkOnly="true"/> 
+     <sf:deploy username="r.vakulovskyi@svitla.com.cfquoteeng" password="Fcmana5600@" serverurl="https://test.salesforce.com" maxPoll="500" pollWaitMillis="5000" deployRoot="../src" testLevel="RunLocalTests" checkOnly="true"/> 
   </target>  
 </project>
 
