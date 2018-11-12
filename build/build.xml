@@ -3,7 +3,7 @@
     <echo>Continuous Integration Build</echo>
     <taskdef resource="net/sf/antcontrib/antlib.xml" />
     <property environment="env" />         
-     <sf:deploy username="${sf.username}" password="${sf.password}" singlepackage="true" serverurl="${sf.serverurl}" deployRoot="src"   maxPoll="500" pollWaitMillis="5000" deployRoot="../src" testLevel="RunLocalTests" checkOnly="true"/> 
+     <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="500" pollWaitMillis="5000" deployRoot="../src" testLevel="RunLocalTests" checkOnly="true"/> 
   </target>  
 </project>
 
