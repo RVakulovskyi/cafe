@@ -1,4 +1,4 @@
-<project xmlns:sf="antlib:com.salesforce">
+<project xmlns:sf="antlib:com.salesforce" default="Build">
   <target name="Build">
 	<echo message="Starting Metadata deployment..."/>
     <taskdef resource="com/salesforce/antlib.xml" />        
