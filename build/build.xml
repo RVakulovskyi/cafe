@@ -3,7 +3,7 @@
     <echo>Continuous Integration Build</echo>
     <taskdef resource="net/sf/antcontrib/antlib.xml" />
     <property environment="env" />         
-     <sf:deploy username="r.vakulovskyi@svitla.com.cfquoteeng" password="Fcmana5600@" serverurl="https://test.salesforce.com" maxPoll="500" pollWaitMillis="5000" deployRoot="../src" testLevel="RunLocalTests" checkOnly="true"/> 
+     <sf:deploy username="r.vakulovskyi@svitla.com.cfquoteeng" password="Fcmana5600@" serverurl="https://test.salesforce.com" maxPoll="500" pollWaitMillis="5000" deployRoot="../src" checkOnly="true" runallTests="true"/> 
   </target>  
 </project>
 
