@@ -1,0 +1,16 @@
+<apex:page docType="html-5.0" controller="CustomOpportunityController" showHeader="true" sidebar="true"  standardStylesheets="true">
+<apex:stylesheet value="{!URLFOR($Resource.assetopp, 'css/style.css')}"/>
+    <apex:form id="form-center">
+        <div class="wrapper">
+           <div class="inside">
+               <h2>New Opportunity</h2>
+               <label>Opportunity Name</label><img src="/s.gif" id="HelpImage" alt="Opportunity Name" class="helpOrb" title="(1) Actual property name; or (2) Use the city and the property type ('Richmond Industrial') incl. street names for dupes of the above; or (3) We should not use client names in Opp. names unless client is sole/primary user of property ('Tesla Fremont')." />
+<apex:inputText required="true" id="opportunityname" value="{!opportunityName}"/><br/>
+               <label>PACEPartner Project Number</label><apex:inputText id="ppProjectNumber" value="{!ppProjectNumber}"/><br/>
+               <label>Property Owner Company Name</label><img src="/s.gif" id="HelpImage" alt="Opportunity Name" class="helpOrb" title="Property Owner Company Name" />
+<apex:inputText required="true" id="accountname"  value="{!accountName}"/><br/> 
+               <apex:commandButton action="{!createopportunity}" styleClass="signInButton" id="submit" value="Create Opportunity"/>
+           </div>
+        </div>   
+    </apex:form>
+</apex:page>

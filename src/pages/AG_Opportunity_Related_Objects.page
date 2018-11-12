@@ -1,0 +1,89 @@
+<apex:page standardController="Opportunity" showHeader="true" docType="html-4.01-strict">
+<div id="tabstrip" style="display:none;"> <ul> 
+<li class="k-state-active">Parcels</li>
+<li>Liens</li>
+<li>Document Request Lists</li>
+<li>Tenants</li>
+<li>Exception Criteria</li>
+<li>Disbursement Schedules</li>
+<li>Prepayment Steps</li>
+<li>Sources and Uses</li>  
+</ul>
+<!-- Parcels -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Parcel__c" FKName="Opportunity__c" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0Cj000000Cg3sLEAR" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+<!-- Liens -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Lien__c" FKName="Opportunity__c" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C0a00000DJOECEA5" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+ 
+<!-- Document Request Lists  -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Document_Request_List__c" FKName="Opportunity__c" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0Cj000000Cg2Bn" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+<!-- Tenants -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Tenant__c" FKName="Opportunity__c" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C0a00000DJOE7EAP" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+ 
+
+<!-- Exception Criteria -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Exception_Criteria__c" FKName="Opportunity__c" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C0a00000DJOEH" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+ 
+<!-- Disbursement Schedules -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Disbursement__c" FKName="Opportunity__c" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0Cj000000Cg2BiEAJ" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>  
+ 
+ <!-- Prepayment Steps -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Prepayment_Step__c" FKName="Opportunity__c" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C0a00000KhjjYEAR" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+ 
+  <!-- Sources and Uses -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Sources_Uses__c" FKName="Opportunity__c" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C0a00000LI2wZEAT" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>  
+ 
+</div>
+<script>
+$(document).ready(function() {
+    $("#tabstrip").kendoTabStrip({
+      activate: function(e){
+        setTimeout(function(){          $(window).resize();        });
+      }
+    });
+    $("#tabstrip").css("display", "block");
+});
+ </script>
+</apex:page>

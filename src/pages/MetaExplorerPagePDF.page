@@ -1,0 +1,95 @@
+<apex:page controller="MetadataExplorer" renderAs="PDF" standardStylesheets="false">
+    <head>
+	<style type="text/css" media="all">
+    	.trClass nth-of-type(even){background-color: red;}
+    </style>
+    </head>
+    <apex:form id="theForm">
+     <apex:outputPanel rendered="{!(listOfFieldsToReturn != null && objName != null && listOfFieldsToReturn.size > 0 && selectChoiceValue = 'Fields') || (listOfFieldSetsToReturn != null && objName != null && listOfFieldSetsToReturn.size > 0 && selectChoiceValue = 'FieldSets') || ((listOfRecordTypeToReturn != null && objName != null && listOfRecordTypeToReturn.size > 0 && selectChoiceValue = 'RecordTypes') || selectChoiceValue = 'All')}">
+        <apex:pageBlock title="{!objName} fields" rendered="{!listOfFieldsToReturn != null && objName != null && listOfFieldsToReturn.size > 0 && (selectChoiceValue = 'Fields' || selectChoiceValue = 'All')}">
+    <table  style="font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;">
+        <tr class="trClass">
+            <th style="border: 1px solid #ddd;padding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">
+                <b>Label</b> 
+            </th>
+             <th style="border: 1px solid #ddd;padding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">
+                <b>Helper text</b>
+            </th>
+              <th style="border: 1px solid #ddd;padding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">
+                <b>Type</b>
+            </th>
+             <th style="border: 1px solid #ddd;padding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">
+                <b>Api name</b>
+            </th>
+        </tr>
+        <apex:repeat value="{!listOfFieldsToReturn}" var="itemField">
+        <tr class="trClass">
+            <td style="border: 1px solid #ddd;padding: 8px;">
+                <apex:outputText value="{!itemField.labelName}"/> 
+            </td>
+             <td style="border: 1px solid #ddd;padding: 8px;">
+                <apex:outputText value="{!itemField.helperText}"/>
+            </td>
+            <td style="border: 1px solid #ddd;padding: 8px;">
+                <apex:outputText value="{!itemField.typeName}"/>
+            </td>
+            <td style="border: 1px solid #ddd;padding: 8px;width:15%;font-size:7pt">
+               {!itemField.apiName}
+            </td>
+        </tr>
+            </apex:repeat>
+    </table>  
+
+        </apex:pageBlock>
+         
+
+        
+        <apex:pageBlock title="{!objName} fieldsets" rendered="{!listOfFieldSetsToReturn != null && objName != null && listOfFieldSetsToReturn.size > 0 && (selectChoiceValue = 'FieldSets' || selectChoiceValue = 'All')}">
+             <table  style="font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;">
+        <tr class="trClass">
+            <th style="border: 1px solid #ddd;padding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">
+                <b>Label</b> 
+            </th>
+             <th style="border: 1px solid #ddd;padding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">
+                <b>Api name</b>
+            </th>
+        </tr>
+        	<apex:repeat value="{!listOfFieldSetsToReturn}" var="itemFieldSet">
+                <tr class="trClass">
+                <td style="border: 1px solid #ddd;padding: 8px;">
+                    <apex:outputText value="{!itemFieldSet.labelName}"/>
+                </td>
+                <td style="border: 1px solid #ddd;padding: 8px;">
+                    <apex:outputText value="{!itemFieldSet.apiName}"/>
+                </td>
+                    </tr>
+            </apex:repeat>
+            </table>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="{!objName} recordtypes" rendered="{!listOfRecordTypeToReturn != null && objName != null && listOfRecordTypeToReturn.size > 0 && (selectChoiceValue = 'RecordTypes' || selectChoiceValue = 'All')}">
+              <table  style="font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;border-collapse: collapse;width: 100%;">
+        <tr class="trClass">
+            <th style="border: 1px solid #ddd;padding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">
+                <b>Name</b> 
+            </th>
+             <th style="border: 1px solid #ddd;padding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color: #4CAF50;color: white;">
+                <b>Record Type Id</b>
+            </th>
+        </tr>
+        	<apex:repeat value="{!listOfRecordTypeToReturn}" var="itemRecordType">
+                <tr class="trClass">
+                <td style="border: 1px solid #ddd;padding: 8px;">
+                    <apex:outputText value="{!itemRecordType.recordTypeName}"/>
+                </td>
+                <td style="border: 1px solid #ddd;padding: 8px;">
+                    <apex:outputText value="{!itemRecordType.recordTypeId}"/>
+                </td>
+                    </tr>
+            </apex:repeat>
+            </table>   
+        </apex:pageBlock>
+
+    </apex:outputPanel>
+    </apex:form>
+</apex:page>

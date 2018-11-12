@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Small</formFactors>
+    <formFactors>Medium</formFactors>
+    <formFactors>Large</formFactors>
+    <label>Sales</label>
+    <navType>Standard</navType>
+    <tab>standard-home</tab>
+    <tab>standard-Opportunity</tab>
+    <tab>standard-Lead</tab>
+    <tab>standard-Task</tab>
+    <tab>standard-File</tab>
+    <tab>standard-Account</tab>
+    <tab>standard-Contact</tab>
+    <tab>standard-Campaign</tab>
+    <tab>standard-Dashboard</tab>
+    <tab>standard-report</tab>
+    <tab>standard-Feed</tab>
+    <tab>standard-CollaborationGroup</tab>
+    <tab>standard-Event</tab>
+    <tab>standard-OtherUserProfile</tab>
+    <tab>standard-Case</tab>
+    <tab>standard-Forecasting3</tab>
+    <tab>Sources_Uses__c</tab>
+    <tab>Movement__c</tab>
+    <tab>BDR_Metrics__c</tab>
+    <tab>Prospect__c</tab>
+    <tab>AG_Prospect</tab>
+    <tab>CleanQuote__c</tab>
+    <tab>efs__EgnyteFolderPath__c</tab>
+    <tab>efs__EgnyteFolderTemplate__c</tab>
+    <tab>CleanQuoteUser__c</tab>
+    <tab>CAP_Template</tab>
+    <uiType>Lightning</uiType>
+</CustomApplication>

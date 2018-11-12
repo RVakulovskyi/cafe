@@ -1,0 +1,88 @@
+<apex:page standardcontroller="Opportunity">
+
+
+<apex:messages />
+    <apex:sectionheader title="{!$ObjectType.Opportunity.label} Edit" subtitle="{!IF(ISNULL(Opportunity.Name), 'New Opportunity',Opportunity.Name)}"/>
+    <apex:form >
+        <apex:pageblock mode="edit" title="{!$ObjectType.Opportunity.label} Edit">
+            <apex:pageblockbuttons >
+                <apex:commandbutton value="Save" action="{!Save}"/>
+                <apex:commandbutton value="Cancel" action="{!Cancel}"/>
+            </apex:pageblockbuttons>
+
+            <!-- **********   [Record Type : Master ]   **********  -->
+
+            <apex:outputpanel >
+                <apex:pageblocksection title="Term Sheet is comprised of two parts.  The first section is required for input BEFORE using the Term Sheet button, the
+                second section highlights what should be entered AFTER the Term Sheet/Loan Calculator has been used to price the deal." showheader="true" columns="2">
+                </apex:pageblocksection>
+            </apex:outputpanel>
+            <apex:outputpanel >
+                <apex:pageblocksection title="Input BEFORE Term Sheet/Calculator is generated (using button)" showheader="true" columns="2">
+                    <apex:pageblocksection columns="1">
+                        <apex:inputfield value="{!Opportunity.CloseDate}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.State_Prop__c}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.County__c}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.PACE_Program_New__c}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.Project_Type__c}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.Est_Improvement_Cost__c}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.Loan_Term__c}" required="true" />
+                        <apex:inputfield value="{!Opportunity.Is_Project_a_Reimbursement__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Total_Project_Budget__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Desired_Project_Start_Date__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Desired_Project_Finish_Date__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Construction_Timeline__c}" required="false"/>
+                    </apex:pageblockSection>
+                    <apex:pageblocksection columns="1">
+                        <apex:inputfield value="{!Opportunity.Channel_Partner_Entity__c}" required="false"    />
+                        <apex:inputfield value="{!Opportunity.Property_Market_Value_Est__c}" required="false"    />
+                        <apex:inputfield value="{!Opportunity.Property_Market_Value_Based_Upon__c}" required="false" />
+                        <apex:inputfield value="{!Opportunity.Estimated_Total_Debt__c }" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Primary_Property_Type__c}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.Sub_Vertical_Property_Type__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Is_there_a_groundlease_in_place__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Tax_Defaults_or_Delinquencies__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Estimated_Number_of_Lenders__c }" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Estimated_Number_of_Parcels__c }" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Occupancy_Rate__c}" required="false"/>
+                   
+                        <apex:inputfield value="{!Opportunity.Number_of_Tenants__c }" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Owner_Occupied__c }" required="false"/>
+                         
+                    </apex:pageblockSection>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Solar Information" showheader="true" columns="2">
+                    <apex:inputfield value="{!Opportunity.Solar_Component__c}" id="solarComponent"/>
+                    <apex:inputfield value="{!Opportunity.Solar_PV_System_Size_kW__c}"/>
+                    <apex:inputfield value="{!Opportunity.Year_1_Electricity_kWh_Production_Est__c}"/>
+                    <apex:inputfield value="{!Opportunity.Solar_System_Ownershipo__c}"/>
+                    <apex:inputfield value="{!Opportunity.Estimated_Utility_Rate_Escalation_yr__c}"/>
+                    <apex:inputfield value="{!Opportunity.Avoided_Cost_of_Electricity_ACOE__c}"/>
+                    <apex:inputfield value="{!Opportunity.Solar_TPO_Structure__c}"/>
+                     
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Input these fields AFTER Term Sheet/Calculator is used to price the deal" showheader="true" columns="2">
+                    <apex:pageblocksection >
+                        <apex:pageblocksection columns="1">
+                            <apex:inputfield value="{!Opportunity.Proposal_Sent_Date__c}"/>
+                            <apex:inputfield value="{!Opportunity.Current_Benchmark__c}" />
+                            <apex:inputfield value="{!Opportunity.Benchmark_Date_at_Term_Sheet__c}" />
+                            <apex:inputfield value="{!Opportunity.Benchmark_Type__c}" />
+                            <apex:inputfield value="{!Opportunity.Spread_bps__c}" />
+                            <apex:inputfield value="{!Opportunity.Interest_Rate__c}" />
+                            <apex:inputfield value="{!Opportunity.Channel_Partner__c}" />
+                            <apex:inputfield value="{!Opportunity.Total_Financing_Fee__c}" />
+                            <apex:inputfield value="{!Opportunity.Financing_Amount__c}" required="false"/>
+                        </apex:pageblockSection>
+                        <apex:pageblocksection columns="1">
+                            <apex:inputfield value="{!Opportunity.Pricing_Adjustment_Notes__c}" />
+                        </apex:pageblockSection>
+                     </apex:pageblockSection>
+                 </apex:pageblocksection>
+            </apex:outputpanel>
+        </apex:pageblock>
+    </apex:form>
+    <center><br/>
+        <i style="font-size:10px;color:#aaa;">Generated By LAYOUT PAGE <a href="http://www.clerisoft.com" target="_blank">[http://www.clerisoft.com]</a> (2008-2014) : Wed Nov 02 2016 10:50:11 GMT-0700 (PDT)</i>
+    </center><br/>
+</apex:page>

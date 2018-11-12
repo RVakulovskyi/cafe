@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Comfort_Systems</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This is the sharing rule that will dictate what comfort system users will see.</description>
+        <label>Comfort Systems</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>ComfortSystemsUSAPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000Vayxp</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Donovan_Energy</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Pace Partner Sharing Rules for Donovan Energy</description>
+        <label>Donovan Energy</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>DonovanEnergyPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>0010a00001A9HQA</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Frank_Owens_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Frank Owens Sharing</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>ThompsonPartnersPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000l9tk9</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Integral_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Integral Group</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>IntegralGroupPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000Sd0ol</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MInerva_Opp_Identifier</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This is the account id of the PACE Partner.  Opportunities are shared with this partner based on this field.</description>
+        <label>MInerva Opp Identifier</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>MinervaVenturesPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000khGar</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>NRG_Answers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>NRG Answers Identifier</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>NRGAnswersLLCPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000VZFSa</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Onital_Energy</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>001j000000ul7bA</description>
+        <label>Onital Energy Identifier</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>OnitalEnergyPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000ul7bA</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PACE_Partner_Stok</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>PACE Partner Stok</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>StokPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000j9ZVB</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PACE_Partner_Tier_2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>PACE Partner Tier 2</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>PACEPartnerTier2PartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000jnT5Y</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PACE_Sage_Identifier</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>PACE Sage Identifier</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>PACESagePartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000WZrTL</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Platinum_Solar</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This is the sharing rule that will determine what Platinum Solar will see.</description>
+        <label>Platinum Solar</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>PlatinumSolarPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000re5Eq</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Renew</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Renew</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>RenewFinancialPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000Sd0qi</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Resolve_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Resolve Sharing</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>ResolveFinancePartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000kfQMd</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Solar_City_Identifier</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Solar City Identifier</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>TestOnlyPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000YSGyd</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Solar_Engine_Identifier</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Solar Engine Identifier</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>SolarEnginePartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000khX8m</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>View_Glass_Identifier</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>View Glass Identifier</label>
+        <sharedTo>
+            <portalRoleAndSubordinates>ViewGlassPartnerManager</portalRoleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>PACEPartner_Identifier__c</field>
+            <operation>contains</operation>
+            <value>001j000000Sd0sR</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

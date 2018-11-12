@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Originations Team Member</fullName>
+        <default>false</default>
+        <label>Originations Team Member</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Development Representative</fullName>
+        <default>false</default>
+        <label>Business Development Representative</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Channel Manager</fullName>
+        <default>false</default>
+        <label>Channel Manager</label>
+    </standardValue>
+</StandardValueSet>

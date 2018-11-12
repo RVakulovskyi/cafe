@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Owner</fullName>
+        <default>false</default>
+        <label>Owner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Property Manager</fullName>
+        <default>false</default>
+        <label>Property Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contractor</fullName>
+        <default>false</default>
+        <label>Contractor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Developer</fullName>
+        <default>false</default>
+        <label>Developer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Project Main Contact</fullName>
+        <default>false</default>
+        <label>Project Main Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Loan Servicer Contact</fullName>
+        <default>false</default>
+        <label>Loan Servicer Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Influencer</fullName>
+        <default>false</default>
+        <label>Influencer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lender Contact Name</fullName>
+        <default>false</default>
+        <label>Lender Contact Name</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Channel Partner</fullName>
+        <default>false</default>
+        <label>Channel Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Borrower Counsel</fullName>
+        <default>false</default>
+        <label>Borrower Counsel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Program Counsel</fullName>
+        <default>false</default>
+        <label>Program Counsel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Program Admin Counsel</fullName>
+        <default>false</default>
+        <label>Program Admin Counsel</label>
+    </standardValue>
+</StandardValueSet>

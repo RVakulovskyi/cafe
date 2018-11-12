@@ -1,0 +1,47 @@
+<apex:page id="ContactView" standardController="Contact">
+   <apex:form >
+
+        <apex:outputPanel rendered="{!$User.UIThemeDisplayed != 'Theme4t'}">
+            <apex:detail inlineEdit="true" subject="{!Id}" showChatter="true"/>
+        </apex:outputPanel>
+
+    <script type="text/javascript">
+        function openLookup(baseURL, width, modified, searchParam) {
+        /*IE fix */
+            if (!String.prototype.startsWith) {
+                String.prototype.startsWith = function(searchString, position) {
+                    position = position || 0;
+                    return this.indexOf(searchString, position) === position;
+                };
+            }
+
+            var lookupType;
+
+            var urlParams = baseURL.split("&");
+            for (i = 0; i < urlParams.length; i++) {
+                if (urlParams[i].startsWith('lktp')) {
+                    lookupType = urlParams[i].split('=')[1];
+                }
+            }
+
+            // Following "001" is the lookup type for Account object
+            if (lookupType == "001") {
+                var customBaseURL = "{!$Site.BaseUrl}/apex/CustomLookupAccount?frm=" + escapeUTF("{!$Component.ContactView.contactForm}")
+                            + '&' + baseURL.split('?')[1];
+
+                if (modified == '1') {
+                    customBaseURL += searchParam;
+                }
+
+                openPopup(customBaseURL, "lookup", 0, 100, "width=" + width + ",height=500,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            } else {
+                if (modified == '1') {
+                    baseURL = baseURL + searchParam;
+                }
+                openPopup(baseURL, "lookup", 0, 0, "width=" + width + ",height=500,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            }
+        }
+
+    </script>
+    </apex:form>
+</apex:page>

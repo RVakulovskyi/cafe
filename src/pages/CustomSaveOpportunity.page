@@ -1,0 +1,13 @@
+<apex:page standardController="Opportunity" extensions="CustomOpportunitySaveExtension" action="{!CheckAndValidate}">
+    <apex:form >
+        <apex:pageBlock title="Opportunity Submission">
+            <apex:pageBlockSection title="Please fill the below fields before submitting the Opportunity form" columns="1">
+
+                <apex:outputText style="color:red" value="{!validationMessage}" escape="false"/>
+
+                <apex:commandButton value="Go Back to Opportunity Form" action="{!getBack}"/>
+
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

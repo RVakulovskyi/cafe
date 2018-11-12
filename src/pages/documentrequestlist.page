@@ -1,0 +1,73 @@
+<apex:page showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardStyleSheets="false" standardController="Opportunity" extensions="DocumentRequestListUtilities">
+    <html lang="en">
+        <head>
+            <meta charset="utf-8"></meta>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+            <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+            <meta name="description" content="CleanFund Document Request List App"></meta>
+            <meta name="author" content="Joseph Markey"></meta>
+            <title>CleanFund | {!Opportunity.Name}</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="{!URLFOR($Resource.CleanFund, 'cleanfund.css')}" />
+            <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+        </head>
+        <body id="ControllerDocumentRequestList" ng-app="NgAppDocumentRequestList" ng-controller="ControllerDocumentRequestList">
+        	<i id="fa-loader-document-request-list" class="fa fa-spinner fa-pulse fa-3x fa-fw cleanfund-blue"></i>
+        	<input type="hidden" id="opportunity-id" value="{!Opportunity.Id}" />
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container text-center">
+                    <h1 class="page-header cleanfund-blue">{!Opportunity.Name}</h1>
+                </div>
+            </nav>
+            <div id="alert-error" class="alert alert-danger hidden-cleanfund" role="alert">
+                <button id="close-alert-error" type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <strong>Alert!&#32;</strong><span id="alert-error-message"></span>
+            </div>
+            <div class="container marketing">
+                <h4 class="text-danger"><i>Prior</i> to generating the <strong>Document Request List</strong>, please verify that the data below is correct:</h4>
+                <hr class="featurette-divider" />
+                <form>
+                	<div class="form-group">
+	                	<label for="account-entity-type">Account Entity Type</label>
+	                    <input type="text" id="account-entity-type" value="{!Opportunity.Account.Entity_Type__c}" class="form-control" disabled="true" />
+                    </div>
+                    <div class="form-group">
+	                	<label for="account-entity-sub-type">Account Entity Sub Type</label>
+	                    <input type="text" id="account-entity-sub-type" value="{!Opportunity.Account.Entity_Sub_Type__c}" class="form-control" disabled="true" />
+                    </div>
+                    <div class="form-group">
+	                	<label for="opportunity-state-prop">Opportunity State Prop</label>
+	                    <input type="text" id="opportunity-state-prop" value="{!Opportunity.State_Prop__c}" class="form-control" disabled="true" />
+                    </div>
+                    <div class="form-group">
+	                	<label for="opportunity-solar-top-structure">Opportunity Solar TPO Structure</label>
+	                    <input type="text" id="opportunity-solar-top-structure" value="{!Opportunity.Solar_TPO_Structure__c}" class="form-control" disabled="true" />
+                    </div>
+                    <div class="form-group">
+	                	<label for="opportunity-app-executed-date">Opportunity App Executed Date</label>
+	                    <input type="text" id="opportunity-app-executed-date" value="{!Opportunity.App_Executed_Date__c}" class="form-control" disabled="true" />
+                    </div>
+                    <div class="form-group">
+	                	<label for="opportunity-due-diligence">Opportunity Due Diligence</label>
+	                    <input type="text" id="opportunity-due-diligence" value="{!Opportunity.CF_Due_Diligence_Deposit__c}" class="form-control" disabled="true" />
+                    </div>
+                	<div class="form-group button-group">
+                    	<button type="button" class="btn btn-primary" ng-click="generateDocumentRequestList()">Generate Document Request List</button>
+                    	<button type="button" class="btn btn-default" ng-click="backToOpportunity()">Back to Opportunity</button>
+                	</div>
+                </form>
+            </div>
+            <footer class="text-muted">
+                <p>&copy; {{currentYear}} CleanFund</p>
+            </footer>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+            <script src="https://cdn.jsdelivr.net/angularjs/1.5.5/angular.min.js"></script>
+            <script src="{!URLFOR($Resource.CleanFund, 'cleanfund.js')}"></script>
+        </body>
+    </html>
+</apex:page>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AR - Pulaski County PACE</fullName>
+        <default>false</default>
+        <label>AR - Pulaski County PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>AR - Ygrene</fullName>
+        <default>false</default>
+        <label>AR - Ygrene</label>
+    </customValue>
+    <customValue>
+        <fullName>CA - CalFirst</fullName>
+        <default>false</default>
+        <label>CA - CalFirst</label>
+    </customValue>
+    <customValue>
+        <fullName>CA - OpenPACE</fullName>
+        <default>false</default>
+        <label>CA - OpenPACE</label>
+    </customValue>
+    <customValue>
+        <fullName>CA - WRCOG</fullName>
+        <default>false</default>
+        <label>CA - WRCOG</label>
+    </customValue>
+    <customValue>
+        <fullName>CO - CO C-PACE</fullName>
+        <default>false</default>
+        <label>CO - CO C-PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>CT - C-PACE</fullName>
+        <default>false</default>
+        <label>CT - C-PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>DC - DC PACE</fullName>
+        <default>false</default>
+        <label>DC - DC PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>FL - RenewPACE</fullName>
+        <default>false</default>
+        <label>FL - RenewPACE</label>
+    </customValue>
+    <customValue>
+        <fullName>IL - C-PACE</fullName>
+        <default>false</default>
+        <label>IL - C-PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>KY - KY PACE</fullName>
+        <default>false</default>
+        <label>KY - KY PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>KY - Louisville EPAD</fullName>
+        <default>false</default>
+        <label>KY - Louisville EPAD</label>
+    </customValue>
+    <customValue>
+        <fullName>MD - MD-PACE</fullName>
+        <default>false</default>
+        <label>MD - MD-PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>MI - Lean &amp; Green Michigan</fullName>
+        <default>false</default>
+        <label>MI - Lean &amp; Green Michigan</label>
+    </customValue>
+    <customValue>
+        <fullName>MN - Minnesota PACE</fullName>
+        <default>false</default>
+        <label>MN - Minnesota PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>MN - Rural Minnesota Energy Board</fullName>
+        <default>false</default>
+        <label>MN - Rural Minnesota Energy Board</label>
+    </customValue>
+    <customValue>
+        <fullName>MO - Set the PACE</fullName>
+        <default>false</default>
+        <label>MO - Set the PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>MO - Show Me PACE</fullName>
+        <default>false</default>
+        <label>MO - Show Me PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>NH - C-PACE</fullName>
+        <default>false</default>
+        <label>NH - C-PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>NY - Energize NY</fullName>
+        <default>false</default>
+        <label>NY - Energize NY</label>
+    </customValue>
+    <customValue>
+        <fullName>OH - GC-PACE</fullName>
+        <default>false</default>
+        <label>OH - GC-PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>OR - PropertyFit</fullName>
+        <default>false</default>
+        <label>OR - PropertyFit</label>
+    </customValue>
+    <customValue>
+        <fullName>RI - RIIB</fullName>
+        <default>false</default>
+        <label>RI - RIIB</label>
+    </customValue>
+    <customValue>
+        <fullName>TX - Texas PACE Authority</fullName>
+        <default>false</default>
+        <label>TX - Texas PACE Authority</label>
+    </customValue>
+    <customValue>
+        <fullName>UT - C-PACE</fullName>
+        <default>false</default>
+        <label>UT - C-PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>VA - Arlington</fullName>
+        <default>false</default>
+        <label>VA - Arlington</label>
+    </customValue>
+    <customValue>
+        <fullName>WI - PACE Wisconsin</fullName>
+        <default>false</default>
+        <label>WI - PACE Wisconsin</label>
+    </customValue>
+    <description>All Active PACE Programs CF can currently transact through.</description>
+    <masterLabel>PACE Programs</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

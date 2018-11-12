@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Bond_Payment__c</fullName>
+        <externalId>false</externalId>
+        <formula>Payment__c +  Interest__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This is the bond payment for the period.</inlineHelpText>
+        <label>Bond Payment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>County_Fee__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Any Fee that the county charges</inlineHelpText>
+        <label>County Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the payment is due</inlineHelpText>
+        <label>Bond Payment Due Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Interest__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Interest Payment</inlineHelpText>
+        <label>Interest</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Parcel__c</fullName>
+        <externalId>false</externalId>
+        <label>Parcel</label>
+        <referenceTo>Parcel__c</referenceTo>
+        <relationshipLabel>Payments</relationshipLabel>
+        <relationshipName>Payments</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Payment_Recieved_Amount__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The payment we receieved.</inlineHelpText>
+        <label>Payment Recieved Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Recieved_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the payment was recieved.</inlineHelpText>
+        <label>Payment Recieved Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What kind of payment is it?</inlineHelpText>
+        <label>Payment Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Capitalized Interest</fullName>
+                    <default>false</default>
+                    <label>Capitalized Interest</label>
+                </value>
+                <value>
+                    <fullName>P &amp; I</fullName>
+                    <default>false</default>
+                    <label>P &amp; I</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Payment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount applies to principal</inlineHelpText>
+        <label>Principal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Tax_Admin_Fee__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Any Fee paid to the tax administrator</inlineHelpText>
+        <label>Tax Admin Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Tax_Payment__c</fullName>
+        <externalId>false</externalId>
+        <formula>Interest__c +  Payment__c +  Tax_Admin_Fee__c +  Trustee_Fee__c +  County_Fee__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This is the P&amp;I payment plus any fees</inlineHelpText>
+        <label>Tax Payment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Tax_Year__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The tax year that the bond payment is associated with.</inlineHelpText>
+        <label>Tax Year</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trustee_Fee__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Any Fee the Trustee Charges</inlineHelpText>
+        <label>Trustee Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Payment</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Parcel__c</columns>
+        <columns>Bond_Payment__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>P-{0000}</displayFormat>
+        <label>Payments  Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Payments</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Due_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Payment__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Interest__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

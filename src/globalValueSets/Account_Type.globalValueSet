@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Channel Partner</fullName>
+        <default>false</default>
+        <label>Channel Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <label>Competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Industry Association</fullName>
+        <default>false</default>
+        <label>Industry Association</label>
+    </customValue>
+    <customValue>
+        <fullName>Investor</fullName>
+        <default>false</default>
+        <label>Investor</label>
+    </customValue>
+    <customValue>
+        <fullName>Owner</fullName>
+        <default>false</default>
+        <label>Owner</label>
+    </customValue>
+    <customValue>
+        <fullName>PACE Program</fullName>
+        <default>false</default>
+        <label>PACE Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <label>Prospect</label>
+    </customValue>
+    <customValue>
+        <fullName>Owner Rep</fullName>
+        <default>false</default>
+        <label>Owner Rep</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown</fullName>
+        <default>false</default>
+        <label>Unknown</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank</fullName>
+        <default>false</default>
+        <label>Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor</fullName>
+        <default>false</default>
+        <label>Contractor</label>
+    </customValue>
+    <customValue>
+        <fullName>Influencer</fullName>
+        <default>false</default>
+        <label>Influencer</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Servicer</fullName>
+        <default>false</default>
+        <label>Servicer</label>
+    </customValue>
+    <customValue>
+        <fullName>Transaction Counsel</fullName>
+        <default>false</default>
+        <label>Transaction Counsel</label>
+    </customValue>
+    <customValue>
+        <fullName>Third Party Report Provider</fullName>
+        <default>false</default>
+        <label>Third Party Report Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <masterLabel>Account Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

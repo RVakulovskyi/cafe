@@ -1,0 +1,25 @@
+<apex:page standardController="Prospect__c" showHeader="true" docType="html-4.01-strict">
+<div id="tabstrip" style="display:none;"> <ul> 
+<li class="k-state-active">Prospects</li>
+</ul>
+<!-- Prospects -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Prospect__c" FKName="WhatId" FKValue="{!Prospect__c.Id}"  DelayLoad="false"  ViewID="a0Cj000000BXVGZEA5" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+
+</div>
+<script>
+$(document).ready(function() {
+    $("#tabstrip").kendoTabStrip({
+      activate: function(e){
+        setTimeout(function(){          $(window).resize();        });
+      }
+    });
+    $("#tabstrip").css("display", "block");
+});
+ </script>
+</apex:page>

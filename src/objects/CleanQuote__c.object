@@ -1,0 +1,1904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object for CleanQuote to write to, that then can write to Lead Objects</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>AccountTypeNew__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GlobalAccType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Acquisition_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Acquisition Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Annual_production_degradation__c</fullName>
+        <defaultValue>-0.5</defaultValue>
+        <externalId>false</externalId>
+        <label>Annual production degradation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Application_Submission_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Application Submission Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Appraisal_Completed_in_Last_5_Years__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Appraisal Completed in Last 5 Years?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Appraisal_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Appraisal Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Appraised_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Appraised Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Are_all_Mortgages_s_current__c</fullName>
+        <externalId>false</externalId>
+        <label>Are all Mortgages(s) current?</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Unknown</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Average_Useful_Life__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The average useful life of the non-solar improvements.</inlineHelpText>
+        <label>Average Useful Life</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bankruptcies__c</fullName>
+        <externalId>false</externalId>
+        <label>Bankruptcies?</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Unknown</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bankruptcy_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Bankruptcy Comment</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Benchmark_Date_at_Indicative_Quote__c</fullName>
+        <externalId>false</externalId>
+        <label>Benchmark Date at Indicative Quote</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Benchmark_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Benchmark Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Interest Rate Swap Yield</fullName>
+                    <default>false</default>
+                    <label>Interest Rate Swap Yield</label>
+                </value>
+                <value>
+                    <fullName>U.S. Treasury constant maturity yield</fullName>
+                    <default>false</default>
+                    <label>U.S. Treasury constant maturity yield</label>
+                </value>
+                <value>
+                    <fullName>Fixed Rate</fullName>
+                    <default>false</default>
+                    <label>Fixed Rate</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Benchmark_at_Indicative_Quote__c</fullName>
+        <externalId>false</externalId>
+        <label>Benchmark at Indicative Quote</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Building_Size_sq_ft__c</fullName>
+        <externalId>false</externalId>
+        <label>Building Size (sq ft)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CF_Lead_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>CF Lead Source</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>CF_Lead_Source</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CF_Sub_Lead_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>CF Sub-Lead Source</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CQ_Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>The Lead that is Associated with CQ</inlineHelpText>
+        <label>CQ Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>CleanQuotes</relationshipLabel>
+        <relationshipName>CleanQuotes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CQ_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CQ Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>CleanQuotes</relationshipLabel>
+        <relationshipName>CleanQuotes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CleanQuote_Sourced_Contact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CleanQuote Sourced Contact</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CleanQuote_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>CleanQuote URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Company__c</fullName>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contamination_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Contamination Comment</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contamination__c</fullName>
+        <externalId>false</externalId>
+        <label>Contamination</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contractor_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor City</label>
+        <length>500</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contractor_Company_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor Company Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contractor_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contractor_First__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor First</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contractor_Geolocation__c</fullName>
+        <displayLocationInDecimal>false</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Contractor Geolocation</label>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Contractor_Last__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor Last</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contractor_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Contractor_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor State</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>States</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contractor_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor Street</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contractor_Zip__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor Zip</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Balance_1st__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Balance (1st)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Balance_2nd__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Balance (2nd)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Occupancy__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Occupancy</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Desired_Project_Finish_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Desired Project Finish Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Entity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Entity Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Corporation</fullName>
+                    <default>false</default>
+                    <label>Corporation</label>
+                </value>
+                <value>
+                    <fullName>General Partnership</fullName>
+                    <default>false</default>
+                    <label>General Partnership</label>
+                </value>
+                <value>
+                    <fullName>Limited Liability Company</fullName>
+                    <default>false</default>
+                    <label>Limited Liability Company</label>
+                </value>
+                <value>
+                    <fullName>Limited Partnership</fullName>
+                    <default>false</default>
+                    <label>Limited Partnership</label>
+                </value>
+                <value>
+                    <fullName>Sole Proprietorship</fullName>
+                    <default>false</default>
+                    <label>Sole Proprietorship</label>
+                </value>
+                <value>
+                    <fullName>TBD</fullName>
+                    <default>false</default>
+                    <label>TBD</label>
+                </value>
+                <value>
+                    <fullName>Trust</fullName>
+                    <default>false</default>
+                    <label>Trust</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Environmental_Issues__c</fullName>
+        <externalId>false</externalId>
+        <label>Environmental Issues?</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Unknown</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Environmental_Site_Assessment_Completed__c</fullName>
+        <externalId>false</externalId>
+        <label>Environmental Site Assessment Completed?</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Unknown</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Environmental_Studies_Performed__c</fullName>
+        <externalId>false</externalId>
+        <label>Environmental Studies Performed</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>TSA</fullName>
+                    <default>false</default>
+                    <label>TSA</label>
+                </value>
+                <value>
+                    <fullName>Phase I</fullName>
+                    <default>false</default>
+                    <label>Phase I</label>
+                </value>
+                <value>
+                    <fullName>Phase II</fullName>
+                    <default>false</default>
+                    <label>Phase II</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Estimated_Utility_Rate_Escalation__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Utility Rate Escalation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Financial_Crime_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Crime Comments</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Financial_Crime__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Crime</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Financing_Term__c</fullName>
+        <externalId>false</externalId>
+        <label>Financing Term</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FirstName__c</fullName>
+        <externalId>false</externalId>
+        <label>First Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Foreclosure_Short_Sale_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Foreclosure, Short Sale Comment</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Foreclosure_Short_Sale_or_Deed_in_Lieu__c</fullName>
+        <externalId>false</externalId>
+        <label>Foreclosure, Short Sale, or Deed in Lieu</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Government_Regulations_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Government Regulations Comment</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Ground_Lease_Expiration_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Ground Lease Expiration Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ground_Lease__c</fullName>
+        <externalId>false</externalId>
+        <label>Ground Lease</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Hazardous_Substances_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Hazardous Substances Comment</label>
+        <length>1500</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Hazardous_Substances__c</fullName>
+        <externalId>false</externalId>
+        <label>Hazardous Substances</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>How_did_I_find_CleanQuote__c</fullName>
+        <externalId>false</externalId>
+        <label>How did I find CleanQuote</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CleanFund Team Member</fullName>
+                    <default>false</default>
+                    <label>CleanFund Team Member</label>
+                </value>
+                <value>
+                    <fullName>News Article</fullName>
+                    <default>false</default>
+                    <label>News Article</label>
+                </value>
+                <value>
+                    <fullName>Internet Search</fullName>
+                    <default>false</default>
+                    <label>Internet Search</label>
+                </value>
+                <value>
+                    <fullName>CleanFund Email Marketing</fullName>
+                    <default>false</default>
+                    <label>CleanFund Email Marketing</label>
+                </value>
+                <value>
+                    <fullName>PACE Nation</fullName>
+                    <default>false</default>
+                    <label>PACE Nation</label>
+                </value>
+                <value>
+                    <fullName>Colleague or Industry Professional</fullName>
+                    <default>false</default>
+                    <label>Colleague or Industry Professional</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Partner Network Team Member</fullName>
+                    <default>false</default>
+                    <label>Partner Network Team Member</label>
+                </value>
+                <value>
+                    <fullName>Partner Network Email Marketing</fullName>
+                    <default>false</default>
+                    <label>Partner Network Email Marketing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Improvement_Cost_Est__c</fullName>
+        <externalId>false</externalId>
+        <label>Improvement Cost (Est)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Indicative_Interest_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Indicative Interest Rate</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Indicative_Quote_Sent_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Indicative Quote Sent Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Involuntary_Lien_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Involuntary Lien Comment</label>
+        <length>3000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Involuntary_Liens__c</fullName>
+        <externalId>false</externalId>
+        <label>Involuntary Liens</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Unknown</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_StandAlone__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is StandAlone</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LastName__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Owner_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead Owner Notes</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead Stage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Identified</fullName>
+                    <default>false</default>
+                    <label>Identified</label>
+                </value>
+                <value>
+                    <fullName>Pre-Qualified Lead</fullName>
+                    <default>false</default>
+                    <label>Pre-Qualified Lead</label>
+                </value>
+                <value>
+                    <fullName>Qualified Lead</fullName>
+                    <default>false</default>
+                    <label>Qualified Lead</label>
+                </value>
+                <value>
+                    <fullName>Quoted</fullName>
+                    <default>false</default>
+                    <label>Quoted</label>
+                </value>
+                <value>
+                    <fullName>Dormant</fullName>
+                    <default>false</default>
+                    <label>Dormant</label>
+                </value>
+                <value>
+                    <fullName>Dead/Lost</fullName>
+                    <default>false</default>
+                    <label>Dead/Lost</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Legal_Name_of_Property_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal Name of Property Owner</label>
+        <length>500</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Lender_Type_1st__c</fullName>
+        <externalId>false</externalId>
+        <label>Lender Type 1st</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Lender_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Lender_Type_2nd__c</fullName>
+        <externalId>false</externalId>
+        <label>Lender Type 2nd</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Lender_Type</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Market_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Market Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>More_than_2_Lenders__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>More than 2 Lenders?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Mortgage_Lender_1st__c</fullName>
+        <externalId>false</externalId>
+        <label>Mortgage Lender (1st)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mortgage_Lender_2nd__c</fullName>
+        <externalId>false</externalId>
+        <label>Mortgage Lender (2nd)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mortgages_Current_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Mortgages Current Comment</label>
+        <length>3000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Multiple_Owner_Entities__c</fullName>
+        <externalId>false</externalId>
+        <label>Multiple Owner Entities?</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Unknown</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Next_Step_Tickler__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Step Tickler</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Next_Step__c</fullName>
+        <externalId>false</externalId>
+        <label>Next Step</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_Solar_Savings__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount of savings the non-solar specific cost of the project will produce annually. For instance LED lighting will have savings.</inlineHelpText>
+        <label>Non Solar Savings</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Parcels__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Parcels</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_Project_Scope__c</fullName>
+        <externalId>false</externalId>
+        <label>Opp Project Scope</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Construction</fullName>
+                    <default>false</default>
+                    <label>New Construction</label>
+                </value>
+                <value>
+                    <fullName>Upgrade/Retrofit</fullName>
+                    <default>false</default>
+                    <label>Upgrade/Retrofit</label>
+                </value>
+                <value>
+                    <fullName>Gut Rehab</fullName>
+                    <default>false</default>
+                    <label>Gut Rehab</label>
+                </value>
+                <value>
+                    <fullName>TBD</fullName>
+                    <default>false</default>
+                    <label>TBD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Other_Property_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Property Description</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Owner_Bankruptcy_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Bankruptcy Comment</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Owner_Bankruptcy__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Bankruptcy</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_Occupied__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner Occupied</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_as_Defendant_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner as Defendant Comments</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Owner_as_Defendant__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner as Defendant</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PPA__c</fullName>
+        <externalId>false</externalId>
+        <label>PPA</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Partner_Company__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Company</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner First Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Last Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Pending_Proceedings_or_Lawsuits_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Pending Proceedings or Lawsuits Comments</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Pending_Proceedings_or_Lawsuits__c</fullName>
+        <externalId>false</externalId>
+        <label>Pending Proceedings or Lawsuits</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Prepayment__c</fullName>
+        <externalId>false</externalId>
+        <label>Prepayment</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>5% (10), 4% (11), 3% (12), 2% (13), 1% (14)</fullName>
+                    <default>false</default>
+                    <label>5% (10), 4% (11), 3% (12), 2% (13), 1% (14)</label>
+                </value>
+                <value>
+                    <fullName>5% (7), 4% (8), 3% (9), 2% (10), 1% (11)</fullName>
+                    <default>false</default>
+                    <label>5% (7), 4% (8), 3% (9), 2% (10), 1% (11)</label>
+                </value>
+                <value>
+                    <fullName>4% (7), 3% (8), 2% (9), 1% (10)</fullName>
+                    <default>false</default>
+                    <label>4% (7), 3% (8), 2% (9), 1% (10)</label>
+                </value>
+                <value>
+                    <fullName>5% (5), 4% (6), 3% (7), 2% (8), 1% (9)</fullName>
+                    <default>false</default>
+                    <label>5% (5), 4% (6), 3% (7), 2% (8), 1% (9)</label>
+                </value>
+                <value>
+                    <fullName>4% (5), 3% (6), 2% (7), 1% (8)</fullName>
+                    <default>false</default>
+                    <label>4% (5), 3% (6), 2% (7), 1% (8)</label>
+                </value>
+                <value>
+                    <fullName>3% (8), 2% (9), 1% (10)</fullName>
+                    <default>false</default>
+                    <label>3% (8), 2% (9), 1% (10)</label>
+                </value>
+                <value>
+                    <fullName>5% (2) 3% (5) 2% (6)</fullName>
+                    <default>false</default>
+                    <label>5% (2) 3% (5) 2% (6)</label>
+                </value>
+                <value>
+                    <fullName>Yield Maintenance (special)</fullName>
+                    <default>false</default>
+                    <label>Yield Maintenance (special)</label>
+                </value>
+                <value>
+                    <fullName>Other (Please Specify in Project Notes)</fullName>
+                    <default>false</default>
+                    <label>Other (Please Specify in Project Notes)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Primary_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Property Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alternative</fullName>
+                    <default>false</default>
+                    <label>Alternative</label>
+                </value>
+                <value>
+                    <fullName>Education</fullName>
+                    <default>false</default>
+                    <label>Education</label>
+                </value>
+                <value>
+                    <fullName>Healthcare</fullName>
+                    <default>false</default>
+                    <label>Healthcare</label>
+                </value>
+                <value>
+                    <fullName>Hospitality</fullName>
+                    <default>false</default>
+                    <label>Hospitality</label>
+                </value>
+                <value>
+                    <fullName>Industrial</fullName>
+                    <default>false</default>
+                    <label>Industrial</label>
+                </value>
+                <value>
+                    <fullName>Mixed Use</fullName>
+                    <default>false</default>
+                    <label>Mixed Use</label>
+                </value>
+                <value>
+                    <fullName>Multifamily</fullName>
+                    <default>false</default>
+                    <label>Multifamily</label>
+                </value>
+                <value>
+                    <fullName>Nonprofit</fullName>
+                    <default>false</default>
+                    <label>Nonprofit</label>
+                </value>
+                <value>
+                    <fullName>Office</fullName>
+                    <default>false</default>
+                    <label>Office</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                    <label>Retail</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Name</label>
+        <length>120</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Notes</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_Scope_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Scope Description</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_Scope__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Scope</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Construction</fullName>
+                    <default>false</default>
+                    <label>New Construction</label>
+                </value>
+                <value>
+                    <fullName>Upgrade/Retrofit</fullName>
+                    <default>false</default>
+                    <label>Upgrade/Retrofit</label>
+                </value>
+                <value>
+                    <fullName>Gut Rehab</fullName>
+                    <default>false</default>
+                    <label>Gut Rehab</label>
+                </value>
+                <value>
+                    <fullName>TBD</fullName>
+                    <default>false</default>
+                    <label>TBD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project_Size_In_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Project_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Stage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Planning</fullName>
+                    <default>false</default>
+                    <label>Planning</label>
+                </value>
+                <value>
+                    <fullName>Permitting</fullName>
+                    <default>false</default>
+                    <label>Permitting</label>
+                </value>
+                <value>
+                    <fullName>Construction</fullName>
+                    <default>false</default>
+                    <label>Construction</label>
+                </value>
+                <value>
+                    <fullName>Completed - Looking for PACE reimbursement</fullName>
+                    <default>false</default>
+                    <label>Completed - Looking for PACE reimbursement</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Property_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Property City</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_County__c</fullName>
+        <externalId>false</externalId>
+        <label>Property County</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Geolocation__c</fullName>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Property Geolocation</label>
+        <required>false</required>
+        <scale>6</scale>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Owner City</label>
+        <length>500</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Owner Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_First__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Owner First</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_Geolocation__c</fullName>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Property Owner Geolocation</label>
+        <required>false</required>
+        <scale>6</scale>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_Last__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Owner Last</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Owner Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Owner State</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>States</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Owner Street</label>
+        <length>500</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Property_Owner_Zip__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Owner Zip</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Purchase_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Purchase Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Property_Scope_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Scope Text</label>
+        <length>5000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Property_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Property State</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>States</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Street_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Street Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Property_Tax_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Tax Comment</label>
+        <length>3000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Property_Taxes_Current__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Taxes Current?</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Unknown</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Property_Zip__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Zip</label>
+        <length>5</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Regulatory_Government_Actions__c</fullName>
+        <externalId>false</externalId>
+        <label>Regulatory Government Actions</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Renovation_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Renovation Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Risk_Studies_or_Assessments_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Risk Studies or Assessments Comments</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Risk_Studies_or_Assessments__c</fullName>
+        <externalId>false</externalId>
+        <label>Risk Studies or Assessments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Unknown</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Run_Duplicate_Rules__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Run Duplicate Rules</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sensitive_Industries_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Sensitive Industries Comment</label>
+        <length>1024</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sensitive_Industries__c</fullName>
+        <externalId>false</externalId>
+        <label>Sensitive Industries</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Unknown</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Solar_Specific_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Solar Specific Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Spread_at_Quote_bps__c</fullName>
+        <externalId>false</externalId>
+        <label>Spread at Quote (bps)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage_to_convert_Opp_To__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage to convert Opp To</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Study_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Study Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>System_Size_kW_DC__c</fullName>
+        <externalId>false</externalId>
+        <label>System Size (kW DC)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Financing_Fee_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Financing Fee ($)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Financing_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Financing Fee (%)</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Total_PACE_financing_amount_Est__c</fullName>
+        <externalId>false</externalId>
+        <label>Total PACE financing amount (Est.)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Web_to_Lead_Who_Am_I__c</fullName>
+        <externalId>false</externalId>
+        <label>Web-to-Lead Who Am I</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Owner</fullName>
+                    <default>false</default>
+                    <label>Owner</label>
+                </value>
+                <value>
+                    <fullName>Contractor</fullName>
+                    <default>false</default>
+                    <label>Contractor</label>
+                </value>
+                <value>
+                    <fullName>Developer</fullName>
+                    <default>false</default>
+                    <label>Developer</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                    <label>Partner</label>
+                </value>
+                <value>
+                    <fullName>CleanFund</fullName>
+                    <default>false</default>
+                    <label>CleanFund</label>
+                </value>
+                <value>
+                    <fullName>Energy Services Consultant</fullName>
+                    <default>false</default>
+                    <label>Energy Services Consultant</label>
+                </value>
+                <value>
+                    <fullName>Real Estate Advisor</fullName>
+                    <default>false</default>
+                    <label>Real Estate Advisor</label>
+                </value>
+                <value>
+                    <fullName>Commercial Mortgage Broker</fullName>
+                    <default>false</default>
+                    <label>Commercial Mortgage Broker</label>
+                </value>
+                <value>
+                    <fullName>Solar Developer</fullName>
+                    <default>false</default>
+                    <label>Solar Developer</label>
+                </value>
+                <value>
+                    <fullName>Solar EPC</fullName>
+                    <default>false</default>
+                    <label>Solar EPC</label>
+                </value>
+                <value>
+                    <fullName>Solar Professional</fullName>
+                    <default>false</default>
+                    <label>Solar Professional</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Year_1_Bill_Savings_pre_solar_bill_po__c</fullName>
+        <externalId>false</externalId>
+        <label>Yr 1 Bill Savings Solar (pre- post)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year_1_Production_kWh__c</fullName>
+        <externalId>false</externalId>
+        <label>Year 1 Production (kWh)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>num_of_Tenants__c</fullName>
+        <externalId>false</externalId>
+        <label># of Tenants</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>CleanQuote</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CQ_Lead__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CQ-{YYYY}{MM}{0000}</displayFormat>
+        <label>CleanQuote Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>CleanQuotes</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

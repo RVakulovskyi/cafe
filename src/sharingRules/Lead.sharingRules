@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Lead_Pardot</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Pardot</label>
+        <sharedTo>
+            <group>Pardot_User</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Stage__c</field>
+            <operation>equals</operation>
+            <value>Identified</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Lead_Not_Pardot</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Lead Not Pardot</label>
+        <sharedTo>
+            <group>Not_Pardot</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

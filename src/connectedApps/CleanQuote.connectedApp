@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>utility@cleanfund.com</contactEmail>
+    <label>CleanQuote</label>
+    <oauthConfig>
+        <callbackUrl>https://cf-quote-staging.herokuapp.com</callbackUrl>
+        <consumerKey>3MVG9AJuBE3rTYDgjVgTfUitelZHZbzBsSjFzx6nAxz0XXH4U8IFlfamhRQIeUdAesxVFDsfBkZZZs1UteZZx</consumerKey>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

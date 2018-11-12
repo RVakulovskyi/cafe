@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CleanFund</fullName>
+        <default>false</default>
+        <label>CleanFund</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Owner</fullName>
+        <default>false</default>
+        <label>Property Owner</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor</fullName>
+        <default>false</default>
+        <label>Contractor</label>
+    </customValue>
+    <customValue>
+        <fullName>Tax Equity Provider</fullName>
+        <default>false</default>
+        <label>Tax Equity Provider</label>
+    </customValue>
+    <masterLabel>Responsible Party</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

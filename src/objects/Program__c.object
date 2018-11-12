@@ -1,0 +1,2051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>AccelerationConditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Acceleration Conditions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>AccelerationofPACEAssessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Acceleration of PACE Assessment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ActiveProgram__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active Program</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AppraisalConditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Appraisal Conditions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>AppraisalRequired__c</fullName>
+        <externalId>false</externalId>
+        <label>Appraisal Required</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ApprovedListofEnergyAuditors__c</fullName>
+        <externalId>false</externalId>
+        <label>Approved List of Energy Auditors</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AssessmentName__c</fullName>
+        <externalId>false</externalId>
+        <label>AssessmentName</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>AssessmentRequirements__c</fullName>
+        <externalId>false</externalId>
+        <label>Assessment Requirements</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BDR__c</fullName>
+        <externalId>false</externalId>
+        <label>BDR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ben Dodge</fullName>
+                    <default>false</default>
+                    <label>Ben Dodge</label>
+                </value>
+                <value>
+                    <fullName>Brandon Deno</fullName>
+                    <default>false</default>
+                    <label>Brandon Deno</label>
+                </value>
+                <value>
+                    <fullName>Chris Robbins</fullName>
+                    <default>false</default>
+                    <label>Chris Robbins</label>
+                </value>
+                <value>
+                    <fullName>Danny Roberts</fullName>
+                    <default>false</default>
+                    <label>Danny Roberts</label>
+                </value>
+                <value>
+                    <fullName>Joe Euphrat</fullName>
+                    <default>false</default>
+                    <label>Joe Euphrat</label>
+                </value>
+                <value>
+                    <fullName>John Kinney</fullName>
+                    <default>false</default>
+                    <label>John Kinney</label>
+                </value>
+                <value>
+                    <fullName>Josh Smith</fullName>
+                    <default>false</default>
+                    <label>Josh Smith</label>
+                </value>
+                <value>
+                    <fullName>Joshua Kagan</fullName>
+                    <default>false</default>
+                    <label>Joshua Kagan</label>
+                </value>
+                <value>
+                    <fullName>Leah Wiggs</fullName>
+                    <default>false</default>
+                    <label>Leah Wiggs</label>
+                </value>
+                <value>
+                    <fullName>Lucas Nagy</fullName>
+                    <default>false</default>
+                    <label>Lucas Nagy</label>
+                </value>
+                <value>
+                    <fullName>Matt Mustaro</fullName>
+                    <default>false</default>
+                    <label>Matt Mustaro</label>
+                </value>
+                <value>
+                    <fullName>Tom Neukranz</fullName>
+                    <default>false</default>
+                    <label>Tom Neukranz</label>
+                </value>
+                <value>
+                    <fullName>Will Clark</fullName>
+                    <default>false</default>
+                    <label>Will Clark</label>
+                </value>
+                <value>
+                    <fullName>Woolsey McKernon</fullName>
+                    <default>false</default>
+                    <label>Woolsey McKernon</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BillingType__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>On BIll</fullName>
+                    <default>false</default>
+                    <label>On BIll</label>
+                </value>
+                <value>
+                    <fullName>Off-Bill</fullName>
+                    <default>false</default>
+                    <label>Off-Bill</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BondingAuthorityName__c</fullName>
+        <externalId>false</externalId>
+        <label>Bonding Authority Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>BondingAuthorityType__c</fullName>
+        <externalId>false</externalId>
+        <label>Bonding Authority Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>BondingPermitted__c</fullName>
+        <externalId>false</externalId>
+        <label>Bonding Permitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CEOApproval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CEO Approval</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CF_Program_Preference__c</fullName>
+        <externalId>false</externalId>
+        <label>CF Program Preference</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1st</fullName>
+                    <default>false</default>
+                    <label>1st</label>
+                </value>
+                <value>
+                    <fullName>2nd</fullName>
+                    <default>false</default>
+                    <label>2nd</label>
+                </value>
+                <value>
+                    <fullName>3rd</fullName>
+                    <default>false</default>
+                    <label>3rd</label>
+                </value>
+                <value>
+                    <fullName>4th</fullName>
+                    <default>false</default>
+                    <label>4th</label>
+                </value>
+                <value>
+                    <fullName>5th</fullName>
+                    <default>false</default>
+                    <label>5th</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CLTVMaximum__c</fullName>
+        <externalId>false</externalId>
+        <label>CLTV Maximum</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CapitalProviderPreApproval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Capital Provider Pre-Approval</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CapitalProviderRemittanceDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Capital Provider Remittance Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CapitalProviderRequirements__c</fullName>
+        <externalId>false</externalId>
+        <label>Capital Provider Requirements</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CapitalizedInterest__c</fullName>
+        <externalId>false</externalId>
+        <label>Capitalized Interest</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CollectionProcedures__c</fullName>
+        <externalId>false</externalId>
+        <label>Collection Procedures</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CollectionServicingEntity__c</fullName>
+        <externalId>false</externalId>
+        <label>Collection/Servicing Entity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ConsentRequiredByStatute__c</fullName>
+        <externalId>false</externalId>
+        <label>Consent Required by Statute</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>true</default>
+                    <label>Unknown</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ContractorRequirements__c</fullName>
+        <externalId>false</externalId>
+        <label>Contractor Requirements</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CreditCompletionDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CreditDepartmentApproval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Credit Department Approval</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DebtServiceReservePermitted__c</fullName>
+        <externalId>false</externalId>
+        <label>Debt Service Reserve Permitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Delay_To_Close__c</fullName>
+        <externalId>false</externalId>
+        <label>Delay To Close</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DelayforReceiptofPayment__c</fullName>
+        <externalId>false</externalId>
+        <label>Delay for Receipt of Payment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DelinquentCollectionRateHistoric__c</fullName>
+        <externalId>false</externalId>
+        <label>Delinquent Collection Rate (Historic)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DelinquentPenaltiesandInterest__c</fullName>
+        <externalId>false</externalId>
+        <label>Delinquent Penalties and Interest</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>EULBaseline__c</fullName>
+        <externalId>false</externalId>
+        <label>EUL Baseline</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Term Bond</fullName>
+                    <default>false</default>
+                    <label>Term Bond</label>
+                </value>
+                <value>
+                    <fullName>Weighted Average Life</fullName>
+                    <default>false</default>
+                    <label>Weighted Average Life</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EULCalculationMethod__c</fullName>
+        <externalId>false</externalId>
+        <label>EUL Calculation Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Minimum</fullName>
+                    <default>false</default>
+                    <label>Minimum</label>
+                </value>
+                <value>
+                    <fullName>Maximum</fullName>
+                    <default>false</default>
+                    <label>Maximum</label>
+                </value>
+                <value>
+                    <fullName>Weighted Average</fullName>
+                    <default>false</default>
+                    <label>Weighted Average</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Egnyte_Folder__c</fullName>
+        <externalId>false</externalId>
+        <label>Egnyte Folder</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EligibleImprovements__c</fullName>
+        <externalId>false</externalId>
+        <label>Eligible Improvements</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>EE</fullName>
+                    <default>false</default>
+                    <label>EE</label>
+                </value>
+                <value>
+                    <fullName>RE</fullName>
+                    <default>false</default>
+                    <label>RE</label>
+                </value>
+                <value>
+                    <fullName>Water</fullName>
+                    <default>false</default>
+                    <label>Water</label>
+                </value>
+                <value>
+                    <fullName>Seismic</fullName>
+                    <default>false</default>
+                    <label>Seismic</label>
+                </value>
+                <value>
+                    <fullName>Storm Strengthening</fullName>
+                    <default>false</default>
+                    <label>Storm Strengthening</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EligiblePropertyOwners__c</fullName>
+        <externalId>false</externalId>
+        <label>Eligible Property Owners</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>For-Profit</fullName>
+                    <default>false</default>
+                    <label>For-Profit</label>
+                </value>
+                <value>
+                    <fullName>Non-Profit</fullName>
+                    <default>false</default>
+                    <label>Non-Profit</label>
+                </value>
+                <value>
+                    <fullName>Government</fullName>
+                    <default>false</default>
+                    <label>Government</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EligiblePropertyTypes__c</fullName>
+        <externalId>false</externalId>
+        <label>Eligible Property Types</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>EnergyAudit__c</fullName>
+        <externalId>false</externalId>
+        <label>Energy Audit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ASHRAE I</fullName>
+                    <default>false</default>
+                    <label>ASHRAE I</label>
+                </value>
+                <value>
+                    <fullName>ASHRAE II</fullName>
+                    <default>false</default>
+                    <label>ASHRAE II</label>
+                </value>
+                <value>
+                    <fullName>ASHRAE III</fullName>
+                    <default>false</default>
+                    <label>ASHRAE III</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ExceptionsCFCriteria__c</fullName>
+        <externalId>false</externalId>
+        <label>Exceptions CF Criteria</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ExistingPACELegislation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Existing PACE Legislation</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FeeSchedule__c</fullName>
+        <externalId>false</externalId>
+        <label>Fee Schedule</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>FinanceCompletionDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>InterestRate__c</fullName>
+        <externalId>false</externalId>
+        <label>Interest Rate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LenderAcknowledgement__c</fullName>
+        <externalId>false</externalId>
+        <label>Lender Acknowledgement</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LiTVCalculationMethod__c</fullName>
+        <externalId>false</externalId>
+        <label>LiTV Calculation Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LienPriority__c</fullName>
+        <externalId>false</externalId>
+        <label>Lien Priority</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Property Taxes - Senior</fullName>
+                    <default>false</default>
+                    <label>Property Taxes - Senior</label>
+                </value>
+                <value>
+                    <fullName>Property Taxes - Pari Passu</fullName>
+                    <default>false</default>
+                    <label>Property Taxes - Pari Passu</label>
+                </value>
+                <value>
+                    <fullName>Property Taxes - Junior</fullName>
+                    <default>false</default>
+                    <label>Property Taxes - Junior</label>
+                </value>
+                <value>
+                    <fullName>Property Taxes - Unknown</fullName>
+                    <default>false</default>
+                    <label>Property Taxes - Unknown</label>
+                </value>
+                <value>
+                    <fullName>1st Mortgage - Senior</fullName>
+                    <default>false</default>
+                    <label>1st Mortgage - Senior</label>
+                </value>
+                <value>
+                    <fullName>1st Mortgage - Pari Passu</fullName>
+                    <default>false</default>
+                    <label>1st Mortgage - Pari Passu</label>
+                </value>
+                <value>
+                    <fullName>1st Mortgage - Junior</fullName>
+                    <default>false</default>
+                    <label>1st Mortgage - Junior</label>
+                </value>
+                <value>
+                    <fullName>1st Mortgage - Unknown</fullName>
+                    <default>false</default>
+                    <label>1st Mortgage - Unknown</label>
+                </value>
+                <value>
+                    <fullName>Other Assessments - Senior</fullName>
+                    <default>false</default>
+                    <label>Other Assessments - Senior</label>
+                </value>
+                <value>
+                    <fullName>Other Assessments - Pari Passu</fullName>
+                    <default>false</default>
+                    <label>Other Assessments - Pari Passu</label>
+                </value>
+                <value>
+                    <fullName>Other Assessments - Junior</fullName>
+                    <default>false</default>
+                    <label>Other Assessments - Junior</label>
+                </value>
+                <value>
+                    <fullName>Other Assessments - Unknown</fullName>
+                    <default>false</default>
+                    <label>Other Assessments - Unknown</label>
+                </value>
+                <value>
+                    <fullName>HOA Fees - Senior</fullName>
+                    <default>false</default>
+                    <label>HOA Fees - Senior</label>
+                </value>
+                <value>
+                    <fullName>HOA Fees - Pari Passu</fullName>
+                    <default>false</default>
+                    <label>HOA Fees - Pari Passu</label>
+                </value>
+                <value>
+                    <fullName>HOA Fees - Junior</fullName>
+                    <default>false</default>
+                    <label>HOA Fees - Junior</label>
+                </value>
+                <value>
+                    <fullName>HOA Fees - Unknown</fullName>
+                    <default>false</default>
+                    <label>HOA Fees - Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Lien_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is how pace payments are handle with the program.</inlineHelpText>
+        <label>Lien Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Special Tax</fullName>
+                    <default>false</default>
+                    <label>Special Tax</label>
+                </value>
+                <value>
+                    <fullName>Special Assessment</fullName>
+                    <default>false</default>
+                    <label>Special Assessment</label>
+                </value>
+                <value>
+                    <fullName>Contractual Assessment</fullName>
+                    <default>false</default>
+                    <label>Contractual Assessment</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>LockoutConditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Lockout Conditions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LockoutPermitted__c</fullName>
+        <externalId>false</externalId>
+        <label>Lockout Permitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MaxTerm__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the longest term permissible (in years)</inlineHelpText>
+        <label>Max Term</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MaximumLiTV__c</fullName>
+        <externalId>false</externalId>
+        <label>Maximum LiTV</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MaximumLiTVforNewConstruction__c</fullName>
+        <externalId>false</externalId>
+        <label>Maximum LiTV for New Construction</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MinimumEquity__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Equity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MinimumSIR__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum SIR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MultipleAssessments__c</fullName>
+        <externalId>false</externalId>
+        <label>Multiple Assessments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Same Bond - Yes</fullName>
+                    <default>false</default>
+                    <label>Same Bond - Yes</label>
+                </value>
+                <value>
+                    <fullName>Same Bond - No</fullName>
+                    <default>false</default>
+                    <label>Same Bond - No</label>
+                </value>
+                <value>
+                    <fullName>Same Bond - Unknown</fullName>
+                    <default>false</default>
+                    <label>Same Bond - Unknown</label>
+                </value>
+                <value>
+                    <fullName>Same Parcel - Yes</fullName>
+                    <default>false</default>
+                    <label>Same Parcel - Yes</label>
+                </value>
+                <value>
+                    <fullName>Same Parcel - No</fullName>
+                    <default>false</default>
+                    <label>Same Parcel - No</label>
+                </value>
+                <value>
+                    <fullName>Same Parcel - Unknown</fullName>
+                    <default>false</default>
+                    <label>Same Parcel - Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MuniType__c</fullName>
+        <externalId>false</externalId>
+        <label>Muni Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>County</fullName>
+                    <default>false</default>
+                    <label>County</label>
+                </value>
+                <value>
+                    <fullName>City</fullName>
+                    <default>false</default>
+                    <label>City</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>NewConstructionPermitted__c</fullName>
+        <externalId>false</externalId>
+        <label>New Construction Permitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OtherEligibleImprovements__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Eligible Improvements</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PACERefinancing__c</fullName>
+        <externalId>false</externalId>
+        <label>PACE Refinancing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PPAPermitted__c</fullName>
+        <externalId>false</externalId>
+        <label>PPA Permitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PartialPaymentPermitted__c</fullName>
+        <externalId>false</externalId>
+        <label>Partial Payment Permitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ParticipatingJurisdictions__c</fullName>
+        <externalId>false</externalId>
+        <label>Participating Jurisdictions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PaymentDatesSizing__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Dates/Sizing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PaymentDelinquencyDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Delinquency Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PaymentFrequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Frequency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Annual</fullName>
+                    <default>false</default>
+                    <label>Annual</label>
+                </value>
+                <value>
+                    <fullName>Semi-Annual</fullName>
+                    <default>false</default>
+                    <label>Semi-Annual</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PendingLegislationComments__c</fullName>
+        <externalId>false</externalId>
+        <label>Pending Legislation Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PendingLegislation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pending Legislation</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PrepaymentApplication__c</fullName>
+        <externalId>false</externalId>
+        <label>Prepayment Application</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Principal</fullName>
+                    <default>false</default>
+                    <label>Principal</label>
+                </value>
+                <value>
+                    <fullName>Future Payments</fullName>
+                    <default>false</default>
+                    <label>Future Payments</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PrepaymentConditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Prepayment Conditions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PrepaymentPermitted__c</fullName>
+        <externalId>false</externalId>
+        <label>Prepayment Permitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PriorTransactions__c</fullName>
+        <externalId>false</externalId>
+        <label>Prior Transactions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Tier 1</fullName>
+                    <default>false</default>
+                    <label>Tier 1</label>
+                </value>
+                <value>
+                    <fullName>Tier 2</fullName>
+                    <default>false</default>
+                    <label>Tier 2</label>
+                </value>
+                <value>
+                    <fullName>Tier 3</fullName>
+                    <default>false</default>
+                    <label>Tier 3</label>
+                </value>
+                <value>
+                    <fullName>Backfill</fullName>
+                    <default>false</default>
+                    <label>Backfill</label>
+                </value>
+                <value>
+                    <fullName>No Legislation</fullName>
+                    <default>false</default>
+                    <label>No Legislation</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+                <value>
+                    <fullName>No Program</fullName>
+                    <default>false</default>
+                    <label>No Program</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ProgramAdminName__c</fullName>
+        <externalId>false</externalId>
+        <label>Program Admin Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProgramDevCompletionDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Program Dev Completion Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ProgramDevelopmentApproval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Program Development Approval</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ProgramStrength__c</fullName>
+        <externalId>false</externalId>
+        <label>Program Strength</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ProgramWeakness__c</fullName>
+        <externalId>false</externalId>
+        <label>Program Weakness</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RebatesIncentives__c</fullName>
+        <externalId>false</externalId>
+        <label>Rebates/Incentives</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Gross</fullName>
+                    <default>false</default>
+                    <label>Gross</label>
+                </value>
+                <value>
+                    <fullName>Net</fullName>
+                    <default>false</default>
+                    <label>Net</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ReceivePenalties__c</fullName>
+        <externalId>false</externalId>
+        <label>Receive Penalties</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Recommendation__c</fullName>
+        <externalId>false</externalId>
+        <label>Recommendation</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Full Approval</fullName>
+                    <default>false</default>
+                    <label>Full Approval</label>
+                </value>
+                <value>
+                    <fullName>Conditional Approval</fullName>
+                    <default>false</default>
+                    <label>Conditional Approval</label>
+                </value>
+                <value>
+                    <fullName>Approved with Reservations</fullName>
+                    <default>false</default>
+                    <label>Approved with Reservations</label>
+                </value>
+                <value>
+                    <fullName>Basic Screen</fullName>
+                    <default>false</default>
+                    <label>Basic Screen</label>
+                </value>
+                <value>
+                    <fullName>Not Approved/Screened</fullName>
+                    <default>false</default>
+                    <label>Not Approved/Screened</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ReimbursementPermitted__c</fullName>
+        <externalId>false</externalId>
+        <label>Reimbursement Permitted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ReimbursementWindow__c</fullName>
+        <externalId>false</externalId>
+        <label>Reimbursement Window</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Remedies__c</fullName>
+        <externalId>false</externalId>
+        <label>Remedies</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Tax Sale</fullName>
+                    <default>false</default>
+                    <label>Tax Sale</label>
+                </value>
+                <value>
+                    <fullName>Foreclosure</fullName>
+                    <default>false</default>
+                    <label>Foreclosure</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ReserveGuarantyFund__c</fullName>
+        <externalId>false</externalId>
+        <label>Reserve/Guaranty Fund</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SIRConditions__c</fullName>
+        <externalId>false</externalId>
+        <label>SIR Conditions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ScopeofFinancing__c</fullName>
+        <externalId>false</externalId>
+        <label>Scope of Financing</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SourceOfFinancing__c</fullName>
+        <externalId>false</externalId>
+        <label>Source Of Financing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Preferred Capital Provider</fullName>
+                    <default>false</default>
+                    <label>Preferred Capital Provider</label>
+                </value>
+                <value>
+                    <fullName>External Capital Providers</fullName>
+                    <default>false</default>
+                    <label>External Capital Providers</label>
+                </value>
+                <value>
+                    <fullName>Right of First Refusal</fullName>
+                    <default>false</default>
+                    <label>Right of First Refusal</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>States</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TaxRollCutoff__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax Roll Cutoff</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TransferConditions__c</fullName>
+        <externalId>false</externalId>
+        <label>Transfer Conditions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>TransferofPACEAssessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Transfer of PACE Assessment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>UnderwritingRequirements__c</fullName>
+        <externalId>false</externalId>
+        <label>Underwriting Requirements</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>UnderwritingStatus__c</fullName>
+        <externalId>false</externalId>
+        <label>Underwriting Status</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+                <value>
+                    <fullName>Incomplete</fullName>
+                    <default>false</default>
+                    <label>Incomplete</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ValuationMethod__c</fullName>
+        <externalId>false</externalId>
+        <label>Valuation Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>As Is</fullName>
+                    <default>false</default>
+                    <label>As Is</label>
+                </value>
+                <value>
+                    <fullName>As Complete</fullName>
+                    <default>false</default>
+                    <label>As Complete</label>
+                </value>
+                <value>
+                    <fullName>As Stabilized</fullName>
+                    <default>false</default>
+                    <label>As Stabilized</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Program</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>State__c</columns>
+        <columns>ActiveProgram__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Program Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Programs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Open_PACE_Report</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Sorting Hat</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com?
+sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;Id={!Program__c.Id }
+
+
+&amp;TemplateId=a0h0a000006v7LU
+&amp;QueryId=a0Z0a00000GhnEE</url>
+    </webLinks>
+</CustomObject>

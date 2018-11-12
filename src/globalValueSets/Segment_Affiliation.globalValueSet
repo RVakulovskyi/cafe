@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accounting</fullName>
+        <default>false</default>
+        <label>Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>Administrator</fullName>
+        <default>false</default>
+        <label>Administrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Affiliates</fullName>
+        <default>false</default>
+        <label>Affiliates</label>
+    </customValue>
+    <customValue>
+        <fullName>Appriaser</fullName>
+        <default>false</default>
+        <label>Appriaser</label>
+    </customValue>
+    <customValue>
+        <fullName>Architect</fullName>
+        <default>false</default>
+        <label>Architect</label>
+    </customValue>
+    <customValue>
+        <fullName>Asset Management</fullName>
+        <default>false</default>
+        <label>Asset Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank</fullName>
+        <default>false</default>
+        <label>Bank</label>
+    </customValue>
+    <customValue>
+        <fullName>Bond Issuer</fullName>
+        <default>false</default>
+        <label>Bond Issuer</label>
+    </customValue>
+    <customValue>
+        <fullName>Building Services</fullName>
+        <default>false</default>
+        <label>Building Services</label>
+    </customValue>
+    <customValue>
+        <fullName>City</fullName>
+        <default>false</default>
+        <label>City</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial Mortgage Broker</fullName>
+        <default>false</default>
+        <label>Commercial Mortgage Broker</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction Project Manager</fullName>
+        <default>false</default>
+        <label>Construction Project Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor-Electrical</fullName>
+        <default>false</default>
+        <label>Contractor-Electrical</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor-General</fullName>
+        <default>false</default>
+        <label>Contractor-General</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor-Mechanical</fullName>
+        <default>false</default>
+        <label>Contractor-Mechanical</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor - Roofing</fullName>
+        <default>false</default>
+        <label>Contractor - Roofing</label>
+    </customValue>
+    <customValue>
+        <fullName>County</fullName>
+        <default>false</default>
+        <label>County</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Union</fullName>
+        <default>false</default>
+        <label>Credit Union</label>
+    </customValue>
+    <customValue>
+        <fullName>Developer</fullName>
+        <default>false</default>
+        <label>Developer</label>
+    </customValue>
+    <customValue>
+        <fullName>Developer and Owner</fullName>
+        <default>false</default>
+        <label>Developer and Owner</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct-National</fullName>
+        <default>false</default>
+        <label>Direct-National</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct-Regional</fullName>
+        <default>false</default>
+        <label>Direct-Regional</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy Services and Consulting</fullName>
+        <default>false</default>
+        <label>Energy Services and Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy Storage Provider</fullName>
+        <default>false</default>
+        <label>Energy Storage Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Engineering Firm</fullName>
+        <default>false</default>
+        <label>Engineering Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Entity</fullName>
+        <default>false</default>
+        <label>Entity</label>
+    </customValue>
+    <customValue>
+        <fullName>Environmental Consultant</fullName>
+        <default>false</default>
+        <label>Environmental Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Equipment Rep</fullName>
+        <default>false</default>
+        <label>Equipment Rep</label>
+    </customValue>
+    <customValue>
+        <fullName>Equipment Supplier</fullName>
+        <default>false</default>
+        <label>Equipment Supplier</label>
+    </customValue>
+    <customValue>
+        <fullName>ESCO</fullName>
+        <default>false</default>
+        <label>ESCO</label>
+    </customValue>
+    <customValue>
+        <fullName>Federal Government</fullName>
+        <default>false</default>
+        <label>Federal Government</label>
+    </customValue>
+    <customValue>
+        <fullName>Finance Company</fullName>
+        <default>false</default>
+        <label>Finance Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial Advisor</fullName>
+        <default>false</default>
+        <label>Financial Advisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Full Service CRE Firm</fullName>
+        <default>false</default>
+        <label>Full Service CRE Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Government</fullName>
+        <default>false</default>
+        <label>Government</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare Financial Advisor</fullName>
+        <default>false</default>
+        <label>Healthcare Financial Advisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Industry Association</fullName>
+        <default>false</default>
+        <label>Industry Association</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Investment Sales and Leasing</fullName>
+        <default>false</default>
+        <label>Investment Sales and Leasing</label>
+    </customValue>
+    <customValue>
+        <fullName>Investor</fullName>
+        <default>false</default>
+        <label>Investor</label>
+    </customValue>
+    <customValue>
+        <fullName>Law Firm</fullName>
+        <default>false</default>
+        <label>Law Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Loan Broker</fullName>
+        <default>false</default>
+        <label>Loan Broker</label>
+    </customValue>
+    <customValue>
+        <fullName>Media</fullName>
+        <default>false</default>
+        <label>Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortgage Lender</fullName>
+        <default>false</default>
+        <label>Mortgage Lender</label>
+    </customValue>
+    <customValue>
+        <fullName>Multiple Properties</fullName>
+        <default>false</default>
+        <label>Multiple Properties</label>
+    </customValue>
+    <customValue>
+        <fullName>Municipality</fullName>
+        <default>false</default>
+        <label>Municipality</label>
+    </customValue>
+    <customValue>
+        <fullName>Owners Rep</fullName>
+        <default>false</default>
+        <label>Owners Rep</label>
+    </customValue>
+    <customValue>
+        <fullName>Owner-User</fullName>
+        <default>false</default>
+        <label>Owner-User</label>
+    </customValue>
+    <customValue>
+        <fullName>PACE Project Developer</fullName>
+        <default>false</default>
+        <label>PACE Project Developer</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Management</fullName>
+        <default>false</default>
+        <label>Property Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate Advisor</fullName>
+        <default>false</default>
+        <label>Real Estate Advisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate Service Company</fullName>
+        <default>false</default>
+        <label>Real Estate Service Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Servicer</fullName>
+        <default>false</default>
+        <label>Servicer</label>
+    </customValue>
+    <customValue>
+        <fullName>Single Property</fullName>
+        <default>false</default>
+        <label>Single Property</label>
+    </customValue>
+    <customValue>
+        <fullName>Software Platform</fullName>
+        <default>false</default>
+        <label>Software Platform</label>
+    </customValue>
+    <customValue>
+        <fullName>Solar Developer</fullName>
+        <default>false</default>
+        <label>Solar Developer</label>
+    </customValue>
+    <customValue>
+        <fullName>Solar Distributor</fullName>
+        <default>false</default>
+        <label>Solar Distributor</label>
+    </customValue>
+    <customValue>
+        <fullName>Solar EPC</fullName>
+        <default>false</default>
+        <label>Solar EPC</label>
+    </customValue>
+    <customValue>
+        <fullName>Solar Finance Company</fullName>
+        <default>false</default>
+        <label>Solar Finance Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Solar Manufacturer</fullName>
+        <default>false</default>
+        <label>Solar Manufacturer</label>
+    </customValue>
+    <customValue>
+        <fullName>State Government</fullName>
+        <default>false</default>
+        <label>State Government</label>
+    </customValue>
+    <customValue>
+        <fullName>Sustainability Consultant</fullName>
+        <default>false</default>
+        <label>Sustainability Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Title Report</fullName>
+        <default>false</default>
+        <label>Title Report</label>
+    </customValue>
+    <customValue>
+        <fullName>Utility</fullName>
+        <default>false</default>
+        <label>Utility</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Conservation Firm</fullName>
+        <default>false</default>
+        <label>Water Conservation Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Wealth Management Firm</fullName>
+        <default>false</default>
+        <label>Wealth Management Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Lifeco</fullName>
+        <default>false</default>
+        <label>Lifeco</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Debt Fund</fullName>
+        <default>false</default>
+        <label>Private Debt Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>Family Office</fullName>
+        <default>false</default>
+        <label>Family Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Pension Fund</fullName>
+        <default>false</default>
+        <label>Pension Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>Hard Money Lender</fullName>
+        <default>false</default>
+        <label>Hard Money Lender</label>
+    </customValue>
+    <customValue>
+        <fullName>CMBS</fullName>
+        <default>false</default>
+        <label>CMBS</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortgage REIT</fullName>
+        <default>false</default>
+        <label>REIT</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortgage Lender - Direct-National</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mortgage Lender - Direct-National</label>
+    </customValue>
+    <customValue>
+        <fullName>Consultant/Engineering; Equipment Manufacturer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Consultant/Engineering; Equipment Manufacturer</label>
+    </customValue>
+    <customValue>
+        <fullName>Financing PACE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Financing PACE</label>
+    </customValue>
+    <customValue>
+        <fullName>Federal Regulator</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Federal Regulator</label>
+    </customValue>
+    <customValue>
+        <fullName>CREO</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CREO</label>
+    </customValue>
+    <customValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Education</label>
+    </customValue>
+    <customValue>
+        <fullName>Admin</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Architects</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Architects</label>
+    </customValue>
+    <customValue>
+        <fullName>Building Services-EE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Building Services-EE</label>
+    </customValue>
+    <customValue>
+        <fullName>Building Services-Water</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Building Services-Water</label>
+    </customValue>
+    <customValue>
+        <fullName>Solar Integrator</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Solar Integrator</label>
+    </customValue>
+    <customValue>
+        <fullName>Engineering firms</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Engineering firms</label>
+    </customValue>
+    <customValue>
+        <fullName>PACE Project Developers</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PACE Project Developers</label>
+    </customValue>
+    <customValue>
+        <fullName>Real estate service companies</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Real estate service companies</label>
+    </customValue>
+    <customValue>
+        <fullName>Equipment Reps</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Equipment Reps</label>
+    </customValue>
+    <customValue>
+        <fullName>Multi Property</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Multi Property</label>
+    </customValue>
+    <customValue>
+        <fullName>Sustainability Consultants</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sustainability Consultants</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Direct</label>
+    </customValue>
+    <customValue>
+        <fullName>Equipment Suppliers</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Equipment Suppliers</label>
+    </customValue>
+    <customValue>
+        <fullName>ESCOs</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ESCOs</label>
+    </customValue>
+    <customValue>
+        <fullName>channel partner</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>channel partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortgage Lender - Credit Union</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mortgage Lender - Credit Union</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortgage Lender - Direct-Regional</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mortgage Lender - Direct-Regional</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortgage Lender - Servicer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Mortgage Lender - Servicer</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction Property Manager</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Construction Property Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Software Platform-EE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Software Platform-EE</label>
+    </customValue>
+    <customValue>
+        <fullName>NA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>NA</label>
+    </customValue>
+    <customValue>
+        <fullName>Full Service CRE</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Full Service CRE</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy Sevice and Consulting</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Energy Sevice and Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>Building Service</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Building Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction Company</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Construction Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy Service and Consultant</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Energy Service and Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor- General</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Contractor- General</label>
+    </customValue>
+    <customValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Client</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Client</label>
+    </customValue>
+    <customValue>
+        <fullName>Attorneys; CHP Project Developer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Attorneys; CHP Project Developer</label>
+    </customValue>
+    <customValue>
+        <fullName>CHP Project Developer; Consultant/Engineering; Financier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CHP Project Developer; Consultant/Engineering; Financier</label>
+    </customValue>
+    <customValue>
+        <fullName>CHP Project Developer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CHP Project Developer</label>
+    </customValue>
+    <customValue>
+        <fullName>CHP Project Developer; Construction; Consultant/Engineering; End-user; Equipment Manufacturer; ESCO; Financier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CHP Project Developer; Construction; Consultant/Engineering; End-user; Equipment Manufacturer; ESCO; Financier</label>
+    </customValue>
+    <customValue>
+        <fullName>Financier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Financier</label>
+    </customValue>
+    <customValue>
+        <fullName>CHP Project Developer; Consultant/Engineering</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CHP Project Developer; Consultant/Engineering</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Governmental Organization (NGO)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Non-Governmental Organization (NGO)</label>
+    </customValue>
+    <customValue>
+        <fullName>CHP Project Developer; Equipment Manufacturer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CHP Project Developer; Equipment Manufacturer</label>
+    </customValue>
+    <customValue>
+        <fullName>Equipment Manufacturer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Equipment Manufacturer</label>
+    </customValue>
+    <customValue>
+        <fullName>CHP Project Developer; Financier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CHP Project Developer; Financier</label>
+    </customValue>
+    <customValue>
+        <fullName>CHP Project Developer; Construction; Consultant/Engineering; Equipment Manufacturer; ESCO</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CHP Project Developer; Construction; Consultant/Engineering; Equipment Manufacturer; ESCO</label>
+    </customValue>
+    <customValue>
+        <fullName>CHP Project Developer; Construction; ESCO</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CHP Project Developer; Construction; ESCO</label>
+    </customValue>
+    <customValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Competitor</label>
+    </customValue>
+    <masterLabel>Segment Affiliation</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

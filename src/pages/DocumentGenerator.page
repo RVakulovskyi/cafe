@@ -1,0 +1,59 @@
+<apex:page controller="DocumentsGenerationCntr">
+ <apex:form id="theForm" onkeypress="return event.keyCode != 13;">
+     <apex:actionRegion >  
+    <apex:pageBlock title="Select opportunity doc generation">
+        <apex:pageMessages />
+         <apex:actionStatus id="status">
+                  <center>
+            <apex:facet name="start">
+                <apex:image id="theImage" value="/apexpages/devmode/img/saveStatus.gif" width="16" height="16"/>
+            </apex:facet>
+                  </center>
+                </apex:actionStatus>
+        <apex:selectList size="1" value="{!picklistValue}">
+            <apex:selectOptions value="{!DocumentTypes}"/>
+        </apex:selectList>
+        
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Cancel" action="{!back}"/>
+            <apex:commandButton value="Generate fields" action="{!returnFieldSetList}" reRender="theForm" status="status"/>
+            <apex:commandButton value="Generate Link" action="{!generateButton}" rerender="theForm" rendered="{!mapOfFieldSets != null}"/>
+        </apex:PageBlockButtons>
+    </apex:pageBlock>
+     </apex:actionRegion>
+     <apex:actionRegion > 
+        <apex:pageBlock rendered="{!mapOfFieldSets != null && picklistValue != 'Generate DRL'}" title="{!picklistValue} fields"> 
+            <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!saveOpp}"/>
+        </apex:pageBlockButtons>
+     <apex:repeat value="{!mapOfFieldSets}" var="fieldSetItemKey">
+            <apex:pageBlockSection collapsible="false" title="{!fieldSetItemKey}">
+                <apex:repeat value="{!mapOfFieldSets[fieldSetItemKey]}" var="fieldSetItem">
+                        <apex:inputField value="{!inputOpp[fieldSetItem.fieldPath]}" required="{!OR(fieldSetItem.required, fieldSetItem.dbrequired)}"/>
+                </apex:repeat>
+            </apex:pageBlockSection> 
+          </apex:repeat>
+     </apex:pageBlock>
+     <apex:pageBlock rendered="{!generatedLink != null}" title="Document generator link">
+        <a target="_blank" href="{!generatedLink}" >Document Link</a>
+    </apex:pageBlock>
+         
+    <apex:pageBlock rendered="{!mapOfFieldSets != null && picklistValue = 'Generate DRL'}" title="{!picklistValue} fields"> 
+            <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!saveOpp}"/>
+        </apex:pageBlockButtons>
+            <apex:pageBlockSection collapsible="false" title="Prior to generating the Document Request List, please verify that the data below is correct:">
+                <apex:inputField value="{!inputAcc.Entity_Type__c}"/>
+                <apex:inputField value="{!inputAcc.Entity_Sub_Type__c}"/>
+                <apex:inputField value="{!inputOpp.State_Prop__c}"/>
+                <apex:inputField value="{!inputOpp.Solar_TPO_Structure__c}"/>
+                <apex:inputField value="{!inputOpp.App_Executed_Date__c}"/>
+                <apex:inputField value="{!inputOpp.CF_Due_Diligence_Deposit__c}"/>
+            </apex:pageBlockSection> 
+     </apex:pageBlock>
+
+     </apex:actionRegion>
+
+    
+    </apex:form>
+</apex:page>

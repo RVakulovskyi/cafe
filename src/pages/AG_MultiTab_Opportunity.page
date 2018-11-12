@@ -1,0 +1,93 @@
+<apex:page sidebar="false" showHeader="true" docType="html-4.01-strict">
+
+<div id="tabstrip" style="display:none;"> <ul> 
+<li class="k-state-active">My Open Opps</li>
+<li>Quick Create</li>
+<li>PreQual to Qual</li>
+<li>Term Sheet</li>
+</ul>
+
+
+<!-- My Open Opps -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Opportunity" DelayLoad="true"  ViewID="a0Cj000000BEPyK"
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+<!-- Quick Create AG -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Opportunity" DelayLoad="true"  ViewID="a0Cj000000BEQ1IEAX" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+ 
+ <!-- PreQual to Qual -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Opportunity" DelayLoad="true"  ViewID="a0C0a00000DKMBU" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+ 
+  <!-- Term Sheet -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Opportunity" DelayLoad="true"  ViewID="a0C0a00000DKMwx" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+ 
+
+</div>
+<script>
+$(document).ready(function() {
+    $("#tabstrip").kendoTabStrip({
+      activate: function(e){
+        setTimeout(function(){          $(window).resize();        });
+      }
+    });
+    $("#tabstrip").css("display", "block");
+});
+ </script>
+ <script type="text/javascript">
+            function openLookup(baseURL, width, modified, searchParam) {
+        /*IE fix */
+            if (!String.prototype.startsWith) {
+                String.prototype.startsWith = function(searchString, position) {
+                    position = position || 0;
+                    return this.indexOf(searchString, position) === position;
+                };
+            }
+
+            var lookupType;
+
+            var urlParams = baseURL.split("&");
+            for (i = 0; i < urlParams.length; i++) {
+                if (urlParams[i].startsWith('lktp')) {
+                    lookupType = urlParams[i].split('=')[1];
+                }
+            }
+
+            // Following "001" is the lookup type for Account object
+            if (lookupType == "001") {
+                var customBaseURL = "{!$Site.BaseUrl}/apex/CustomLookupAccount?frm=" + escapeUTF("{!$Component.OpportunityView.opportunityForm}")
+                            + '&' + baseURL.split('?')[1];
+
+                if (modified == '1') {
+                    customBaseURL += searchParam;
+                }
+
+                openPopup(customBaseURL, "lookup", 0, 100, "width=" + width + ",height=500,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            } else {
+                if (modified == '1') {
+                    baseURL = baseURL + searchParam;
+                }
+                openPopup(baseURL, "lookup", 0, 0, "width=" + width + ",height=500,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            }
+        }
+
+    </script>
+</apex:page>

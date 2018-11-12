@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>State</fullName>
+        <default>false</default>
+        <label>State</label>
+    </customValue>
+    <customValue>
+        <fullName>Municipality</fullName>
+        <default>false</default>
+        <label>Municipality</label>
+    </customValue>
+    <customValue>
+        <fullName>Program</fullName>
+        <default>false</default>
+        <label>Program</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>ProgramDev</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,13 @@
+<aura:component controller="fetchPicklistOptsControllerCustom" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="objName" type="String" />
+    <aura:attribute name="picklistName" type="String"/>
+    <aura:attribute name="currentValue" type="String"/>
+    <aura:attribute name="currentControlValue" type="String"/>
+    <aura:registerEvent name="picklistEvent" type="c:LightningPicklistEvent"/>
+   	<div class="slds-form-element" style="width : 50%;margin-left:1%;">
+      	<div class="slds-select_container">
+         	<ui:inputSelect  aura:id="picklistValueSelect" class="slds-select"  change="{!c.onPicklistChange}" value="{!v.currentValue}"/>
+      	</div>
+   	</div>
+</aura:component>

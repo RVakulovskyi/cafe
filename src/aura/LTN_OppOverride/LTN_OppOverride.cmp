@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId"> 
+    <aura:attribute name="oppId" type="String"/> 
+    <force:recordView recordId="{!v.oppId}" type="FULL"/> 
+</aura:component>

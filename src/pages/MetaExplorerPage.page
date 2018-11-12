@@ -1,0 +1,70 @@
+<apex:page controller="MetadataExplorer">
+    <apex:form id="theForm">
+    	<apex:pageBlock title="Select object">
+            
+              <apex:actionStatus id="status" startText="Loading AND sorting Object metadata...">
+                  <center>
+			<apex:facet name="start">
+				<apex:image id="theImage" value="/apexpages/devmode/img/saveStatus.gif" width="16" height="16"/>
+			</apex:facet>
+                  </center>
+                </apex:actionStatus>
+
+        	<apex:selectList value="{!objName}" size="1" onchange="nullify()">
+                <apex:selectOption itemLabel="--None--" itemValue="--None--"/>
+                <apex:selectOptions value="{!ObjectPicklistValues}"/>
+            </apex:selectList>
+            <apex:selectList value="{!selectChoiceValue}" size="1" onchange="nullify()">
+                <apex:selectOption itemLabel="--All--" itemValue="All"/>
+                <apex:selectOptions value="{!SectionSelector}"/>
+            </apex:selectList>
+            <apex:actionFunction action="{!showDetails}" rerender="theForm" name="nullify" status="status"/>
+        </apex:pageBlock>
+     <apex:outputPanel rendered="{!(listOfFieldsToReturn != null && objName != null && listOfFieldsToReturn.size > 0 && selectChoiceValue = 'Fields') || (listOfFieldSetsToReturn != null && objName != null && listOfFieldSetsToReturn.size > 0 && selectChoiceValue = 'FieldSets') || (listOfRecordTypeToReturn != null && objName != null && listOfRecordTypeToReturn.size > 0 && selectChoiceValue = 'RecordTypes') || ((listOfRecordTypeToReturn != null || listOfFieldSetsToReturn != null || listOfFieldsToReturn != null) && selectChoiceValue = 'All')}">
+         <apex:pageBlock mode="mainDetail">
+             <apex:pageBlockButtons >
+                 <apex:outputLink value="/apex/MetaExplorerPagePDF?objName={!objName}&choiceName={!selectChoiceValue}" target="_blank" styleClass="btn" style="text-decoration: none;">Generate pdf</apex:outputLink>
+                <apex:commandlink value="Clear" action="{!nullifyingLists}" styleClass="btn" style="text-decoration: none;" status="status"/>
+             </apex:pageBlockButtons>
+        <apex:pageBlock title="{!objName} fields"  rendered="{!listOfFieldsToReturn != null && objName != null && listOfFieldsToReturn.size > 0 && (selectChoiceValue = 'Fields' || selectChoiceValue = 'All')}">
+        	<apex:pageBlockTable value="{!listOfFieldsToReturn}" var="itemField">
+                <apex:column headerValue="Label">
+                    <apex:outputText value="{!itemField.labelName}"/>
+                </apex:column>
+                <apex:column headerValue="Api Name">
+                    <apex:outputText value="{!itemField.apiName}"/>
+                </apex:column>
+                <apex:column headerValue="Helper text">
+                    <apex:outputText value="{!itemField.helperText}"/>
+                </apex:column>
+                <apex:column headerValue="Field Type">
+                    <apex:outputText value="{!itemField.typeName}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="{!objName} fieldsets" rendered="{!listOfFieldSetsToReturn != null && objName != null && listOfFieldSetsToReturn.size > 0 && (selectChoiceValue = 'FieldSets' || selectChoiceValue = 'All')}">
+        	<apex:pageBlockTable value="{!listOfFieldSetsToReturn}" var="itemFieldSet">
+                <apex:column headerValue="Label">
+                    <apex:outputText value="{!itemFieldSet.labelName}"/>
+                </apex:column>
+                <apex:column headerValue="Api Name">
+                    <apex:outputText value="{!itemFieldSet.apiName}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="{!objName} recordtypes" rendered="{!listOfRecordTypeToReturn != null && objName != null && listOfRecordTypeToReturn.size > 0 && (selectChoiceValue = 'RecordTypes' || selectChoiceValue = 'All')}">
+			<apex:pageBlockTable value="{!listOfRecordTypeToReturn}" var="itemRecordType">
+                <apex:column headerValue="Name">
+                    <apex:outputText value="{!itemRecordType.recordTypeName}"/>
+                </apex:column>
+                <apex:column headerValue="Record Type Id">
+                    <apex:outputText value="{!itemRecordType.recordTypeId}"/>
+                </apex:column>
+            </apex:pageBlockTable>        
+        </apex:pageBlock>
+	</apex:pageBlock>
+    </apex:outputPanel>
+    </apex:form>
+</apex:page>

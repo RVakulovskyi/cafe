@@ -1,0 +1,35 @@
+<apex:page standardController="Opportunity" extensions="OpportunityStagingChecker" id="thePage">
+    <apex:form id="theForm">
+   <apex:actionRegion >     
+    <apex:pageBlock title="Select opportunity stage" id="pb1">
+        <apex:pageMessages />
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!renderFields}" value="Generate Fields" rerender="theForm"/>
+            <apex:commandButton action="{!closePage}" value="Cancel" immediate="true"/> 
+        </apex:pageBlockButtons>
+        <apex:selectList size="1" value="{!stageName}">
+            <apex:selectOptions value="{!StageValues}"/>
+        </apex:selectList>
+        
+    </apex:pageBlock>
+       </apex:actionRegion> 
+<apex:actionRegion >
+    <apex:pageBlock rendered="{!listofStagedFields != null}" title="Sections" id="pb2">
+        
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!saveOpp}"/>
+        </apex:pageBlockButtons>
+        
+         
+         <apex:repeat value="{!listofStagedFields}" var="fieldSetItemKey">
+            <apex:pageBlockSection collapsible="false" title="{!fieldSetItemKey}">
+                <apex:repeat value="{!listofStagedFields[fieldSetItemKey]}" var="fieldSetItem">
+                        <apex:inputField value="{!inputOpp[fieldSetItem.fieldPath]}" required="{!OR(fieldSetItem.required, fieldSetItem.dbrequired)}"/>
+                </apex:repeat>
+            </apex:pageBlockSection> 
+          </apex:repeat> 
+      
+    </apex:pageBlock>
+   </apex:actionRegion>        
+    </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<aura:component access="global" >
+    <aura:attribute name="map" type="Map" access="public"/>
+    <aura:attribute name="key" type="String"/>
+    <aura:attribute name="value" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:handler name="mapTransfer" event="c:ChildMapPass" action="{!c.processEvent}"/>
+    
+
+        {!v.value}
+ 
+
+
+</aura:component>

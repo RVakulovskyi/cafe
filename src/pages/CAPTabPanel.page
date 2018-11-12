@@ -1,0 +1,427 @@
+<apex:page standardController="Opportunity" extensions="OppCAPTemplateCntr" doctype="html-5.0" lightningStyleSheets="true">
+<script>
+
+</script>
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!save}" value="Save"/>
+             <apex:commandButton value="Export in Excel"/>
+            <apex:commandButton action="{!cancel}" value="Cancel"/>
+        </apex:pageBlockButtons>
+    <apex:tabPanel switchType="client" selectedtab="summary" >
+        <apex:tab label="Summary" id="summary">
+            <apex:pageBlockSection columns="2" title="EXECUTIVE SUMMARY {!oppItem.Name} :">
+                <apex:inputField value="{!oppItem.Name}" />
+                <apex:inputField value="{!oppItem.Opportunity_Identifier__c}" />
+                 <apex:inputField value="{!oppItem.Primary_Property_Type__c}" />
+                <apex:inputField value="{!oppItem.Physical_Address__c}" />
+                 <apex:inputField value="{!oppItem.Sub_Vertical_Property_Type__c}" />
+                <apex:inputField value="{!oppItem.Municipality__c}" />
+                 <apex:inputField value="{!oppItem.State_Prop__c}" />
+                 <apex:inputField value="{!oppItem.Project_Cost__c}" />
+                <apex:inputField value="{!oppItem.Zip_Code__c}" />
+                 <apex:inputField value="{!oppItem.Net_Rentable_Sq_Foot__c}" />
+                <apex:inputField value="{!oppItem.MSA_Metropolitan_Statistical_Area__c}" />
+                 <apex:inputField value="{!oppItem.Tenancy_Type__c}" />
+                <apex:inputField value="{!oppItem.Project_Type__c}" />
+                 <apex:inputField value="{!oppItem.Type_of_Improvements_Multi__c}" />
+                <apex:inputField value="{!oppItem.LeadSource}" />
+                 <apex:inputField value="{!oppItem.Sub_Lead_Source__c}" />
+              </apex:pageBlockSection>
+              <apex:pageBlockSection columns="2" title="C-PACE FINANCING TERMS:">
+                     <apex:inputField value="{!oppItem.PACE_Program_New__c}" />
+                <apex:inputField value="{!oppItem.PACE_Program_Administrator__c}" />
+                 <apex:inputField value="{!oppItem.Financing_Amount__c}" />
+                <apex:inputField value="{!oppItem.Project_Cost__c}" />
+                 <apex:inputField value="{!oppItem.Loan_Term__c}" />
+                <apex:inputField value="{!oppItem.Benchmark_Type__c}" />
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel for="test">Benchmark (%): </apex:outputLabel>
+                 <apex:inputText id="test"/>
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                 <apex:outputLabel >Spread (%): </apex:outputLabel>
+                 <apex:outputText value="{!oppItem.Spread__c / 100}"/>
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                  <apex:outputLabel >C-PACE Prepay Terms: </apex:outputLabel>
+                  <apex:inputText />
+                  </apex:pageBlockSectionItem>
+                  <apex:pageBlockSectionItem >
+                  <apex:outputLabel >C-PACE Coupon: </apex:outputLabel>
+                <apex:outputText value="{!oppItem.Spread__c / 100 + oppItem.Benchmark_at_Commit__c / 100}" id="cPaceCoupon"/>
+                </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                <apex:outputLabel >C-PACE Yield to Maturity: </apex:outputLabel>
+                 <apex:outputText value="{!oppItem.PACE_Yield_to_Maturity__c / 100}" />
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                   <apex:outputLabel >C-PACE Payment-to-Value: </apex:outputLabel>
+                  <apex:inputText />
+                  </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                     <apex:outputLabel >C-PACE Average Payment: </apex:outputLabel>
+                  <apex:inputText />
+                   </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                       <apex:outputLabel > C-PACE Total Payments: </apex:outputLabel>
+                  <apex:inputText />
+                   </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                       <apex:outputLabel >Savings over Fin. Term: </apex:outputLabel>
+                  <apex:inputText />
+                    </apex:pageBlockSectionItem>
+              </apex:pageBlockSection>
+              <apex:pageBlockSection columns="2" title="VALUATION:">
+                       <apex:inputField value="{!oppItem.Property_Market_Value_Est__c}" />
+                 <apex:inputField value="{!oppItem.Last_Appraisal_Date__c}" />
+                <apex:inputField value="{!oppItem.Property_Market_Value_Based_Upon__c}" />
+                 <apex:inputField value="{!oppItem.Appraisal_Firm__c}" />
+                  <apex:pageBlockSectionItem >
+                          <apex:outputLabel >Savings over Fin. Term: </apex:outputLabel>
+                  <apex:outputText value="{!oppItem.Income_Approach_Cap_Rate_OAR__c / 100}" />
+                  </apex:pageBlockSectionItem>
+              </apex:pageBlockSection>
+        </apex:tab>
+        <apex:tab label="Analysis" id="analysis">
+              <apex:pageBlockSection columns="2" title="PROPERTY VALUATION :">
+                <apex:inputField value="{!oppItem.Property_Market_Value_Est__c}" />
+                <apex:inputField value="{!oppItem.As_Is_Appraised_Value__c}" />
+                 <apex:inputField value="{!oppItem.Property_Market_Value_Based_Upon__c}" />
+                <apex:inputField value="{!oppItem.Appraised_Property_Value_As_Complete__c}" />
+                 <apex:inputField value="{!oppItem.Appraisal_Firm__c}" />
+                <apex:inputField value="{!oppItem.As_Stabalized_Appraised_Value__c}" />
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel >Appraisal Cap Rate: </apex:outputLabel>
+                <apex:outputText value="{!oppItem.Income_Approach_Cap_Rate_OAR__c / 100}" />
+                </apex:pageBlockSectionItem>
+                 <apex:inputField value="{!oppItem.Income_Approach_Value__c}" />
+                <apex:inputField value="{!oppItem.As_Is_Land_Value__c}" />
+                 <apex:inputField value="{!oppItem.Sales_Comparison_Approach_Value__c}" />
+                 <apex:pageBlockSectionItem >
+                 <apex:outputLabel >C-PACE Lien-to-Land Value: </apex:outputLabel>
+                <apex:inputText />
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{!oppItem.Cost_Approach_Value__c}" />
+              </apex:pageBlockSection>
+              <apex:pageBlockSection columns="2" title="C-PACE FINANCING STRUCTURE  & UNDERWRITING METRICS :">
+              <apex:pageBlockSectionItem >
+                <apex:outputLabel >Type of Security Instrument: </apex:outputLabel>
+                <apex:inputText />
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{!oppItem.CF_Program__c}" />
+                <apex:inputField value="{!oppItem.Opportunity_Identifier__c}" />
+                 <apex:inputField value="{!oppItem.Loan_Term__c}" />
+                <apex:inputField value="{!oppItem.Benchmark_Type__c}" />
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel for="test">First Payment Date: </apex:outputLabel>
+                <apex:inputText size="10" id="nxtmondt" onfocus="DatePicker.pickDate(false, this , false);" />
+                 </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel >First Investor Payment Date: </apex:outputLabel>
+                 <apex:inputText size="10" id="nxtmondt2" onfocus="DatePicker.pickDate(false, this , false);" />
+                 </apex:pageBlockSectionItem>
+                 <apex:pageBlockSectionItem >
+                <apex:outputLabel >C-PACE Yield to Maturity: </apex:outputLabel>
+                 <apex:outputText value="{!oppItem.PACE_Yield_to_Maturity__c / 100}" />
+                 </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel > Average Annual C-PACE PMT: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                 <apex:pageBlockSectionItem >
+                <apex:outputLabel > Annual RE Tax + C-PACE PMT: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                 <apex:pageBlockSectionItem >
+                <apex:outputLabel > C-PACE Payment-to-Value (PTV):</apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                                  <apex:pageBlockSectionItem >
+                <apex:outputLabel > Annual RE Taxes PTV: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                                                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > Annual RE Taxes + C-PACE PTV: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                                                         <apex:pageBlockSectionItem >
+                <apex:outputLabel > C-PACE Lien-to-Value (LiTV): </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+
+                       <apex:inputField value="{!oppItem.Current_Property_Taxes__c}" />
+                 <apex:inputField value="{!oppItem.Project_Cost__c}" />
+                <apex:inputField value="{!oppItem.Accrual_Method__c}" />
+                 <apex:inputField value="{!oppItem.Is_Capitalized_Interest_Financed__c}" />
+                   <apex:inputField value="{!oppItem.Prepay_Penalty_Premium__c}" />
+                 <apex:inputField value="{!oppItem.Bill_Type__c}" />
+                                                                         <apex:pageBlockSectionItem >
+                <apex:outputLabel >C-PACE Prepay Terms: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                                                                          <apex:pageBlockSectionItem >
+                <apex:outputLabel >UW DSCR (Mortgage only): </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                                                                          <apex:pageBlockSectionItem >
+                <apex:outputLabel > Combined UW DSCR: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                     <apex:inputField value="{!oppItem.Payment_Frequency__c}" />                                                                  
+              </apex:pageBlockSection>
+        </apex:tab>
+        <apex:tab label="Collateral" id="collateral">
+            <apex:pageBlockSection columns="1" title="COLLATERAL INFORMATION">
+                QUALITY, OVERALL ACREAGE, DEMOGRAPHICS, LOCATION, NUMBER OF PEOPLE BUSINESS IS EMPLOYING ENTER INFORMATION FROM APPRIAISAL ABOUT PROPERTY, CHANGE FONT TO BLACK WHEN COMPLETED 
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="PROPERTY INFORMATION:">
+                 <apex:inputField value="{!oppItem.Name}" />
+                  <apex:pageBlockSectionItem >
+                <apex:outputLabel > Property Type / Condition: </apex:outputLabel>
+                 <apex:outputText value="{!oppItem.Primary_Property_Type__c +' / '+oppItem.Property_Condition__c}"/>
+                 </apex:pageBlockSectionItem>
+                <apex:inputField value="{!oppItem.Physical_Address__c}" />
+                 <apex:pageBlockSectionItem >
+                <apex:outputLabel > City / State / Zip - MSA: </apex:outputLabel>
+                 <apex:outputText value="{!oppItem.Municipality__c +' , '+oppItem.State_Prop__c+' , '+oppItem.State_Prop__c+' , '+oppItem.Zip_Code__c+' , '+oppItem.County__c}"/>
+                 </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel > Gross / Net Rentable Area: </apex:outputLabel>
+                 <apex:outputText value="{!TEXT(oppItem.Gross_Building_Area_sf__c) +' / '+TEXT(oppItem.Net_Rentable_Sq_Foot__c)}"/>
+                 </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                <apex:outputLabel > Year Built / Renovated: </apex:outputLabel>
+                 <apex:outputText />
+                 </apex:pageBlockSectionItem>
+                                       <apex:pageBlockSectionItem >
+                <apex:outputLabel > # Stories / # Buildings: </apex:outputLabel>
+                 <apex:outputText value="{!TEXT(oppItem.Stories__c) +' / '+TEXT(oppItem.Buildings__c)}"/>
+                 </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel > Land Area: </apex:outputLabel>
+                 <apex:outputText value="{!TEXT(oppItem.Gross_Land_Area_sq_ft__c) +' / '+TEXT(oppItem.Gross_Land_Area_Acre_Foot__c)}"/>
+                 </apex:pageBlockSectionItem>
+                                 <apex:pageBlockSectionItem >
+                <apex:outputLabel > Occupancy % / Date: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                              <apex:pageBlockSectionItem >
+                <apex:outputLabel > Ground Lease / Exp: </apex:outputLabel>
+                 <apex:outputText value="{!oppItem.Ground_Lease_Type__c +' / '+Text(oppItem.If_groundlease_expiration_date__c)}"/>
+                 </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="MORTGAGE INFORMATION:">
+                      <apex:repeat value="{!Lien}" var="lienVar">
+                         <apex:inputField value="{!lienVar.Type_of_Lender__c}" />
+                        <apex:inputField value="{!lienVar.Origination_Date__c}" />
+                        <apex:inputField value="{!lienVar.Interest_Rate_Type__c}" />
+                        <apex:inputField value="{!lienVar.Amortization_at_Origination_years__c}" />
+                        <apex:inputField value="{!lienVar.Current_Loan_Balance__c}" />
+                        <apex:inputField value="{!lienVar.Maturity_Date__c}" />
+                        <apex:inputField value="{!lienVar.Current_Balance_as_of_Date__c}" />
+                        <apex:inputField value="{!lienVar.Current_Loan_Balance__c}" />
+                         <apex:pageBlockSectionItem >
+                <apex:outputLabel > LTV: </apex:outputLabel>
+                 <apex:outputText value="{!lienVar.Current_Loan_Balance__c/oppItem.Property_Market_Value_Est__c}"/>
+                 </apex:pageBlockSectionItem>
+                </apex:repeat>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="TENANTS INFORMATION:">
+                <apex:repeat value="{!Tenants}" var="tenant">
+                         <apex:inputField value="{!tenant.Name}" />
+                        <apex:inputField value="{!tenant.TenantBySqFtSortOder__c}" />
+                        <apex:inputField value="{!tenant.Tenant_Income__c}" />
+                        <apex:inputField value="{!tenant.Tenant_Lease_Type__c}" />
+                        <apex:inputField value="{!tenant.Notes_and_Comments__c}" />
+                </apex:repeat>
+                   <apex:inputField value="{!oppItem.Net_Rentable_Sq_Foot__c}" />
+                        <apex:inputField value="{!oppItem.Number_of_Tenants__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="PROJECT INFORMATION:">
+                         <apex:inputField value="{!oppItem.Project_Type__c}" />
+                        <apex:inputField value="{!oppItem.Desired_Project_Start_Date__c}" />
+                        <apex:inputField value="{!oppItem.Desired_Project_Finish_Date__c}" />
+                        <apex:inputField value="{!oppItem.Solar_Developer__c}" />
+                         <apex:inputField value="{!oppItem.Solar_System_Ownershipo__c}" />
+                        <apex:inputField value="{!oppItem.Type_of_Improvements_Multi__c}" />
+                        <apex:inputField value="{!oppItem.Solar_Install_Type__c}" />
+                        <apex:inputField value="{!oppItem.Solar_PV_System_Size_kW__c}" />
+                            <apex:pageBlockSectionItem >
+                <apex:outputLabel > PPA: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!oppItem.PPA_Services_Term_Yrs__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="ENERGY SAVINGS METRICS:">
+                         <apex:inputField value="{!oppItem.Effective_Useful_Life_cost_weighted__c}" />
+                        <apex:inputField value="{!oppItem.Avoided_Cost_of_Electricity_ACOE__c}" />
+                          <apex:pageBlockSectionItem >
+                <apex:outputLabel > PACE Pmt to Inv. Ratio: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                           <apex:pageBlockSectionItem >
+                <apex:outputLabel > Total Savings (MMBtu): </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                                            <apex:pageBlockSectionItem >
+                <apex:outputLabel > Present Value of Project: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                                            <apex:pageBlockSectionItem >
+                <apex:outputLabel > Project Discount Rate: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                                            <apex:pageBlockSectionItem >
+                <apex:outputLabel > Annual CO2 Reduction: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                                                             <apex:pageBlockSectionItem >
+                <apex:outputLabel > Total EUI Savings: </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+                                                            <apex:pageBlockSectionItem >
+                <apex:outputLabel > Fuel Savings (MMBtu): </apex:outputLabel>
+                 <apex:inputText />
+                 </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="ZONING & INSURANCE:">
+              <apex:pageBlockSectionItem >
+                <apex:outputLabel > Flood Zone / MAP Panel Date: </apex:outputLabel>
+                 <apex:outputText value="{!oppItem.Flood_Category__c +' / '+oppItem.Flood_Panel_Map_Number__c+' / '+TEXT(oppItem.Flood_Map_Panel__c)}"/>
+                 </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!oppItem.Zoning_Status__c}" />
+                        <apex:inputField value="{!oppItem.Law_and_Ordinance_Insurance_in_place__c}" />
+                        <apex:inputField value="{!oppItem.Flood_Insurance_Required__c}" />
+                         <apex:pageBlockSectionItem >
+                <apex:outputLabel > Zoning Code/Name: </apex:outputLabel>
+                 <apex:outputText value="{!oppItem.Zoning_Code__c +' / '+oppItem.Zoning_Type__c}"/>
+                 </apex:pageBlockSectionItem>
+                        <apex:inputField value="{!oppItem.Insurance_Coverage_Level__c}" />
+            </apex:pageBlockSection>
+              <apex:pageBlockSection columns="2" title="ENVIRONMENTAL INFORMATION:">
+                        <apex:inputField value="{!oppItem.CF_Risk_Rating__c}" />
+                        <apex:inputField value="{!oppItem.Vendor_Environ_Screen_Risk_Rating__c}" />
+                        <apex:inputField value="{!oppItem.Existing_Phase_I_Report_Completed__c}" />
+                        <apex:inputField value="{!oppItem.Existing_Phase_I_Report_Date__c}" />
+                        <apex:inputField value="{!oppItem.Existing_Phase_II_Report_Completed__c}" />
+                        <apex:inputField value="{!oppItem.Existing_Phase_II_Report_Date__c}" />
+                        <apex:inputField value="{!oppItem.Cost_to_Cure__c}" />
+                        <apex:inputField value="{!oppItem.Vendor_Environ_Screen_Report_Date__c}" />
+                        <apex:inputField value="{!oppItem.Unresolved_Issues__c}" />
+            </apex:pageBlockSection>
+              <apex:pageBlockSection columns="1" title="TITLE STATUS:">
+                     <apex:inputField value="{!oppItem.CF_Risk_Rating__c}" />
+                        <apex:inputField value="{!oppItem.Title_Report_Provider__c}" />
+                        <apex:inputField value="{!oppItem.Title_Search_Type__c}" />
+                        <apex:outputField value="{!oppItem.Owner_of_Record__c}" />
+                        <apex:inputField value="{!accToGet.Public_Record_Search_Notes__c}" />
+               </apex:pageBlockSection>
+                <apex:pageBlockSection columns="3">
+                        <apex:inputField value="{!oppItem.Tax_Defaults_or_Delinquencies__c}" />
+                        <apex:inputField value="{!oppItem.Tax_Delinquencies_Date__c}" />
+                         <apex:inputField value="{!oppItem.Tax_Delinquencies_Notes__c}" />
+                        <apex:inputField value="{!oppItem.Mortgage_Delinquencies_or_Default__c}" />
+                        <apex:inputField value="{!oppItem.Mortgage_Delinquencies_Date__c}" />
+                         <apex:inputField value="{!oppItem.Mortgage_Delinquencies_Notes__c}" />
+                        <apex:inputField value="{!oppItem.Bankruptcy_Proceedings_or_Litigation__c}" />
+                        <apex:inputField value="{!oppItem.Litigation_Date__c}" />
+                         <apex:inputField value="{!oppItem.Litigation_Notes__c}" />
+                        <apex:inputField value="{!oppItem.Owner_Bankruptcy__c}" />
+                        <apex:inputField value="{!oppItem.Bankruptcy_Date__c}" />
+                         <apex:inputField value="{!oppItem.Bankruptcy_Notes__c}" />
+                        <apex:inputField value="{!oppItem.Involuntary_Liens__c}" />
+                        <apex:inputField value="{!oppItem.Involuntary_Liens_Date__c}" />
+                         <apex:inputField value="{!oppItem.Involuntary_Liens_Notes__c}" />
+            </apex:pageBlockSection>
+              <apex:pageBlockSection columns="1" title="OWNER INFORMATION:">
+              <apex:inputField value="{!oppItem.Legal_Name_of_Property_Owner__c}" />
+               <apex:inputField value="{!accToGet.Entity_Type__c}" />
+                 <apex:pageBlockSectionItem >
+                <apex:outputLabel > Entity Name: </apex:outputLabel>
+                 <apex:outputText value="{!accToGet.Name &' '& oppItem.Sub_Entity_1__r.Name &' '& oppItem.Sub_Entity_2__r.Name &' '&oppItem.Sub_Entity_3__r.Name}" />
+                 </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel > Status: </apex:outputLabel>
+                 <apex:outputText value="{!accToGet.Entity_Status__c &' '& oppItem.Sub_Entity_1__r.Entity_Status__c &' '& oppItem.Sub_Entity_2__r.Entity_Status__c &' '& oppItem.Sub_Entity_3__r.Entity_Status__c}" />
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel >Filing Date: </apex:outputLabel>
+                 <apex:outputText value="{!TEXT(accToGet.Entity_Date_Formed__c) &' '& TEXT(oppItem.Sub_Entity_1__r.Entity_Date_Formed__c) &' '& TEXT(oppItem.Sub_Entity_2__r.Entity_Date_Formed__c) &' '& TEXT(oppItem.Sub_Entity_3__r.Entity_Date_Formed__c)}"/>
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > Filing #:</apex:outputLabel>
+                 <apex:outputText value="{!accToGet.Entity_Filling__c&' '& oppItem.Sub_Entity_1__r.Entity_Filling__c &' '& oppItem.Sub_Entity_2__r.Entity_Filling__c &' '& oppItem.Sub_Entity_3__r.Entity_Filling__c}"/>
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > State: </apex:outputLabel>
+                 <apex:outputText value="{!accToGet.Entity_State__c&' '& oppItem.Sub_Entity_1__r.Entity_State__c &' '& oppItem.Sub_Entity_2__r.Entity_State__c &' '& oppItem.Sub_Entity_3__r.Entity_State__c}"/>
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > Tax ID or SSN:  </apex:outputLabel>
+                 <apex:outputText value="{!TEXT(accToGet.Entity_Tax_ID__c)&' '& TEXT(oppItem.Sub_Entity_1__r.Entity_Tax_ID__c) &' '& TEXT(oppItem.Sub_Entity_2__r.Entity_Tax_ID__c) &' '& TEXT(oppItem.Sub_Entity_3__r.Entity_Tax_ID__c)}"/>
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > Sponsor Name:  </apex:outputLabel>
+                 <apex:outputText value="{!accToGet.Sponsor_Name__c&' '& oppItem.Sub_Entity_1__r.Sponsor_Name__c &' '& oppItem.Sub_Entity_2__r.Sponsor_Name__c &' '& oppItem.Sub_Entity_3__r.Sponsor_Name__c}"/>
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > Active/Pending Litigation: </apex:outputLabel>
+                 <apex:outputText value="{!accToGet.Litigation__c&' '& oppItem.Sub_Entity_1__r.Litigation__c &' '& oppItem.Sub_Entity_2__r.Litigation__c &' '& oppItem.Sub_Entity_3__r.Litigation__c}"/>
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > Bankruptcy (prior 7 yrs.): </apex:outputLabel>
+                 <apex:outputText value="{!accToGet.Bankruptcy__c&' '& oppItem.Sub_Entity_1__r.Bankruptcy__c &' '& oppItem.Sub_Entity_2__r.Bankruptcy__c &' '& oppItem.Sub_Entity_3__r.Bankruptcy__c}"/>
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > Foreclosure / DIL (prior 7 yrs.): </apex:outputLabel>
+                 <apex:outputText value="{!accToGet.Foreclosure_Short_Sale_Deed_in_Lieu__c&' '& oppItem.Sub_Entity_1__r.Foreclosure_Short_Sale_Deed_in_Lieu__c &' '& oppItem.Sub_Entity_2__r.Foreclosure_Short_Sale_Deed_in_Lieu__c &' '& oppItem.Sub_Entity_3__r.Foreclosure_Short_Sale_Deed_in_Lieu__c}"/>
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > Financial Crime Involvement: </apex:outputLabel>
+                 <apex:outputText value="{!accToGet.Financial_Crime__c&' '& oppItem.Sub_Entity_1__r.Financial_Crime__c &' '& oppItem.Sub_Entity_2__r.Financial_Crime__c &' '& oppItem.Sub_Entity_3__r.Financial_Crime__c}"/>
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > Public Records Search Date: </apex:outputLabel>
+                 <apex:outputText value="{!TEXT(accToGet.Public_Records_Search_Date__c)&' '& TEXT(oppItem.Sub_Entity_1__r.Public_Records_Search_Date__c) &' '& TEXT(oppItem.Sub_Entity_2__r.Public_Records_Search_Date__c) &' '& TEXT(oppItem.Sub_Entity_3__r.Public_Records_Search_Date__c)}"/>
+                 </apex:pageBlockSectionItem>
+                   <apex:pageBlockSectionItem >
+                <apex:outputLabel > Public Records Search Notes </apex:outputLabel>
+                 <apex:outputText value="{!accToGet.Public_Record_Search_Notes__c&' '& oppItem.Sub_Entity_1__r.Public_Record_Search_Notes__c &' '& oppItem.Sub_Entity_2__r.Public_Record_Search_Notes__c &' '& oppItem.Sub_Entity_3__r.Public_Record_Search_Notes__c}"/>
+                 </apex:pageBlockSectionItem>
+              </apex:pageBlockSection>
+        </apex:tab>
+        <apex:tab label="Conformance" id="conformance">
+            <apex:pageBlockSection columns="1" title="C-PACE BOND CONFORMANCE : ">
+                 <apex:inputField value="{!exCriteria.Bond_Indenture_Agreement_or_similar__c}" />
+                <apex:inputField value="{!exCriteria.Tax_assessment_recorded__c}" />
+                 <apex:inputField value="{!exCriteria.Approved_pace_jurisdiction__c}" />
+                <apex:inputField value="{!exCriteria.Improvments_approved_by_program__c}" />
+                 <apex:inputField value="{!exCriteria.litv_under_20_percent__c}" />
+                <apex:inputField value="{!exCriteria.Mortgage_ltv_less_than_or_equal_to_80__c}" />
+                 <apex:inputField value="{!exCriteria.contractual_agreement_to_pace_assessemen__c}" />
+                 <apex:inputField value="{!exCriteria.EUL_greater_than_weight_avg_life_of_bond__c}" />
+                <apex:inputField value="{!exCriteria.Mortgage_holder_consent__c}" />
+                 <apex:inputField value="{!exCriteria.Current_prop_taxes_and_prior_3_years__c}" />
+                <apex:inputField value="{!exCriteria.Acceptable_trustee_or_servicer__c}" />
+                 <apex:inputField value="{!exCriteria.Unqualified_bond_counsel_opinion__c}" />
+                <apex:inputField value="{!exCriteria.Verified_savings__c}" />
+                 <apex:inputField value="{!exCriteria.PTV_5__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" title="UNDERWRITING CONFORMANCE : ">
+                <apex:inputField value="{!exCriteria.Standard_Property_type__c}" />
+                <apex:inputField value="{!exCriteria.Combined_LTV_LiTV_under_100_percent__c}" />
+                 <apex:inputField value="{!exCriteria.Satisfactory_Environmental_clearance__c}" />
+                <apex:inputField value="{!exCriteria.Mortgage_current__c}" />
+                 <apex:inputField value="{!exCriteria.Free_of_involuntary_liens__c}" />
+                <apex:inputField value="{!exCriteria.Improvements_Qualified__c}" />
+                 <apex:inputField value="{!exCriteria.Standard_Items_from_DRL_received__c}" />
+            </apex:pageBlockSection>
+        </apex:tab>
+        
+    </apex:tabPanel>
+    </apex:pageBlock>
+</apex:form>
+
+</apex:page>

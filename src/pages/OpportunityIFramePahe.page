@@ -1,0 +1,42 @@
+<apex:page standardController="Opportunity" extensions="OpportunityIframePageHandler" >
+    <apex:form id="theForm">
+        
+<apex:pageBlock mode="mainDetail" rendered="{!urlIFrame = ''}">
+<center>
+  <div style="color: ;border: solid #222222;width:200px;">
+      
+   
+   <h1><b><font size="4">
+       Egnyte Login</font></b>
+  </h1>
+<div class="slds-form-element">
+  <label class="slds-form-element__label" for="form-element-01">Egnyte Login</label>
+  <div class="slds-form-element__control">
+      <apex:inputText value="{!loginStr}" id="form-element-01" styleClass="slds-input"/><br/>
+  </div>
+</div>
+    <div class="slds-form-element">
+      <label class="slds-form-element__label" for="form-element-02">Egnyte Password</label>
+  <div class="slds-form-element__control">
+      <apex:inputSecret value="{!passwordStr}" id="form-element-02" styleClass="slds-input"/><br/>
+  </div>
+</div>
+        <div class="slds-form-element">
+  <div class="slds-form-element__control">
+      <apex:commandButton value="Login" action="{!formEgnyteRequest}" id="form-element-03" styleClass="slds-input"/><br/>
+  </div>
+</div>
+       </div>
+    </center>
+ </apex:pageBlock>
+        
+       <apex:outputpanel rendered="{!iframeRenderer}">   `    
+     <apex:iframe src="{!urlIFrame}" scrolling="true" id="theIframe"/>
+        </apex:outputpanel>   
+            <center>
+    <apex:outputpanel rendered="{!!iframeRenderer}">
+        <h1><b><font size="4">No Folder/File found in Egnyte system</font></b></h1>
+    </apex:outputpanel>
+    </center>
+        </apex:form>
+</apex:page>

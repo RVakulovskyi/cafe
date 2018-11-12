@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is to capture all the variations and contacts of communities.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Active_PACE_Programs__c</fullName>
+        <description>All PACE Programs active in this community</description>
+        <externalId>false</externalId>
+        <inlineHelpText>All PACE Programs active in this community</inlineHelpText>
+        <label>Active PACE Programs</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>PACE_Programs</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>City_Government__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>City Government</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Communities</relationshipLabel>
+        <relationshipName>Communities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Consultant__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Consultant</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Communities (Consultant)</relationshipLabel>
+        <relationshipName>Communities2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>County_New__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>County</label>
+        <referenceTo>Communities__c</referenceTo>
+        <relationshipLabel>Communities (County)</relationshipLabel>
+        <relationshipName>Communities2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>County__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>County Deprecated</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.AccTypeNew__c</field>
+                <operation>equals</operation>
+                <value>County</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Communities (County)</relationshipLabel>
+        <relationshipName>County</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Date_Program_Approved__c</fullName>
+        <description>Date CF was approved to transact in this community with the primary program.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date CF was approved to transact in this community with the primary program.</inlineHelpText>
+        <label>Date Program Approved</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Program_Presented__c</fullName>
+        <description>Date program was presented to this community</description>
+        <externalId>false</externalId>
+        <label>Date Program Presented</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Details_Special_Conditions__c</fullName>
+        <description>Any unique or special conditions about PACE in this community</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Any unique or special conditions about PACE in this community</inlineHelpText>
+        <label>Details &amp; Special Conditions</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>League_of_Cities_Rep__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>League of Cities Rep</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Communities (League of Cities Rep)</relationshipLabel>
+        <relationshipName>Communities1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Link_to_Lobbying_Law__c</fullName>
+        <description>Link to text of lobbying law, if it exists, for this jurisdiction.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to text of lobbying law, if it exists, for this jurisdiction.</inlineHelpText>
+        <label>Link to Lobbying Law</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Lobbying_Law__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Whether or not legislation surrounding/restricting lobbying activities exists in this jurisdiction.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Whether or not legislation surrounding/restricting lobbying activities exists in this jurisdiction.</inlineHelpText>
+        <label>Lobbying Law?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OpenPACEOptIn__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>OpenPACE Opt-In</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PACE_Municipality__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>PACE Municipality</label>
+        <referenceTo>Communities__c</referenceTo>
+        <relationshipLabel>Communities (PACE Municipality)</relationshipLabel>
+        <relationshipName>Communities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Participation_Agreement_Link__c</fullName>
+        <description>Weblink to Community&apos;s agreement to participate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Weblink to Community&apos;s agreement to participate.</inlineHelpText>
+        <label>Participation Agreement Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Participation_Agreement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Participation Agreement</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Population__c</fullName>
+        <description>Population of this community.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Population of this community.</inlineHelpText>
+        <label>Population</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Communities</relationshipLabel>
+        <relationshipName>Communities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Primary_OpenPACE_Rep__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary OpenPACE Rep</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Communities (Primary OpenPACE Rep)</relationshipLabel>
+        <relationshipName>Communities4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Primary_PACE_Program__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>CF&apos;s Primary PACE Program in this community.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CF&apos;s Primary PACE Program in this community.</inlineHelpText>
+        <label>Primary PACE Program</label>
+        <referenceTo>Program__c</referenceTo>
+        <relationshipLabel>Communities</relationshipLabel>
+        <relationshipName>Communities</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Staff_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Staff #1</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Communities (Staff #1)</relationshipLabel>
+        <relationshipName>Communities3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>State</label>
+        <referenceTo>Communities__c</referenceTo>
+        <relationshipLabel>Communities (State)</relationshipLabel>
+        <relationshipName>Communities1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status_of_Primary_Program__c</fullName>
+        <description>Status of CF&apos;s engagement with primary program</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of CF&apos;s engagement with primary program</inlineHelpText>
+        <label>Status of Primary Program</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No Contact</fullName>
+                    <default>false</default>
+                    <label>No Contact</label>
+                </value>
+                <value>
+                    <fullName>In Discussion</fullName>
+                    <default>false</default>
+                    <label>In Discussion</label>
+                </value>
+                <value>
+                    <fullName>Agenda Date</fullName>
+                    <default>false</default>
+                    <label>Agenda Date</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Approved (Pending Conditions)</fullName>
+                    <default>false</default>
+                    <label>Approved (Pending Conditions)</label>
+                </value>
+                <value>
+                    <fullName>Denied</fullName>
+                    <default>false</default>
+                    <label>Denied</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type_of_Community__c</fullName>
+        <description>What type of Community this is!</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What type of Community this is!</inlineHelpText>
+        <label>Type of Community</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>City</fullName>
+                    <default>false</default>
+                    <label>City</label>
+                </value>
+                <value>
+                    <fullName>County</fullName>
+                    <default>false</default>
+                    <label>County</label>
+                </value>
+                <value>
+                    <fullName>State</fullName>
+                    <default>false</default>
+                    <label>State</label>
+                </value>
+                <value>
+                    <fullName>Unincorporated Area</fullName>
+                    <default>false</default>
+                    <label>Unincorporated Area</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Unincorporated_Area__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Unincorporated Area</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>WRCOG_OptIn__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Is a municipality in WRCOG territory?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is a municipality in WRCOG territory?</inlineHelpText>
+        <label>WRCOG Opt-In</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Communities</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Communities Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Communities</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

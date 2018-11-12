@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Responded</fullName>
+        <color>#33CC00</color>
+        <default>false</default>
+        <label>Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <color>#BBBBBB</color>
+        <default>false</default>
+        <label>Sent</label>
+    </standardValue>
+</StandardValueSet>

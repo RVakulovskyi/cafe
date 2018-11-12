@@ -1,0 +1,14 @@
+.THIS.hideMe {
+    display: none;
+}
+.THIS .selectWidth {
+    width : 80%;
+    margin-left:1%;
+}
+.THIS .selectWidthField {
+    width : 50%;
+    margin-left:1%;
+}
+.THIS .selectWidthButton {
+    width : 100%;
+}

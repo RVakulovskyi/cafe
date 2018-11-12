@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="Event for picklist">
+    <aura:attribute name="idValue" type="String"/>
+    <aura:attribute name="fieldName" type="String"/>
+</aura:event>

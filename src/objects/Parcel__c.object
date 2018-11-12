@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>AC_Recording_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the assessment contract was recorded.</inlineHelpText>
+        <label>AC Recording Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Agency_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The taxing authority agency name</inlineHelpText>
+        <label>Agency Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_Payment__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Cost_P_I_Fees__c/Opportunity__r.Loan_Term__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The total annual bond payment [(P+I)/Term] excludes Cap I</inlineHelpText>
+        <label>Annual Bond Payment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Annual_Tax_Payment__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Bond_Total__c+Interest__c+Total_Fees__c)/Opportunity__r.Loan_Term__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>(P+I+Fees)/Term (excludes Cap I)</inlineHelpText>
+        <label>Annual Tax Payment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Assessment_Contract__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the assessment contract.</inlineHelpText>
+        <label>Assessment Contract</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Bond_Counsel_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Bond Counsel Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bond_Total__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The Principal payment that this parcel contributes to the bond.</inlineHelpText>
+        <label>Bond Total</label>
+        <summarizedField>Payments__c.Payment__c</summarizedField>
+        <summaryForeignKey>Payments__c.Parcel__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Bond__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://na16.salesforce.com/&quot;&amp;Opportunity__r.Bond__r.Id,Opportunity__r.Bond__r.Name)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Link to the bone</inlineHelpText>
+        <label>Bond</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Capitalized_Interest__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total of Capitalized Interest</inlineHelpText>
+        <label>Capitalized Interest</label>
+        <summarizedField>Payments__c.Interest__c</summarizedField>
+        <summaryFilterItems>
+            <field>Payments__c.Payment_Type__c</field>
+            <operation>equals</operation>
+            <value>Capitalized Interest</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Payments__c.Parcel__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>CleanFund_Admin_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>CleanFund Admin Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CleanFund_Assessment_Servicing_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>CleanFund Assessment Servicing Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CleanFund_Origination_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>CleanFund Origination Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cost_of_Issuance__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost of Issuance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>County_Assessment_Servicing_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>County Assessment Servicing Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>County_Fees__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Fees going to the county</inlineHelpText>
+        <label>County Fees</label>
+        <summarizedField>Payments__c.County_Fee__c</summarizedField>
+        <summaryForeignKey>Payments__c.Parcel__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>FIPS__c</fullName>
+        <externalId>false</externalId>
+        <label>FIPS</label>
+        <length>180</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Tax_Year__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The year the assessment starts.</inlineHelpText>
+        <label>Initial Tax Year</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Interest__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This represents the total interest.</inlineHelpText>
+        <label>Interest</label>
+        <summarizedField>Payments__c.Interest__c</summarizedField>
+        <summaryFilterItems>
+            <field>Payments__c.Payment_Type__c</field>
+            <operation>equals</operation>
+            <value>P &amp; I</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Payments__c.Parcel__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Notes on the Assesment</inlineHelpText>
+        <label>Notes</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Parcels</relationshipLabel>
+        <relationshipName>Opportunity_Parcels</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Other_Assessment_Servicing_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Assessment Servicing Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Prepayment_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Prepayment Terms</label>
+        <length>180</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Sponsor_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Program Sponsor Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Recordation_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Recordation Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Reserve__c</fullName>
+        <externalId>false</externalId>
+        <label>Reserve</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Tax_Admin_Assessment_Servicing_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax Admin Assessment Servicing Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Tax_Admin_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax Admin Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Tax_Admin_Fee__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This represents the total of the tax admin fees</inlineHelpText>
+        <label>Tax Admin Fee</label>
+        <summarizedField>Payments__c.Tax_Admin_Fee__c</summarizedField>
+        <summaryForeignKey>Payments__c.Parcel__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Bond_Cost_Cap_I__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Cost_P_I_Fees__c+Capitalized_Interest__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>P+I+Cap I</inlineHelpText>
+        <label>Total Bond Cost + Cap I</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Cap_I__c</fullName>
+        <externalId>false</externalId>
+        <formula>County_Fees__c+Bond_Total__c+Interest__c+Tax_Admin_Fee__c+Trustee_Fees__c+ Capitalized_Interest__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Principal, Interest, Cap I, Fees</inlineHelpText>
+        <label>Total + Cap I + Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Cost_P_I_Fees__c</fullName>
+        <externalId>false</externalId>
+        <formula>Bond_Total__c+Interest__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Bond Cost not including capitalized interest or fees.</inlineHelpText>
+        <label>Total Bond Cost (P+I)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Fees__c</fullName>
+        <externalId>false</externalId>
+        <formula>County_Fees__c+ Trustee_Fees__c+ Tax_Admin_Fee__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Fees for the Tax Assessment</inlineHelpText>
+        <label>Total Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Trustee_Assessment_Servicing_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Trustee Assessment Servicing Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Trustee_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Trustee Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Trustee_Fees__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the total for the trustee fees</inlineHelpText>
+        <label>Trustee Fees</label>
+        <summarizedField>Payments__c.Trustee_Fee__c</summarizedField>
+        <summaryForeignKey>Payments__c.Parcel__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <label>Parcel</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>APN</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Parcels</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

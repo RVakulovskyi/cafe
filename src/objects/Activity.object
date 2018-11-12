@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>DB_Activity_Type__c</fullName>
+        <description>This is a field that is installed by and used with the Adoption Dashboard AppExchange package.  If your org already has a similar field, you can change the reports that are part of the Adoption Dashboard package to use your custom field and then delete this field.</description>
+        <externalId>false</externalId>
+        <formula>IF(CONTAINS( Subject , &quot;Email&quot;), &quot;Email&quot;, IF(CONTAINS( Subject , &quot;Cold Call&quot;), &quot;Cold Call&quot;, IF(CONTAINS( Subject , &quot;Call&quot;), &quot;Call&quot;, IF(CONTAINS( Subject , &quot;Meeting&quot;), &quot;Meeting&quot;, IF(CONTAINS( Subject , &quot;On Site Visit&quot;), &quot;Site Visit&quot;, IF(CONTAINS( Subject , &quot;Quote&quot;), &quot;Send Letter/Quote&quot;, &quot;Other&quot;))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DB Activity Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DateDormCheck__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATE(year( DateVALUE(LastModifiedDate) ), (Month(DateVALUE(LastModifiedDate)) -6), Day(DateVALUE(LastModifiedDate)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DateDormCheck</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Import2_Id__c</fullName>
+        <description>Id of the record in original system, where it was imported from by Import2.com</description>
+        <externalId>true</externalId>
+        <label>Import2 Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LID__Date_Sent__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Date Sent</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LID__URL__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>URL</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Tally__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tally</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YW_Activity_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(BEGINS( Subject, &quot;Message Sent:&quot;), &quot;1] Sent&quot;, 
+IF(BEGINS( Subject, &quot;Message Opened:&quot;), &quot;2] Open&quot;, 
+IF(BEGINS( Subject,&quot;Reply:&quot;), &quot;3] Reply&quot;, 
+IF(BEGINS( Subject,&quot;Link Clicked in Message:&quot;), &quot;4] Click&quot;, 
+IF(BEGINS( Subject,&quot;Attachment Opened in Message:&quot;), &quot;5] Attachment&quot;, 
+IF(BEGINS( Subject,&quot;Presentation Viewed in Message:&quot;), &quot;6] Presentation&quot;, 
+IF(BEGINS( Subject,&quot;Message Sync:&quot;), &quot;7] Sync&quot;, 
+IF(BEGINS( Subject,&quot;YW Call:&quot;), &quot;8] YW Call&quot;, 
+IF((Subject = &quot;Bounce Received: Delivery Status Notification (Failure)&quot;), &quot;Bounce&quot;,
+If(Not(IsTask), &quot;9] Meeting&quot;, 
+&quot;Other&quot;))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>YW Activity Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YW_Email_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>If((Not( YeswareIsMailMerge__c ) &amp;&amp; ( (Yesware_Template__c)=True )), &quot;3] Template&quot;, 
+If(( YeswareIsMailMerge__c )=True &amp;&amp; ( (Yesware_Template__c)=True ), &quot;4] MailMerge w/ Templates&quot;, 
+If(( YeswareIsMailMerge__c )=True &amp;&amp; ( Not(Yesware_Template__c) ), &quot;2] MailMerge&quot;, &quot;1] Individual&quot;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>YW Email Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YeswareIsMailMerge__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label># Yesware MailMerge</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>YeswareTemplateIds__c</fullName>
+        <externalId>false</externalId>
+        <label>Yesware Template Id(s)</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>YeswareTemplateNames__c</fullName>
+        <externalId>false</externalId>
+        <label>Yesware Template Name(s)</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Yesware_Call_Duration_Minutes__c</fullName>
+        <description>Yesware Click to Call automatically updates this field.</description>
+        <externalId>false</externalId>
+        <label>Yesware Call Minutes</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yesware_Meeting__c</fullName>
+        <externalId>false</externalId>
+        <formula>VALUE(IF(Not(IsTask), &quot;1&quot;, &quot;0&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># Meeting</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yesware_Open__c</fullName>
+        <externalId>false</externalId>
+        <formula>VALUE(IF(BEGINS(Subject, &quot;Message Opened:&quot;), &quot;1&quot;, &quot;0&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># Yesware Open</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yesware_Reply__c</fullName>
+        <externalId>false</externalId>
+        <formula>VALUE(IF(BEGINS(Subject, &quot;Reply:&quot;), &quot;1&quot;, &quot;0&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># Yesware Reply</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yesware_Sent__c</fullName>
+        <externalId>false</externalId>
+        <formula>VALUE(IF(BEGINS(Subject, &quot;Message Sent:&quot;), &quot;1&quot;, &quot;0&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># Yesware Sent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yesware_Template__c</fullName>
+        <externalId>false</externalId>
+        <formula>ISBLANK(  YeswareTemplateNames__c   ) = False</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># Yesware Template</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Yesware_TotalCall__c</fullName>
+        <externalId>false</externalId>
+        <formula>VALUE(IF(BEGINS(Subject, &quot;Call&quot;) || BEGINS(Subject, &quot;YW Call&quot;) || BEGINS(Subject, &quot;Connect&quot;), &quot;1&quot;, &quot;0&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label># Call</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>MyActivities</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyDelegatedActivities</fullName>
+        <filterScope>Delegated</filterScope>
+        <label>My Delegated Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyTeamsActivities</fullName>
+        <filterScope>Team</filterScope>
+        <label>My Team&apos;s Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysTasks</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>lessThan</operation>
+            <value>TOMORROW</value>
+        </filters>
+        <label>Today&apos;s Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>UpcomingEvents</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>greaterThan</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Upcoming Events</label>
+    </listViews>
+    <searchLayouts>
+        <searchResultsAdditionalFields>TASK.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHO_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHAT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.DUE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

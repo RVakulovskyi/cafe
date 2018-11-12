@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canvasConfig>
+        <accessMethod>Post</accessMethod>
+        <canvasUrl>https://cafemobile--cfquoteeng.cs61.my.salesforce.com/apex/OpportunityIFramePahe</canvasUrl>
+        <locations>Chatter</locations>
+        <locations>Visualforce</locations>
+        <locations>Aura</locations>
+        <locations>Publisher</locations>
+        <locations>ChatterFeed</locations>
+        <locations>ServiceDesk</locations>
+        <locations>OpenCTI</locations>
+        <locations>MobileNav</locations>
+        <locations>PageLayout</locations>
+        <samlInitiationMethod>None</samlInitiationMethod>
+    </canvasConfig>
+    <contactEmail>rodion.vakulovskyi@gmail.com</contactEmail>
+    <label>Custom Egnyte</label>
+</ConnectedApp>

@@ -1,0 +1,31 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride" access="global" description="TestOverride" controller="OpportunitySalesForce1Controller">
+<aura:attribute name="record" type="Object" 
+  description="The record object to be displayed"/>
+<aura:attribute name="simpleRecord" type="Object" 
+  description="A simplified view record object to be displayed"/>
+<aura:attribute name="recordError" type="String" 
+  description="An error message bound to force:recordData"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="PageFieldSets" type="Object"/>
+<force:recordData aura:id="record"
+    layoutType="FULL"
+    recordId="{!v.recordId}"
+    targetError="{!v.recordError}"
+    targetRecord="{!v.record}"
+    targetFields="{!v.simpleRecord}"
+    mode="VIEW"/>
+     <div class="slds-page-header">
+  <div class="slds-media">
+    <div class="slds-media__figure">
+      <span class="slds-icon_container slds-icon-standard-opportunity" title="Description of icon when needed">
+      </span>
+    </div>
+    <div class="slds-media__body">
+      <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="{!v.simpleRecord.Name}">{!v.simpleRecord.Name}</h1>
+      <p class="slds-text-body_small slds-line-height_reset">test</p>
+    </div>
+  </div>
+</div>
+    <p><lightning:formattedText title="Name" value="{!v.simpleRecord.Name}" /></p>
+
+</aura:component>

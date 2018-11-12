@@ -1,0 +1,23 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="EgnyteUserUpdate">
+    <aura:attribute name="egnyteLogin" type="String"/>
+    <aura:attribute name="egnytePassword" type="String"/> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:card footer="Egnyte" title="Egnyte credentials" aura:id="egnyteHasCreds" class="slds-hide">
+   		<aura:set attribute="actions">
+            <lightning:button label="Edit" onclick="{!c.showAndHide}" class="slds-button slds-button_brand"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+			You have Egnyte credentials.You can edit them, if you want.
+        </p>
+    </lightning:card>
+        <lightning:card footer="Egnyte" title="Egnyte credentials" aura:id="egnyte" class="slds-hide">
+   		<aura:set attribute="actions">
+            <lightning:button label="Save" onclick="{!c.saveUserEgnyte}" class="slds-button slds-button_brand"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            <lightning:input value="{!v.egnyteLogin}" type="text" label="Login"/>
+            <ui:inputSecret value="{!v.egnytePasword}" label="Password" aura:id="inputSecret"/>
+        </p>
+    </lightning:card>
+</aura:component>

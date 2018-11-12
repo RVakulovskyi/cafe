@@ -1,0 +1,274 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride" access="global" description="TestOverride" controller="OpportunitySalesForce1Controller">
+    <aura:attribute name="PageFieldSets" type="Map"/>
+    <aura:attribute name="MapOfValues" type="Map"/>
+    <aura:attribute name="MapOfLabels" type="Map"/>
+    <aura:attribute name="MapOfHelperText" type="Map"/>
+    <aura:attribute name="opp" type="Object"/>
+    <aura:attribute name="key" type="String"/>
+    <aura:attribute name="value" type="String"/>
+    <aura:attribute name="simpleOpp" type="Object"/>
+    <aura:attribute name="fieldList" type="String" />
+    <aura:attribute name="oppError" type="String"/>
+    <aura:attribute name="checker" type="Boolean" />
+    <aura:attribute name="selectedLookUpRecord" type="sObject" default="{}"/>
+    <aura:attribute name="OppToInsert" type="Opportunity" default="{'sobjectType':'Opportunity'}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <aura:handler name="change" value="{!v.MapOfLabels}" action="{!c.changeFunction}"/>
+    <force:recordData aura:id="oppRecordLoader" mode="EDIT"
+        recordId="{!v.recordId}"
+        fields="Est_Improvement_Cost__c,Transaction_Manager__r.Name,Property_Owner_Main_Contact__r.Name,Owner.Name,OwnerId,Financing_Amount__c,Loan_Term__c,Project_Overview__c,PACE_Program_New__c,Funding_Source__c,OwnerId,AccountId,Property_Owner_Main_Contact__c,Relationship_to_Main_Contact__c,Name,NextStep,Next_Steps_Tickler__c,Next_Steps_Update_Time__c,Transaction_Manager__c,LeadSource,Sub_Lead_Source__c,Dispersment_Sum__c,Funds_Remaining__c,Project_Type__c,Project_Stage__c,PACE_payment_amount_est__c,Description_of_Improvements__c,Desired_Project_Start_Date__c,Desired_Project_Finish_Date__c,Interest_Rate__c,Pricing_Adjustment_Notes__c,Total_Financing_Fee__c,Total_Origination_Fee_CF_and_Partner__c,Interest_Rate_Based_On__c,Property_Acquisition_Date__c,Property_Purchase_Price__c,Total_Annual_Property_Tax_Pmt__c,Physical_Address__c,Municipality__c,State_Prop__c,Zip_Code__c,Building_Size__c,Building_Size_Type__c,Primary_Property_Type__c,Property_Owner_Main_Contact_Email__c,Property_Owner_Main_Contact_Phone__c,Last_Appraisal_Date__c,Property_Market_Value_Est__c,Property_Market_Value_Based_Upon__c,Is_there_a_lender__c,Mortgage_Lenders__c,Assessed_Value__c,Land_Value__c,Total_Debt__c,Construction_Timeline__c,Number_of_Lenders__c,Number_of_Parcels__c,Solar_Component__c,Solar_PV_System_Size_kW__c,Date_Declared_Dormant__c,Date_Dead_Lost__c,Dead_Lost_Comment__c,StageName,Initial_Entry_Date__c,Project_Qualified_Date__c,Application_Submission_Date__c,Initial_App_Date__c,Proposal_Sent_Date__c,App_Executed_Date__c,LOI_Sent_Date__c,LOI_Executed_Date__c,UW_Start_Date__c,CloseDate,AccountId,Account.Name"
+        targetRecord="{!v.opp}"
+        targetFields="{!v.simpleOpp}"
+        targetError="{!v.oppError}"
+    />
+    <aura:handler name="lookupEvent" event="c:LightningLookupEvent" action="{!c.eventLookupHandler}"/>
+    <aura:handler name="picklistEvent" event="c:LightningPicklistEvent" action="{!c.eventHandler}"/>
+      <div class="slds-grid">
+  <div class="slds-col">
+     <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppInfiMode}" aura:id="editButton1">Opportunity Information</button>&nbsp;
+
+  </div>
+  <div class="slds-col">
+     <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppOwnerMode}" aura:id="editButton2">Ownership Information</button>&nbsp;
+
+  </div>
+  <div class="slds-col">
+        <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppProjectScope}" aura:id="editButton3">Project Details</button>&nbsp;
+
+  </div>
+  <div class="slds-col">
+       <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppProjectPricing}" aura:id="editButton4">Project Pricing</button>&nbsp;
+
+  </div>
+
+  
+</div>
+    <div class="slds-grid">
+    <div class="slds-col">
+          <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppProjectPricingAdv}" aura:id="editButton5">Project Pricing Advanced</button>&nbsp;
+
+  </div>
+  <div class="slds-col">
+     <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppPropertyDetails}" aura:id="editButton6">Property Information</button>&nbsp;
+
+  </div>
+        <div class="slds-col">
+      <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppSolarInfo}" aura:id="editButton10">Solar Information</button>&nbsp;
+
+  </div>
+  <div class="slds-col">
+    <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppStageDead}" aura:id="editButton11">Stage Dead-Lost-Dormant</button>&nbsp;
+
+  </div>
+    </div>
+     <div class="slds-grid">
+          <div class="slds-col">
+    <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppStageInfo}" aura:id="editButton12">Stage Information</button>&nbsp;
+
+  </div>
+  <div class="slds-col">
+     <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppPropertyInfo}" aura:id="editButton7">Property Details</button>&nbsp;
+
+  </div>
+           <div class="slds-col">
+      <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppPropertyOwner}" aura:id="editButton8">Property Owner</button>&nbsp;
+
+  </div>
+           <div class="slds-col">
+      <button class="slds-button slds-button--neutral slds-truncate selectWidthButton" onclick="{!c.changeOppPropertyValuation}" aura:id="editButton9">Property Valuation</button>&nbsp;
+
+  </div>
+    </div>
+     <lightning:card title="Details" aura:id="OppView">
+    <aura:iteration items="{!v.PageFieldSets}" var="currentFieldSet" indexVar="key"> 
+		<h3 class="slds-section-title--divider">{!currentFieldSet.key}</h3>
+      		<aura:iteration items="{!currentFieldSet.value}" var="field" aura:Id="iteration2">
+                		<c:MapEntryChild map="{!v.MapOfValues}" key="{!field}" aura:id="Keys"/>
+						<div class="slds-m-left_small">
+                            <b><ui:outputText aura:Id="labelValues" class="slds-text-body_regular"/><aura:renderIf aura:Id="renderList"><lightning:helptext aura:id="HelperText"/></aura:renderIf></b><br/>
+        				<ui:outputText aura:Id="fieldValues"/>
+                            <br/>
+                            <br/> 
+                            
+				</div>
+          </aura:iteration>
+         </aura:iteration>
+    </lightning:card>
+         <lightning:card title="Opportunity Information" aura:id="OppEditOppInfor" class="slds-hide">
+             <div class="selectWidth"><br/>
+             <ui:outputText  class="slds-text-body_regular" value="C-PACE Project Amount"/>
+             <lightning:input type="number" value="{!v.simpleOpp.Est_Improvement_Cost__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Total PACE financing amount (Est.)"/>
+             <lightning:input type="number" value="{!v.simpleOpp.Financing_Amount__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Financing Term"/>
+             <lightning:input type="number" value="{!v.simpleOpp.Loan_Term__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Project Overview"/>
+             <lightning:input value="{!v.simpleOpp.Project_Overview__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="PACE Program"/><br/><br/>
+             <c:LightningPicklist objName="Opportunity" picklistName="PACE_Program_New__c" currentValue="{!v.simpleOpp.PACE_Program_New__c}" currentControlValue="{!v.recordId}"/><br/>  
+             <ui:outputText  class="slds-text-body_regular" value="Funding Source"/><br/><br/> 
+             <c:LightningPicklist objName="Opportunity" picklistName="Funding_Source__c" currentValue="{!v.simpleOpp.Funding_Source__c}"/>  <br/>  
+             </div>
+    </lightning:card>
+     <lightning:card title="Ownership Information" aura:id="OppEditOwnInfor" class="slds-hide">
+             <div class="selectWidth"><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Owner"/><br/><br/>
+             <c:GenericLookup objectAPIName="user" IconName="standard:user" fieldName="OwnerId" SearchKeyWord="{!v.simpleOpp.Owner.Name}"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Account"/><br/><br/>
+             <c:GenericLookup objectAPIName="account" IconName="standard:account" fieldName="AccountId" SearchKeyWord="{!v.simpleOpp.Account.Name}"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Main Contact"/><br/><br/>
+             <c:GenericLookup objectAPIName="contact" IconName="standard:contact" fieldName="Property_Owner_Main_Contact__c" SearchKeyWord="{!v.simpleOpp.Property_Owner_Main_Contact__r.Name}"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Relationship to Main Contact"/><br/>
+             <lightning:input value="{!v.simpleOpp.Relationship_to_Main_Contact__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Name"/>
+             <lightning:input value="{!v.simpleOpp.Name}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="NextStep"/>
+             <lightning:input value="{!v.simpleOpp.NextStep}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Next Steps Tickler"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.Next_Steps_Tickler__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Next Steps Update Time"/>
+             <lightning:input type="date" value="{!v.simpleOpp.Next_Steps_Update_Time__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Underwriter"/>
+             <c:GenericLookup objectAPIName="user" IconName="standard:user" fieldName="Transaction_Manager__c" SearchKeyWord="{!v.simpleOpp.Transaction_Manager__r.Name}"/><br/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Lead Source"/><br/>  
+             <c:LightningPicklist objName="Opportunity" picklistName="LeadSource" currentValue="{!v.simpleOpp.LeadSource}"/><br/><br/> 
+             <ui:outputText  class="slds-text-body_regular" value="Sub Lead Source"/><br/>  
+             <lightning:input value="{!v.simpleOpp.Sub_Lead_Source__c}" class="selectWidthField"/><br/>
+             </div>
+    </lightning:card>
+     <lightning:card title="Project Details" aura:id="OppEditProjectScope" class="slds-hide">
+             <div class="selectWidth"><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Project Scope"/><br/><br/>
+             <c:LightningPicklist objName="Opportunity" picklistName="Project_Type__c" currentValue="{!v.simpleOpp.Project_Type__c}"/><br/><br/> 
+             <ui:outputText  class="slds-text-body_regular" value="Project Stage"/><br/><br/>
+             <c:LightningPicklist objName="Opportunity" picklistName="Project_Stage__c" currentValue="{!v.simpleOpp.Project_Stage__c}"/><br/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="PACE Annual Payment Amount (Est.)"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.PACE_payment_amount_est__c}" class="selectWidthField" formatter="currency"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Detail of Improvements"/><br/>  
+             <lightning:textarea value="{!v.simpleOpp.Description_of_Improvements__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Project Start Date (Est.)"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.Desired_Project_Start_Date__c}" /><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Project Finish Date (Est.)"/>
+             <lightning:input type="date" value="{!v.simpleOpp.Desired_Project_Finish_Date__c}" /><br/>
+             </div>
+    </lightning:card>
+    <lightning:card title="Project Pricing" aura:id="OppEditProjectPricing" class="slds-hide">
+             <div class="selectWidth"><br/>  
+             <ui:outputText  class="slds-text-body_regular" value="PACE Annual Payment Amount (Est.)"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.Interest_Rate__c}" class="selectWidthField" step="00000.001"/><br/>
+			 <ui:outputText  class="slds-text-body_regular" value="Pricing Adjustment Notes"/><br/>  
+             <lightning:textarea value="{!v.simpleOpp.Pricing_Adjustment_Notes__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Detail of Improvements"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.PACE_payment_amount_est__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Total Financing Fee"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.Total_Financing_Fee__c}" class="selectWidthField"/><br/>
+             </div>
+    </lightning:card>
+    <lightning:card title="Project Pricing Advanced" aura:id="OppEditProjectPricingAdvanced" class="slds-hide">
+             <div class="selectWidth"><br/>   
+             <ui:outputText  class="slds-text-body_regular" value="Interest Rate Based On"/><br/><br/>
+             <c:LightningPicklist objName="Opportunity" picklistName="Interest_Rate_Based_On__c" currentValue="{!v.simpleOpp.Interest_Rate_Based_On__c}"/><br/>
+             </div>
+    </lightning:card>
+    <lightning:card title="Property Details" aura:id="OppEditPropertyDetails" class="slds-hide">
+             <div class="selectWidth"><br/>  
+             <ui:outputText  class="slds-text-body_regular" value="Property Acquisition Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.Property_Acquisition_Date__c }" class="selectWidthField"/><br/>
+			 <ui:outputText  class="slds-text-body_regular" value="Property Purchase Price"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.Property_Purchase_Price__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Total Annual Property Tax Payment"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.Total_Annual_Property_Tax_Pmt__c}" class="selectWidthField"/><br/>
+             </div>
+    </lightning:card>
+    <lightning:card title="Property Information" aura:id="OppEditProjectInformation" class="slds-hide">
+             <div class="selectWidth"><br/>  
+             <ui:outputText  class="slds-text-body_regular" value="Street Address - Property"/><br/>  
+             <lightning:textArea value="{!v.simpleOpp.Physical_Address__c}" class="selectWidthField"/><br/>
+			 <ui:outputText  class="slds-text-body_regular" value="City - Property"/><br/>  
+             <lightning:input value="{!v.simpleOpp.Municipality__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="State - Property"/><br/><br/>
+             <c:LightningPicklist objName="Opportunity" picklistName="State_Prop__c" currentValue="{!v.simpleOpp.State_Prop__c}"/><br/>   
+             <ui:outputText  class="slds-text-body_regular" value="Zip Code - Property"/><br/>  
+             <lightning:input value="{!v.simpleOpp.Zip_Code__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Building Size"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.Building_Size__c}" class="selectWidthField"/><br/>     
+             <ui:outputText  class="slds-text-body_regular" value="Building Size Unit of Measurement"/><br/><br/>
+             <c:LightningPicklist objName="Opportunity" picklistName="Building_Size_Type__c" currentValue="{!v.simpleOpp.Building_Size_Type__c}"/><br/>    
+             <ui:outputText  class="slds-text-body_regular" value="Primary Property Type"/><br/><br/>
+             <c:LightningPicklist objName="Opportunity" picklistName="Primary_Property_Type__c" currentValue="{!v.simpleOpp.Primary_Property_Type__c}"/><br/>  
+             </div>
+    </lightning:card>
+        <lightning:card title="Property Owner" aura:id="OppEditPropertyOwner" class="slds-hide">
+             <div class="selectWidth"><br/>  
+             <ui:outputText  class="slds-text-body_regular" value="Main Contact Email"/><br/>  
+             <lightning:input type="email" value="{!v.simpleOpp.Property_Owner_Main_Contact_Email__c}" class="selectWidthField"/><br/>
+			 <ui:outputText  class="slds-text-body_regular" value="Main Contact Phone"/><br/>  
+             <lightning:input value="{!v.simpleOpp.Property_Owner_Main_Contact_Phone__c}" class="selectWidthField"/><br/>
+             </div>
+    </lightning:card>
+    <lightning:card title="Property Valuation" aura:id="OppEditPropertyValuation" class="slds-hide">
+             <div class="selectWidth"><br/>  
+             <ui:outputText  class="slds-text-body_regular" value="CF Value Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.Last_Appraisal_Date__c}" class="selectWidthField"/><br/>
+			 <ui:outputText  class="slds-text-body_regular" value="CF Value"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.Property_Market_Value_Est__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="CF Value Basis"/><br/><br/> 
+             <c:LightningPicklist objName="Opportunity" picklistName="Property_Market_Value_Based_Upon__c" currentValue="{!v.simpleOpp.Property_Market_Value_Based_Upon__c}"/><br/>  
+             <ui:outputText  class="slds-text-body_regular" value="Is there a lender?"/><br/><br/>
+             <c:LightningPicklist objName="Opportunity" picklistName="Is_there_a_lender__c" currentValue="{!v.simpleOpp.Is_there_a_lender__c}"/><br/>       
+             <lightning:input value="{!v.simpleOpp.Property_Owner_Main_Contact_Phone__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Mortgage Lenders"/><br/>  
+             <lightning:textArea type="email" value="{!v.simpleOpp.Mortgage_Lenders__c}" class="selectWidthField"/><br/>
+			 <ui:outputText  class="slds-text-body_regular" value="Assessed Value"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.Assessed_Value__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Assessed Land Value"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.Land_Value__c}" class="selectWidthField"/><br/>  
+             </div>
+    </lightning:card>
+    <lightning:card title="Solar Information" aura:id="OppEditSolarInfo" class="slds-hide">
+             <div class="selectWidth"><br/>  
+             <ui:outputText  class="slds-text-body_regular" value="Solar Component"/><br/><br/>
+             <c:LightningPicklist objName="Opportunity" picklistName="Solar_Component__c" currentValue="{!v.simpleOpp.Solar_Component__c}"/><br/>     
+			 <ui:outputText  class="slds-text-body_regular" value="Solar PV System Size (kW)"/><br/>  
+             <lightning:input type="number" value="{!v.simpleOpp.Solar_PV_System_Size_kW__c}" class="selectWidthField"/><br/>
+             </div>
+    </lightning:card>
+    <lightning:card title="Stage Dead-Lost-Dormant" aura:id="OppEditStageDead" class="slds-hide">
+             <div class="selectWidth"><br/>  
+             <ui:outputText  class="slds-text-body_regular" value="Date Declared Dormant"/><br/>
+             <lightning:input type="date" value="{!v.simpleOpp.Date_Declared_Dormant__c}" class="selectWidthField"/><br/>   
+			 <ui:outputText  class="slds-text-body_regular" value="Date Dead-Lost"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.Date_Dead_Lost__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Dead-Lost Comment"/><br/>  
+             <lightning:input value="{!v.simpleOpp.Dead_Lost_Comment__c}" class="selectWidthField"/><br/>
+             </div>
+    </lightning:card>
+    <lightning:card title="Stage Information" aura:id="OppEditStageInfo" class="slds-hide">
+             <div class="selectWidth"><br/>  
+             <ui:outputText  class="slds-text-body_regular" value="Stage"/><br/>
+             <c:LightningPicklist objName="Opportunity" picklistName="StageName" currentValue="{!v.simpleOpp.StageName}"/><br/>  
+			 <ui:outputText  class="slds-text-body_regular" value="Project Identified Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.Initial_Entry_Date__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Project Qualified Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.Project_Qualified_Date__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Application Submission Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.Application_Submission_Date__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Initial App Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.Initial_App_Date__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Term Sheet Sent Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.Proposal_Sent_Date__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Application Executed Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.App_Executed_Date__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="LOI Sent Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.LOI_Sent_Date__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="LOI Executed Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.LOI_Executed_Date__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Underwriting Start Date"/><br/>  
+             <lightning:input value="{!v.simpleOpp.UW_Start_Date__c}" class="selectWidthField"/><br/>
+             <ui:outputText  class="slds-text-body_regular" value="Close Date"/><br/>  
+             <lightning:input type="date" value="{!v.simpleOpp.CloseDate}" class="selectWidthField"/><br/>
+             </div>
+    </lightning:card>
+     <button class="slds-button slds-button_brand slds-hide" aura:id="editButton" onclick="{!c.saveRecordOppInfo}">Save</button>
+    <button class="slds-button slds-button_brand slds-hide" aura:id="cancelButton" onclick="{!c.cancelEdit}">Cancel</button>
+</aura:component>

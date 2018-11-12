@@ -1,0 +1,30 @@
+<apex:page standardController="Lead" extensions="LeadUpdateStageCntr">
+    <apex:form id="theForm">
+   <apex:actionRegion >     
+    <apex:pageBlock title="Select Lead stage" id="pb1">
+        <apex:pageMessages />
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!renderFields}" value="Generate Fields" rerender="theForm"/>
+            <apex:commandButton action="{!closePage}" value="Cancel" immediate="true"/> 
+        </apex:pageBlockButtons>
+        <apex:selectList size="1" value="{!stageName}">
+            <apex:selectOptions value="{!StageValues}"/>
+        </apex:selectList>
+    </apex:pageBlock>
+       </apex:actionRegion> 
+       <apex:actionRegion >
+    <apex:pageBlock rendered="{!listOfFieldSetMember != null}" title="Sections" id="pb2">
+        
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!saveLead}"/>
+        </apex:pageBlockButtons>
+        
+        <apex:pageBlockSection collapsible="false" title="{!stageName}">
+         <apex:repeat value="{!listOfFieldSetMember}" var="fieldSetItemKey">
+            <apex:inputField value="{!inputLead[fieldSetItemKey.fieldPath]}" required="{!OR(fieldSetItemKey.required, fieldSetItemKey.dbrequired)}"/>
+          </apex:repeat> 
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+   </apex:actionRegion> 
+       </apex:form>
+</apex:page>

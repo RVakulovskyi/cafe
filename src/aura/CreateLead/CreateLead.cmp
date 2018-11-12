@@ -1,0 +1,96 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="LTN_CreateRecordCntr" >
+    <aura:attribute name="listOfObjects" type="String[]" default="['--None--', 'Lead', 'Account', 'Contact']" />
+    <aura:attribute name="selectedValue" type="String" />
+    <aura:attribute name="LeadToInsert" type="Lead" default="{'sobjectType':'Lead'}" />
+    <aura:attribute name="lstOfRecordType" type="String[]" />
+    <aura:attribute name="RecTypeId" type="String" />
+    <aura:attribute name="currentRecord" type="Account" default="{'sobjectType':'Account'}"/>
+    <aura:attribute name="DefaultFlag" type="String" />
+    <aura:attribute name="StageFieldTest" type="String" />
+    <aura:attribute name="acc" type="Object"/>
+    <aura:attribute name="simpleAcc" type="Object"/>
+    <aura:attribute name="accError" type="String"/>
+    <aura:attribute name="defaultAcc" type="String" />
+    <aura:dependency resource="markup://force:navigateToSObject" type="EVENT"/>
+        <force:recordData aura:id="oppRecordLoader" mode="EDIT"
+        recordId="{!v.recordId}"
+        fields="AccTypeNew__c,Name,Id"
+        targetRecord="{!v.acc}"
+        targetFields="{!v.simpleAcc}"
+        targetError="{!v.accError}"
+    />
+    	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	    <lightning:card title="Lead" aura:id="leadComp">
+        <div class="selectWidth">
+            <p> <abbr title="required" class="slds-required" lightning-input_input="">*</abbr>
+                <ui:outputText value="Project Name" class="slds-form-element__label" />
+                <force:inputField value="{!v.LeadToInsert.Project_Name__c}" required="true" />
+                <abbr title="required" class="slds-required" lightning-input_input="">*</abbr>
+                <ui:outputText value="Improvement Cost (Est)" class="slds-form-element__label" />
+                <force:inputField value="{!v.LeadToInsert.Improvement_Cost_Est__c}" required="true" />
+                <abbr title="required" class="slds-required" lightning-input_input="">*</abbr>
+                <ui:outputText value="Property Owner Main Contact" />
+                <force:inputField value="{!v.LeadToInsert.Property_Owner_Main_Contact__c}" required="true" />
+                <abbr title="required" class="slds-required" lightning-input_input="">*</abbr>
+                <ui:outputText value="Lead Stage" class="slds-form-element__label" />
+                <force:inputField value="{!v.LeadToInsert.Stage__c}" required="true" change="{!c.changeStage}" />
+                <abbr title="required" class="slds-required" lightning-input_input="">*</abbr>
+                <ui:outputText value="Solar Component" class="slds-form-element__label" />
+                <force:inputField value="{!v.LeadToInsert.Solar_Component__c}" required="true" change="{!c.changeSolar}" aura:id="SolarDivVal" />
+                <div aura:id="SolarDiv" class="slds-hide">
+                    <ui:outputText value="Solar PV System Size (kW)" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Solar_PV_System_Size_kW__c}" />
+                    <ui:outputText value="Year 1 Production (kWh)" />
+                    <force:inputField value="{!v.LeadToInsert.Year_1_Production_kWh__c}" />
+                    <ui:outputText value="Yr 1 Bill Savings Solar (pre- post)" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Year_1_Bill_Savings_pre_solar_bill_po__c}" />
+                    <ui:outputText value="Lead Stage" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Solar_Component__c}" />
+                    <ui:outputText value="Solar System Ownership" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Solar_System_Ownership__c}" required="true" />
+                    <ui:outputText value="Estimated Utility Rate Escalation" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Estimated_Utility_Rate_Escalation__c}" />
+                </div>
+                <div aura:id="PreQual" class="slds-hide">
+                    <ui:outputText value="Primary Property Type" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Primary_Type__c}" />
+                    <ui:outputText value="Close Date" />
+                    <force:inputField value="{!v.LeadToInsert.Close_Date__c}" />
+                    <ui:outputText value="Property State" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Property_State__c}" />
+                </div>
+                <div aura:id="Qual" class="slds-hide">
+                    <ui:outputText value="Project Scope" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Project_Scope__c}" />
+                    <ui:outputText value="Property City" />
+                    <force:inputField value="{!v.LeadToInsert.Property_City__c}" />
+                    <ui:outputText value="Originations Team Member" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Originations_Team_Member__c}" />
+                    <ui:outputText value="Project Start Date" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Project_Start_Date__c}" />
+                    <ui:outputText value="Project Finish Date" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Project_Finish_Date__c}" />
+                </div>
+                <div aura:id="Quoted" class="slds-hide">
+                    <ui:outputText value="Indicative Quote Sent Date" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Indicative_Quote_Sent_Date__c}" />
+                    <ui:outputText value="Indicative Interest Rate at Quote" />
+                    <force:inputField value="{!v.LeadToInsert.Indicative_Interest_Rate_at_Quote__c}" />
+                    <ui:outputText value="Spread at Quote (bps)" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Spread_at_Quote_bps__c}" />
+                    <ui:outputText value="Benchmark at Indicative Quote" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Benchmark_at_Indicative_Quote__c}" />
+                    <ui:outputText value="Benchmark Date at Indicative Quote" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Benchmark_Date_at_Indicative_Quote__c}" />
+                    <ui:outputText value="Benchmark Type" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Benchmark_Type__c}" />
+                    <ui:outputText value="Total Financing Fee" class="slds-form-element__label" />
+                    <force:inputField value="{!v.LeadToInsert.Total_Financing_Fee__c}" />
+                </div>
+            </p>
+            <br/>
+            <button class="slds-utton slds-button_brand" onclick="{!c.saveLead}">Save Lead</button> &nbsp;&nbsp;
+            <button class="slds-utton slds-button_brand" onclick="{!c.useDefault}">Use Default</button>
+        </div>
+    </lightning:card>
+</aura:component>

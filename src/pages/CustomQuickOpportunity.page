@@ -1,0 +1,13 @@
+<apex:page standardController="Opportunity" sidebar="false">
+<apex:form >
+<apex:pageBlock title="Opportunity Detail">
+<apex:pageBlockbuttons >
+<apex:commandButton value="Save Opportunity" action="{!save}"/>
+</apex:pageBlockbuttons>
+<apex:pageBlockSection title="Opportunity Information 1" columns="2" collapsible="false">
+<apex:inputField value="{!opportunity.Name}"/>
+<apex:inputField value="{!opportunity.PACEPartner_Project_Number__c}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,10 @@
+<apex:page standardController="Opportunity" extensions="EgnyteIframeController" >
+    <apex:outputpanel rendered="{!iframeRenderer}">
+        <apex:iframe src="{!redirectUrl}" scrolling="true" id="theIframe"/>
+    </apex:outputpanel>
+    <center>
+    <apex:outputpanel rendered="{!!iframeRenderer}">
+        <h1><b><font size="4">No Folder/File found in Egnyte system</font></b></h1>
+    </apex:outputpanel>
+    </center>
+</apex:page>

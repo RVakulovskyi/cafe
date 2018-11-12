@@ -1,0 +1,76 @@
+<apex:page id="OpportunityEdit" standardController="Opportunity" extensions="OpportunityEditController"
+           tabStyle="Opportunity" >
+
+    <div class="bPageTitle">
+        <div class="ptBody">
+            <div class="content">
+                <img src="/img/s.gif" alt="Opportunity" class="pageTitleIcon" title="Opportunity"/>
+                <h1 class="pageType">Opportunity Edit<span class="titleSeparatingColon">:</span></h1>
+                <h2 class="pageDescription"> {!editedOpportunity.Name}</h2>
+                <div class="blank">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <apex:form >
+        <apex:outputPanel layout="block" id="content">
+            <apex:pageMessages id="msg"/>
+            <apex:pageBlock title="Opportunity Edit">
+                <apex:pageBlockButtons >
+                    <apex:commandButton value="Save" action="{!save}"/>
+                    <apex:commandButton value="Save & New" action="{!saveAndNew}"/>
+                    <apex:commandButton value="Cancel" action="{!cancel}"/>
+                </apex:pageBlockButtons>
+                <!-- page block section for each field set -->
+                <apex:repeat value="{!fieldSets}" var="currentFieldSet">
+                    <apex:pageBlockSection title="{!currentFieldSet.Label}" collapsible="false" columns="2" >
+
+                        <!-- page block section item for each field in field set-->
+                        <apex:repeat value="{!currentFieldSet.Fields}" var="field">
+                            <apex:inputField value="{!editedOpportunity[field.FieldPath]}"/>
+                        </apex:repeat>
+                    </apex:pageBlockSection>
+                </apex:repeat>
+
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+
+    <script type="text/javascript">
+        function openLookup(baseURL, width, modified, searchParam) {
+        /*IE fix */
+            if (!String.prototype.startsWith) {
+                String.prototype.startsWith = function(searchString, position) {
+                    position = position || 0;
+                    return this.indexOf(searchString, position) === position;
+                };
+            }
+
+            var lookupType;
+
+            var urlParams = baseURL.split("&");
+            for (i = 0; i < urlParams.length; i++) {
+                if (urlParams[i].startsWith('lktp')) {
+                    lookupType = urlParams[i].split('=')[1];
+                }
+            }
+
+            // Following "001" is the lookup type for Account object
+            if (lookupType == "001") {
+                var customBaseURL = "{!$Site.BaseUrl}/apex/CustomLookupAccount?frm=" + escapeUTF("{!$Component.OpportunityView.opportunityForm}")
+                            + '&' + baseURL.split('?')[1];
+
+                if (modified == '1') {
+                    customBaseURL += searchParam;
+                }
+
+                openPopup(customBaseURL, "lookup", 0, 100, "width=" + width + ",height=500,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            } else {
+                if (modified == '1') {
+                    baseURL = baseURL + searchParam;
+                }
+                openPopup(baseURL, "lookup", 0, 0, "width=" + width + ",height=500,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            }
+        }
+
+    </script>
+</apex:page>

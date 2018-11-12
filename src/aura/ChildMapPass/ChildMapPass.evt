@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT">
+    <aura:attribute name="mapOfValues" type="Map"/>
+</aura:event>

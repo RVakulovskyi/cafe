@@ -1,0 +1,35 @@
+<apex:page controller="LogActivityCntr">
+    <apex:form id="theForm" onkeypress="return event.keyCode != 13;">
+         <apex:actionRegion >  
+    <apex:pageBlock title="Select option">
+        <apex:pageMessages />
+         <apex:actionStatus id="status">
+                  <center>
+            <apex:facet name="start">
+                <apex:image id="theImage" value="/apexpages/devmode/img/saveStatus.gif" width="16" height="16"/>
+            </apex:facet>
+                  </center>
+                </apex:actionStatus>
+        <apex:selectList size="1" value="{!activityValue}">
+            <apex:selectOptions value="{!ActivityValues}"/>
+        </apex:selectList>
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Cancel" action="{!back}" immediate="true"/>
+            <apex:commandButton value="Generate fields" action="{!renderFieldSetMembers}" rerender="theForm" />
+        </apex:PageBlockButtons>
+    </apex:pageBlock>
+     </apex:actionRegion>
+     <apex:actionRegion > 
+	    <apex:pageBlock rendered="{!listFieldSetMembers != null}" title="{!activityValue} fields"> 
+            <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!saveTask}"/>
+        </apex:pageBlockButtons>
+            <apex:pageBlockSection collapsible="false" title="{!activityValue}">
+                <apex:repeat value="{!listFieldSetMembers}" var="fieldSetItem">
+                    	<apex:inputField value="{!taskToInsert[fieldSetItem.fieldPath]}" required="{!OR(fieldSetItem.required, fieldSetItem.dbrequired)}"/>
+                </apex:repeat>
+            </apex:pageBlockSection> 
+     </apex:pageBlock>
+     </apex:actionRegion>
+    </apex:form>
+</apex:page>

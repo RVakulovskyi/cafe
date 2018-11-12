@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Test Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Test Flow</label>
+    <processType>Flow</processType>
+    <screens>
+        <name>test_finished</name>
+        <label>test finished</label>
+        <locationX>266</locationX>
+        <locationY>158</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>TestFinishedtext</name>
+            <fieldText>You finished the test.</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+    </screens>
+    <screens>
+        <name>Test_Flow_Permissions</name>
+        <label>Test Flow Permissions</label>
+        <locationX>20</locationX>
+        <locationY>166</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>test_finished</targetReference>
+        </connector>
+        <fields>
+            <name>Test</name>
+            <dataType>String</dataType>
+            <fieldText>Test</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+    </screens>
+    <startElementReference>Test_Flow_Permissions</startElementReference>
+</Flow>

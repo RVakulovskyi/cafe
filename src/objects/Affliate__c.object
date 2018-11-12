@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>CRMC_Action_Grid_Defaults</fullName>
+        <description>Fro ActionGrid</description>
+        <displayedFields>
+            <field>Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Business_Dev_Lead__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Agreement_Executed_By__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Geography_Focus__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Agreement_Signed_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CleanFund_Fee_Range_Low__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CleanFund_Fee_Range_High__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Affiliate_Fee_Based_On__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CRMC_Action_Grid_Defaults</label>
+    </fieldSets>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Affiliate_Agreement</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Affiliate_Agreement_on_Box__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to the executed agreement in Box.</inlineHelpText>
+        <label>Affiliate Agreement (on Box)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Affiliate_Fee_Based_On__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This describes what the fee to the partner/affiliate is based on.</inlineHelpText>
+        <label>Affiliate Fee Based On</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Project Cost</fullName>
+                    <default>false</default>
+                    <label>Project Cost</label>
+                </value>
+                <value>
+                    <fullName>CleanFund Fee</fullName>
+                    <default>false</default>
+                    <label>CleanFund Fee</label>
+                </value>
+                <value>
+                    <fullName>Flat Fee</fullName>
+                    <default>false</default>
+                    <label>Flat Fee</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Agreement_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Agreement_Executed_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>The signer on the fee agreement</inlineHelpText>
+        <label>Agreement Executed By</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Affiliate_Parnter_Agreement</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Agreement_Signed_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The date the affiliate agreement was first signed.</inlineHelpText>
+        <label>Agreement Signed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Agreement_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Business_Dev_Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Business Dev Lead</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Affiliate_Parnter_Agreement</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CleanFund_Fee_Range_High__c</fullName>
+        <externalId>false</externalId>
+        <label>CF Fee Range High</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>CleanFund_Fee_Range_Low__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The lower range of the CleanFund fee.</inlineHelpText>
+        <label>CF Fee Range Low</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Flat_Fee_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Flat Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Flat_Fee_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Notes regarding any flat fee arrangment</inlineHelpText>
+        <label>Flat Fee Notes</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Geography_Focus__c</fullName>
+        <externalId>false</externalId>
+        <label>Geography Focus</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Budget_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Any color on the marketing budget?</inlineHelpText>
+        <label>Marketing Budget Notes</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Marketing__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Marketing Budget for the Month.</inlineHelpText>
+        <label>Monthly Marketing Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Retainer_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Any special arrangements for monthly retainer.  Step down schedule, etc.</inlineHelpText>
+        <label>Monthly Retainer Notes</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Monthly_Retainer__c</fullName>
+        <description>Monthly retainer for this partner</description>
+        <externalId>false</externalId>
+        <label>Monthly Retainer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Short Note Field used for display on reports.</inlineHelpText>
+        <label>Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Fee_Range_High__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Fee Range High (On Cost)</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Fee_Range_Low__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Fee Range Low (On Cost)</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Material_Engagement__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is for CleanFund Originated deals that the partner has material engagement in.</inlineHelpText>
+        <label>Partner Material Engagement</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Originated_Fee__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Projects originated by Partner and accepted by CF in the Geo. Area of Focus in which Partner performs a material role in the customer acquisition, vendor selection, incentive capture, client communications, or any other activity related to transaction.</inlineHelpText>
+        <label>Partner Originated Fee</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Outside_of_Geography__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Fee for referring clients outside of the Partner&apos;s geography</inlineHelpText>
+        <label>Partner Outside of Geography</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Referral_Only__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>These are for CleanFund originated deals where the partner has an exclusive lock on a geographical area.</inlineHelpText>
+        <label>Partner Referral Only</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Special_Deals__c</fullName>
+        <externalId>false</externalId>
+        <label>Special Deals</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Type_of_Affliate__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Affliate Agreement</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Partner</fullName>
+                    <default>false</default>
+                    <label>Partner</label>
+                </value>
+                <value>
+                    <fullName>Placement</fullName>
+                    <default>false</default>
+                    <label>Placement</label>
+                </value>
+                <value>
+                    <fullName>Referral</fullName>
+                    <default>false</default>
+                    <label>Referral</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Vertical_Focus__c</fullName>
+        <externalId>false</externalId>
+        <label>Vertical Focus</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Affiliate Agreement</label>
+    <nameField>
+        <label>Affliate  Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Affiliate Agreements</pluralLabel>
+    <searchLayouts>
+        <listViewButtons>crmc_Grid</listViewButtons>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Notes__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Geography_Focus__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Agreement_Signed_Date__c</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>crmc_Grid</searchResultsCustomButtons>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>crmc_Grid</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>ActionGrid</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>(function (e,t,i){var a=document.getElementsByTagName(&quot;HEAD&quot;).item(0),n=document.createElement(&quot;script&quot;);n.type=&quot;text/javascript&quot;,a.appendChild(n),n.onload=function(){GridButton.showInGrid(e,t)},n.src=&quot;/resource/&quot;+i+&quot;gridbutton?ts=&quot;+(new Date).getTime()}(&quot;Affliate__c&quot;, {!GETRECORDIDS( $ObjectType.Affliate__c)}, &quot;CRMC_PP__&quot;));</url>
+    </webLinks>
+</CustomObject>

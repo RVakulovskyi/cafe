@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>HVAC Systems</fullName>
+        <default>false</default>
+        <label>HVAC Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>HVAC, Air Sealing, Ventilation, other</fullName>
+        <default>false</default>
+        <label>HVAC, Air Sealing, Ventilation, other</label>
+    </customValue>
+    <customValue>
+        <fullName>Refrigeration</fullName>
+        <default>false</default>
+        <label>Refrigeration</label>
+    </customValue>
+    <customValue>
+        <fullName>Electrical</fullName>
+        <default>false</default>
+        <label>Electrical</label>
+    </customValue>
+    <customValue>
+        <fullName>Lighting</fullName>
+        <default>false</default>
+        <label>Lighting</label>
+    </customValue>
+    <customValue>
+        <fullName>Daylighting</fullName>
+        <default>false</default>
+        <label>Daylighting</label>
+    </customValue>
+    <customValue>
+        <fullName>Control Systems</fullName>
+        <default>false</default>
+        <label>Control Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>Insulation</fullName>
+        <default>false</default>
+        <label>Insulation</label>
+    </customValue>
+    <customValue>
+        <fullName>Openings</fullName>
+        <default>false</default>
+        <label>Openings</label>
+    </customValue>
+    <customValue>
+        <fullName>Roofing</fullName>
+        <default>false</default>
+        <label>Roofing</label>
+    </customValue>
+    <customValue>
+        <fullName>Sealing</fullName>
+        <default>false</default>
+        <label>Sealing</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Heating</fullName>
+        <default>false</default>
+        <label>Water Heating</label>
+    </customValue>
+    <customValue>
+        <fullName>Conveying Systems</fullName>
+        <default>false</default>
+        <label>Conveying Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>Commissioning</fullName>
+        <default>false</default>
+        <label>Commissioning</label>
+    </customValue>
+    <customValue>
+        <fullName>Plumbing Fixtures</fullName>
+        <default>false</default>
+        <label>Plumbing Fixtures</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Reuse</fullName>
+        <default>false</default>
+        <label>Water Reuse</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Conservation Other</fullName>
+        <default>false</default>
+        <label>Water Conservation Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Solar</fullName>
+        <default>false</default>
+        <label>Solar</label>
+    </customValue>
+    <customValue>
+        <fullName>Wind</fullName>
+        <default>false</default>
+        <label>Wind</label>
+    </customValue>
+    <customValue>
+        <fullName>Fuel Cell</fullName>
+        <default>false</default>
+        <label>Fuel Cell</label>
+    </customValue>
+    <customValue>
+        <fullName>Geothermal</fullName>
+        <default>false</default>
+        <label>Geothermal</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Renewable Energy</fullName>
+        <default>false</default>
+        <label>Other Renewable Energy</label>
+    </customValue>
+    <customValue>
+        <fullName>Electric Vehicle Charging Equipment &amp; Infrastructure</fullName>
+        <default>false</default>
+        <label>Electric Vehicle Charging Equipment &amp; Infrastructure</label>
+    </customValue>
+    <customValue>
+        <fullName>Seismic Retrofit &amp; Safety</fullName>
+        <default>false</default>
+        <label>Seismic Retrofit &amp; Safety</label>
+    </customValue>
+    <customValue>
+        <fullName>Related Scope (Demolition, Finishes, Sitework, etc.)</fullName>
+        <default>false</default>
+        <label>Related Scope (Demolition, Finishes, Sitework, etc.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Indirect Costs  (GC fees, general requirements, etc.)</fullName>
+        <default>false</default>
+        <label>Indirect Costs  (GC fees, general requirements, etc.)</label>
+    </customValue>
+    <customValue>
+        <fullName>Soft Costs (A&amp;E and other indirect costs)</fullName>
+        <default>false</default>
+        <label>Soft Costs (A&amp;E and other indirect costs)</label>
+    </customValue>
+    <description>This is a multi-select field that supports the online quote page</description>
+    <masterLabel>Project Scope Detail</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

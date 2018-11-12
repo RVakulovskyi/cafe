@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bank</fullName>
+        <default>false</default>
+        <label>Lender</label>
+    </customValue>
+    <customValue>
+        <fullName>Channel Partner</fullName>
+        <default>false</default>
+        <label>Channel Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>City</fullName>
+        <default>false</default>
+        <label>City</label>
+    </customValue>
+    <customValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <label>Competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>County</fullName>
+        <default>false</default>
+        <label>County</label>
+    </customValue>
+    <customValue>
+        <fullName>Influencer</fullName>
+        <default>false</default>
+        <label>Influencer</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Investor</fullName>
+        <default>false</default>
+        <label>Investor</label>
+    </customValue>
+    <customValue>
+        <fullName>Owner</fullName>
+        <default>true</default>
+        <label>Owner</label>
+    </customValue>
+    <customValue>
+        <fullName>Owner Rep</fullName>
+        <default>false</default>
+        <label>Owner Rep</label>
+    </customValue>
+    <customValue>
+        <fullName>PACE Program</fullName>
+        <default>false</default>
+        <label>PACE Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Servicer</fullName>
+        <default>false</default>
+        <label>Servicer</label>
+    </customValue>
+    <customValue>
+        <fullName>Third party Report Provider</fullName>
+        <default>false</default>
+        <label>Third party Report Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Transaction Counsel</fullName>
+        <default>false</default>
+        <label>Transaction Counsel</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown</fullName>
+        <default>false</default>
+        <label>Unknown</label>
+    </customValue>
+    <masterLabel>GlobalAccType</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,124 @@
+<apex:page standardcontroller="Opportunity">
+
+
+<apex:messages />
+    <apex:sectionheader title="{!$ObjectType.Opportunity.label} Edit" subtitle="{!IF(ISNULL(Opportunity.Name), 'New Opportunity',Opportunity.Name)}"/>
+    <apex:form >
+        <apex:pageblock mode="edit" title="{!$ObjectType.Opportunity.label} Edit">
+            <apex:pageblockbuttons >
+                <apex:commandbutton value="Save" action="{!Save}"/>
+                <apex:commandbutton value="Cancel" action="{!Cancel}"/>
+            </apex:pageblockbuttons>
+
+            <!-- **********   [Record Type : Master ]   **********  -->
+            <apex:outputpanel >
+                <apex:pageblocksection title="All fields marked in RED are required to change to Qualified Lead" showheader="true" columns="2">
+                </apex:pageblocksection>
+            </apex:outputpanel>
+            <apex:outputpanel >
+                <apex:pageblocksection title="Stage Information" showheader="true" columns="2">
+                    <apex:inputfield value="{!Opportunity.StageName}" required="true"/>
+                      <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Project Qualified Date" for="qualDate"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Project_Qualified_Date__c}" id="qualDate"/>
+                                </div>
+                            </apex:outputpanel>
+                      </apex:pageBlockSectionItem>
+                </apex:pageblocksection>
+
+                <apex:pageblocksection title="Pricing" showheader="true" columns="2">
+                    <apex:pageblocksection >
+                        <apex:pageblocksection columns="1">
+                            <apex:inputfield value="{!Opportunity.PACE_Program_New__c}" required="true"/>
+                            <apex:inputfield value="{!Opportunity.Proposal_Sent_Date__c}"/>
+                            <apex:inputfield value="{!Opportunity.Current_Benchmark__c}" />
+                            <apex:inputfield value="{!Opportunity.Benchmark_Date_at_Term_Sheet__c}" />
+                            <apex:inputfield value="{!Opportunity.Benchmark_Type__c}" />
+                            <apex:inputfield value="{!Opportunity.Spread_bps__c}" />
+                            <apex:inputfield value="{!Opportunity.Interest_Rate__c}" />
+                            <apex:inputfield value="{!Opportunity.Channel_Partner__c}" />
+                            <apex:inputfield value="{!Opportunity.Total_Financing_Fee__c}" />
+                            <apex:inputfield value="{!Opportunity.Financing_Amount__c}" required="true"/>
+                        </apex:pageblockSection>
+                        <apex:pageblocksection columns="1">
+                            <apex:inputfield value="{!Opportunity.Pricing_Adjustment_Notes__c}" />
+                        </apex:pageblockSection>
+                    </apex:pageblockSection>
+                </apex:pageblocksection>
+
+                <apex:pageblocksection title="Contact Information" showheader="true" columns="2">
+                    <apex:pageblocksection columns="1">
+                        <apex:inputfield value="{!Opportunity.AccountId}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.Name}" required="true"/>
+                     </apex:pageblockSection>
+                     <apex:pageblocksection columns="1">
+                        <apex:inputfield value="{!Opportunity.Channel_Partner_Entity__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Channel_Partner_Main_Contact__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.LeadSource}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.Sub_Lead_Source__c}" required="false"/>
+                     </apex:pageblocksection>
+                 </apex:pageblocksection>
+                 <apex:pageblocksection title="Property Information" showheader="true" columns="2">
+                     <apex:pageblocksection columns="1">
+                        <apex:inputfield value="{!Opportunity.State_Prop__c}" required="true"/>
+                     </apex:pageblockSection>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Project Information" showheader="true" columns="2">
+                    <apex:pageblocksection columns="1">
+                        <apex:inputfield value="{!Opportunity.Project_Type__c}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.CloseDate}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.Loan_Term__c}" required="true"/>
+                         <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Improvement Cost (Est.)" for="improvementCost"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Est_Improvement_Cost__c}" id="improvementCost"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageblockSection>
+                    <apex:pageblocksection columns="1">
+                        <apex:inputfield value="{!Opportunity.NextStep}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Type_of_Improvements_Multi__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Description_of_Improvements__c}" required="false"/>
+                        
+                         <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Construction Status-Initial Engagement" for="constructionStatus"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Construction_Work_Status__c}" id="constructionStatus"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Project Objective" for="projectObjective"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Project_Objective__c}" id="projectObjective"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>    
+                       
+                    </apex:pageblockSection>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Solar Information" showheader="true" columns="2">
+                    <apex:inputfield value="{!Opportunity.Solar_Component__c}" id="solarComponent"/>
+                    <apex:inputfield value="{!Opportunity.Solar_PV_System_Size_kW__c}"/>
+                    <apex:inputfield value="{!Opportunity.Year_1_Electricity_kWh_Production_Est__c}"/>
+                    <apex:inputfield value="{!Opportunity.Solar_System_Ownershipo__c}"/>
+                    <apex:inputfield value="{!Opportunity.Estimated_Utility_Rate_Escalation_yr__c}"/>
+                </apex:pageblocksection>
+            </apex:outputpanel>
+        </apex:pageblock>
+    </apex:form>
+    <center><br/>
+        <i style="font-size:10px;color:#aaa;">Generated By LAYOUT PAGE <a href="http://www.clerisoft.com" target="_blank">[http://www.clerisoft.com]</a> (2008-2014) : Wed Nov 02 2016 10:50:11 GMT-0700 (PDT)</i>
+    </center><br/>
+</apex:page>

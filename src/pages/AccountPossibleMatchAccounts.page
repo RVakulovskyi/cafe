@@ -1,0 +1,25 @@
+<apex:page standardController="Account" extensions="AccountMatchingController" >
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageBlockSection id="InfoId" columns="1" >
+                <apex:outputLabel value="Possible Accounts" />
+                <apex:selectList size="1" value="{!selectedResult}">
+                    <apex:selectOptions value="{!result}"/>
+                </apex:selectList>
+                <apex:commandButton value="Save" action="{!save}" rerender="redirectPanel" status="actStatusId"/>
+                <apex:actionStatus id="actStatusId" >
+                <apex:facet name="start" >
+                  <img src="/img/loading32.gif" width="25" height="25"/>                    
+                </apex:facet>
+            </apex:actionStatus>
+                <apex:outputPanel id="redirectPanel" >
+                    <apex:outputText rendered="{!shouldRedirect}">
+                        <script type="text/javascript">
+                        window.top.location.href = '{!redirectUrl}';
+                        </script>
+                    </apex:outputText>
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

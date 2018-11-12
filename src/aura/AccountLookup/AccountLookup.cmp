@@ -1,0 +1,67 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="LookUpController">
+    <aura:attribute name="selectedLookUpRecord" type="sObject" default="{}"/>
+    <aura:attribute name="studentObj" type="Account" default="{ 'sobjectType': 'Account'}"/>
+    <aura:attribute name="objAccount" type="Account" default="{'sobjectType':'Account'}"/>
+    <aura:attribute name="newAccount" type="Object"/>
+	<aura:attribute name="simpleNewAccount" type="Object"/>
+	<aura:attribute name="newAccountError" type="String"/> 
+    <aura:attribute name="lstOfRecordType" type="String[]" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="record" type="Object" description="The record object to be displayed"/>
+    <aura:attribute name="ContactRecord" type="Object" description="A simplified view record object to be displayed"/>
+    <aura:attribute name="recordError" type="String" description="An error message bound to force:recordData"/>
+    <aura:attribute name="objContact" type="contact" default="{'sobjectType':'contact'}"/>
+    <force:recordData aura:id="record"
+                      layoutType="FULL"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.ContactRecord}"
+                      mode="VIEW"/>
+   
+	<div class="slds-tabs_default">
+  <ul class="slds-tabs_default__nav" role="tablist">
+    <li class="slds-tabs_default__item slds-is-active" title="Search" role="presentation" aura:id="searchId" onclick="{!c.searchTab}">
+      <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Search</a>
+    </li>
+    <li class="slds-tabs_default__item " title="New Account" role="presentation" aura:id="accId" onclick="{!c.accTab}">
+      <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">New Account</a>
+    </li>
+  </ul>
+  <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item" aura:id="searchTabId">
+
+       <c:LTN_AccountLookup objectAPIName="account" IconName="standard:account" label="Account Name" selectedRecord="{!v.selectedLookUpRecord}" aura:id = "childComp" contactCurrentRecord="{!v.ContactRecord}" SearchKeyWord = "{!v.ContactRecord.Account.Name}"/>
+      <br/>
+       <button class="slds-utton slds-button_brand" onclick="{!c.saveContactRecord}">Save</button>   
+   </div>
+  <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item" aura:id="accTabId">
+       
+    
+    <div class="slds-grid">
+        <lightning:card title="New Account">
+            <p>
+            <ui:outputText value="Name" />
+            <force:inputField value="{!v.objAccount.Name}" required="true" aura:id="nameField"/>
+            <ui:outputText value="CF Lead Source" />
+            <force:inputField value="{!v.objAccount.CF_Lead_Source__c}" required="true" />
+            <ui:outputText value="Type" />
+            <force:inputField value="{!v.objAccount.AccTypeNew__c}" required="true" />
+            <ui:outputText value="Status" />
+            <force:inputField value="{!v.objAccount.Client_Status__c}" required="true" />
+            <ui:outputText value="RecordType" />
+            <ui:inputSelect aura:id="selectRecordTypeId">
+            	<aura:iteration items="{!v.lstOfRecordType}" var="accountrType">                            
+            		<ui:inputSelectOption text="{!accountrType}" label="{!accountrType}"  />
+            	</aura:iteration>
+           </ui:inputSelect>
+        </p>
+            <br/><br/>
+            <button class="slds-utton slds-button_brand" onclick="{!c.saveContactRecordAccount}">Save</button>  
+        </lightning:card>
+      
+    </div>        
+        </div>
+       
+</div>
+       
+</aura:component>

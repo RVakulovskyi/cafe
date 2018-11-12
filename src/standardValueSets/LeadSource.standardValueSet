@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Affiliate</fullName>
+        <default>false</default>
+        <label>Affiliate</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Channel Partner</fullName>
+        <default>false</default>
+        <label>Channel Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CleanQuote</fullName>
+        <default>false</default>
+        <label>CleanQuote</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference</fullName>
+        <default>false</default>
+        <label>Conference</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employee Referral</fullName>
+        <default>false</default>
+        <label>Employee Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing Account Contacts</fullName>
+        <default>false</default>
+        <label>Existing Account Contacts</label>
+    </standardValue>
+    <standardValue>
+        <fullName>External Referral</fullName>
+        <default>false</default>
+        <label>External Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Phone</fullName>
+        <default>false</default>
+        <label>Inbound Phone</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Journal</fullName>
+        <default>false</default>
+        <label>Journal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Marketing Campaign</fullName>
+        <default>false</default>
+        <label>Marketing Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Media</fullName>
+        <default>false</default>
+        <label>Media</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PACE Program</fullName>
+        <default>false</default>
+        <label>PACE Program</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prior Relationship</fullName>
+        <default>false</default>
+        <label>Prior Relationship</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UNKNOWN</fullName>
+        <default>false</default>
+        <label>UNKNOWN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web Search</fullName>
+        <default>false</default>
+        <label>Web Search</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Website Inquiry</fullName>
+        <default>false</default>
+        <label>Website Inquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LeadGen</fullName>
+        <default>false</default>
+        <label>LeadGen</label>
+    </standardValue>
+</StandardValueSet>

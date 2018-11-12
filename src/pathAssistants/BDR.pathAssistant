@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Stage__c</fieldName>
+    <masterLabel>BDR</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Date_Dead_Lost__c</fieldNames>
+        <fieldNames>Dead_Lost_Reason__c</fieldNames>
+        <fieldNames>Dead_Lost_Comment__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif; font-size: 11pt;&quot;&gt;The property owner or their representative has declined interest.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Dead/Lost</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Date_Declared_Dormant__c</fieldNames>
+        <fieldNames>Reason_for_Dormancy__c</fieldNames>
+        <fieldNames>Out_of_Dormancy_Trigger__c</fieldNames>
+        <fieldNames>Dormancy_Resolution_Date__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif; font-size: 11pt;&quot;&gt;CleanFund has identified a viable opportunity, but the property owner or owner’s representative is not ready to close. A tickler date and note should be noted.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Dormant</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Project_Name__c</fieldNames>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>Property_Street_Address__c</fieldNames>
+        <fieldNames>AccountTypeNew__c</fieldNames>
+        <fieldNames>CF_Lead_Source__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif; font-size: 11pt;&quot;&gt;An early stage potential (unconfirmed) lead at the highest level – a contact/company that is a path to an owner/partner with a potential deal(s). &lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Identified</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Primary_Type__c</fieldNames>
+        <fieldNames>Project_Objective__c</fieldNames>
+        <fieldNames>Property_State__c</fieldNames>
+        <fieldNames>Improvement_Cost_Est__c</fieldNames>
+        <fieldNames>Close_Date__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 11pt; font-family: Calibri, sans-serif;&quot;&gt;A discussion with Channel Partner or other referring entity/individual, but CleanFund has not yet had a discussion with property owner or their representative to confirm interest.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Pre-Qualified Lead</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Project_Scope__c</fieldNames>
+        <fieldNames>Construction_Status_Initial_Engagement__c</fieldNames>
+        <fieldNames>Project_Start_Date__c</fieldNames>
+        <fieldNames>Property_City__c</fieldNames>
+        <fieldNames>Solar_Component__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 11pt; font-family: Calibri, sans-serif;&quot;&gt;CleanFund has confirmed early stage interest in communication with the property owner (or their contracted/designated representative), with interest to continue dialogue and to consider C-PACE.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Qualified Lead</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Affiliate</fullName>
+        <default>false</default>
+        <label>Affiliate</label>
+    </customValue>
+    <customValue>
+        <fullName>Channel Partner</fullName>
+        <default>false</default>
+        <label>Channel Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Conference</fullName>
+        <default>false</default>
+        <label>Conference</label>
+    </customValue>
+    <customValue>
+        <fullName>Employee Referral</fullName>
+        <default>false</default>
+        <label>Employee Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Account Contacts</fullName>
+        <default>false</default>
+        <label>Existing Account Contacts</label>
+    </customValue>
+    <customValue>
+        <fullName>External Referral</fullName>
+        <default>false</default>
+        <label>External Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Inbound Phone</fullName>
+        <default>false</default>
+        <label>Inbound Phone</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Campaign</fullName>
+        <default>false</default>
+        <label>Marketing Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>PACE Program</fullName>
+        <default>false</default>
+        <label>PACE Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Prior Relationship</fullName>
+        <default>false</default>
+        <label>Prior Relationship</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospecting</fullName>
+        <default>false</default>
+        <label>Prospecting</label>
+    </customValue>
+    <customValue>
+        <fullName>Vendor on Opportunity</fullName>
+        <default>false</default>
+        <label>Vendor on Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Quote Owner</fullName>
+        <default>false</default>
+        <label>Web Quote Owner</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Quote Owner Rep</fullName>
+        <default>false</default>
+        <label>Web Quote Owner Rep</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Search (Outbound)</fullName>
+        <default>false</default>
+        <label>Web Search (Outbound)</label>
+    </customValue>
+    <customValue>
+        <fullName>Website Inquiry (Inbound)</fullName>
+        <default>false</default>
+        <label>Website Inquiry (Inbound)</label>
+    </customValue>
+    <customValue>
+        <fullName>Website Inquiry</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Website Inquiry</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Search</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Web Search</label>
+    </customValue>
+    <customValue>
+        <fullName>UNKNOWN</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>UNKNOWN</label>
+    </customValue>
+    <customValue>
+        <fullName>Media</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Journal</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Journal</label>
+    </customValue>
+    <masterLabel>CF Lead Source</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

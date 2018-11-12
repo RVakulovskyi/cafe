@@ -1,0 +1,49 @@
+<apex:page standardController="Lead" extensions="RequiredLeadConversionCntr">
+     <apex:form id="formId">
+         <apex:actionFunction name="convertLeadFunc" />
+     <apex:pageMessages />
+     <apex:actionRegion >
+      <apex:pageBlock title="Select object to convert">
+            <apex:selectList value="{!objectPicker}" label="Select object to convert" size="1">
+                <apex:selectOptions value="{!ObjectPickerList}"/>
+            </apex:selectList>
+            <apex:commandButton value="render fields" rerender="formId"/>
+      </apex:pageBlock>
+      </apex:actionRegion>
+      <apex:actionRegion >
+         <apex:pageBlock rendered="{!objectPicker != NULL}">
+              <apex:pageBlockButtons >
+            <apex:commandbutton value="Convert Lead" action="{!converLead}" onclick="if(!confirm('Please make sure all of the above is correct before you submit.  Opportunities will be created in the Initial App stage.  If you have not received and checked the Initial App, do not convert this lead.')){return false};" />
+        </apex:pageBlockButtons>
+      <apex:pageBlock title="Lead conversion Account required fields" rendered="{!objectPicker ='aCOToConvert' || objectPicker = 'aCToConvert'}">
+       
+          <apex:pageBlockSection title="Fields">
+              <apex:repeat value="{!FieldsAccount}" var="f">
+                  <apex:inputField value="{!inputLead[f.fieldPath]}" 
+                      required="{!OR(f.required, f.dbrequired)}"/>
+              </apex:repeat>
+          </apex:pageBlockSection>
+  
+        </apex:pageBlock>
+          <apex:pageBlock title="Lead conversion Contact required fields" rendered="{!objectPicker = 'aCToConvert' || objectPicker ='aCOToConvert' || objectPicker = 'aToConvert'}">
+          <apex:pageBlockSection title="Fields">
+              <apex:repeat value="{!FieldsContact}" var="f">
+                  <apex:inputField value="{!inputLead[f.fieldPath]}" 
+                      required="{!OR(f.required, f.dbrequired)}"/>
+              </apex:repeat>
+          </apex:pageBlockSection>
+  
+        </apex:pageBlock>
+          <apex:pageBlock title="Lead conversion Opportunity required fields" rendered="{!objectPicker ='aCOToConvert'}">
+          <apex:pageBlockSection title="Fields">
+              <apex:repeat value="{!FieldsOpp}" var="f">
+                  <apex:inputField value="{!inputLead[f.fieldPath]}" 
+                      required="{!OR(f.required, f.dbrequired)}"/>
+              </apex:repeat>
+          </apex:pageBlockSection>
+  
+        </apex:pageBlock>
+</apex:pageBlock>
+</apex:actionRegion>
+    </apex:form>  
+</apex:page>

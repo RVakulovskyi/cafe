@@ -1,0 +1,87 @@
+<apex:page standardController="Opportunity" showHeader="true" docType="html-4.01-strict">
+<div id="tabstrip" style="display:none;"> <ul> 
+<li class="k-state-active">Tasks</li>
+<li>Events</li>
+<li>Contact Roles</li>
+<li>Partners</li>
+<li>Notes</li>
+<li>Attachments</li>
+<li>DocuSign Status</li>
+<li>Stage History</li>
+</ul>
+<!-- Tasks -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Task" FKName="WhatId" FKValue="{!Opportunity.Id}"  DelayLoad="false"  ViewID="a0C2F000000qeDMUAY" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+<!-- Events -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Event" FKName="WhatId" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C2F000000qeDRUAY" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+<!-- Contact Roles -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="OpportunityContactRole" FKName="OpportunityId" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C2F000000qeDWUAY" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+<!-- Partners -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="OpportunityPartner" FKName="OpportunityId" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C2F000000qeDYUAY" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+<!-- Notes -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Note" FKName="ParentId" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C2F000000qeDOUAY" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+<!-- Attachments -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="Attachment" FKName="ParentId" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C2F000000qeDbUAI" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+<!-- DocuSign Status -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="dsfs__DocuSign_Status__c" FKName="dsfs__Opportunity__c" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C2F000000qeDgUAI" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+<!-- Stage History -->
+<div style="overflow:hidden;"> 
+<CRMC_PP:Grid ObjectName="OpportunityHistory" FKName="OpportunityId" FKValue="{!Opportunity.Id}"  DelayLoad="true"  ViewID="a0C2F000000qeDlUAI" 
+ EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true" 
+ EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true" />
+ <CRMC_PP:DrillUp /> 
+ </div>
+
+</div>
+<script>
+$(document).ready(function() {
+    $("#tabstrip").kendoTabStrip({
+      activate: function(e){
+        setTimeout(function(){          $(window).resize();        });
+      }
+    });
+    $("#tabstrip").css("display", "block");
+});
+ </script>
+</apex:page>

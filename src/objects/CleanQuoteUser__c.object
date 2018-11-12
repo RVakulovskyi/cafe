@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>The user information for CleanQuote</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fieldSets>
+        <fullName>CQAccount</fullName>
+        <description>CQAccount</description>
+        <displayedFields>
+            <field>Company_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CQAccount</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>CQContact</fullName>
+        <description>CQContact</description>
+        <displayedFields>
+            <field>Email__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>First_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Last_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Phone__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Title__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CQContact</label>
+    </fieldSets>
+    <fields>
+        <fullName>Business_Focus__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Focus</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Business Development / Sales</fullName>
+                    <default>false</default>
+                    <label>Business Development / Sales</label>
+                </value>
+                <value>
+                    <fullName>Engineering</fullName>
+                    <default>false</default>
+                    <label>Engineering</label>
+                </value>
+                <value>
+                    <fullName>Finance</fullName>
+                    <default>false</default>
+                    <label>Finance</label>
+                </value>
+                <value>
+                    <fullName>Project Management</fullName>
+                    <default>false</default>
+                    <label>Project Management</label>
+                </value>
+                <value>
+                    <fullName>Executive Management</fullName>
+                    <default>false</default>
+                    <label>Executive Management</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Company Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Email</inlineHelpText>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The First Name of the User Register</inlineHelpText>
+        <label>First Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Geography_Focus__c</fullName>
+        <externalId>false</externalId>
+        <label>Geography Focus</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>How_can_CleanFund_Help_You__c</fullName>
+        <externalId>false</externalId>
+        <label>How can CleanFund Help  You</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>How_did_you_hear_about_us__c</fullName>
+        <externalId>false</externalId>
+        <label>How did I find CleanQuote</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CleanFund Team Member</fullName>
+                    <default>false</default>
+                    <label>CleanFund Team Member</label>
+                </value>
+                <value>
+                    <fullName>News Article</fullName>
+                    <default>false</default>
+                    <label>News Article</label>
+                </value>
+                <value>
+                    <fullName>Internet Search</fullName>
+                    <default>false</default>
+                    <label>Internet Search</label>
+                </value>
+                <value>
+                    <fullName>CleanFund Email Marketing</fullName>
+                    <default>false</default>
+                    <label>CleanFund Email Marketing</label>
+                </value>
+                <value>
+                    <fullName>PACE Nation</fullName>
+                    <default>false</default>
+                    <label>PACE Nation</label>
+                </value>
+                <value>
+                    <fullName>Colleague or Industry Professional</fullName>
+                    <default>false</default>
+                    <label>Colleague or Industry Professional</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Partner Network Team Member</fullName>
+                    <default>false</default>
+                    <label>Partner Network Team Member</label>
+                </value>
+                <value>
+                    <fullName>Partner Network Email Marketing</fullName>
+                    <default>false</default>
+                    <label>Partner Network Email Marketing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_Property_Owner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This indicates if this contact is a property owner.</inlineHelpText>
+        <label>Is Property Owner</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The Last Name of the User Registered</inlineHelpText>
+        <label>Last Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PACE_Experience__c</fullName>
+        <externalId>false</externalId>
+        <label>PACE Experience</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Have proposed PACE on projects, but haven’t closed any with PACE.</fullName>
+                    <default>false</default>
+                    <label>Have proposed PACE on projects, but haven’t closed any with PACE.</label>
+                </value>
+                <value>
+                    <fullName>Have closed commercial projects with PACE and have a positive overall impression.</fullName>
+                    <default>false</default>
+                    <label>Have closed commercial projects with PACE and have a positive overall impression.</label>
+                </value>
+                <value>
+                    <fullName>Have closed commercial projects with PACE and have a negative overall impression.</fullName>
+                    <default>false</default>
+                    <label>Have closed commercial projects with PACE and have a negative overall impression.</label>
+                </value>
+                <value>
+                    <fullName>Have not proposed PACE on any projects.</fullName>
+                    <default>false</default>
+                    <label>Have not proposed PACE on any projects.</label>
+                </value>
+                <value>
+                    <fullName>Have closed residential projects with PACE, but not commercial.</fullName>
+                    <default>false</default>
+                    <label>Have closed residential projects with PACE, but not commercial.</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Percentage_Commercial__c</fullName>
+        <externalId>false</externalId>
+        <label>Percentage Commercial</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0-25%</fullName>
+                    <default>false</default>
+                    <label>0-25%</label>
+                </value>
+                <value>
+                    <fullName>26-50%</fullName>
+                    <default>false</default>
+                    <label>26-50%</label>
+                </value>
+                <value>
+                    <fullName>51-75%</fullName>
+                    <default>false</default>
+                    <label>51-75%</label>
+                </value>
+                <value>
+                    <fullName>76-100%</fullName>
+                    <default>false</default>
+                    <label>76-100%</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The Phone Number of the User Registered.</inlineHelpText>
+        <label>Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Contractor</fullName>
+                    <default>false</default>
+                    <label>Contractor</label>
+                </value>
+                <value>
+                    <fullName>Real Estate Advisor</fullName>
+                    <default>false</default>
+                    <label>Real Estate Advisor</label>
+                </value>
+                <value>
+                    <fullName>Mortgage Broker</fullName>
+                    <default>false</default>
+                    <label>Mortgage Broker</label>
+                </value>
+                <value>
+                    <fullName>Energy Services Consultant</fullName>
+                    <default>false</default>
+                    <label>Energy Services Consultant</label>
+                </value>
+                <value>
+                    <fullName>Solar Professional</fullName>
+                    <default>false</default>
+                    <label>Solar Professional</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Street_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Street Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Used_PACE_before__c</fullName>
+        <externalId>false</externalId>
+        <label>Used PACE before</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Yes_No_Only</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Zip__c</fullName>
+        <externalId>false</externalId>
+        <label>Zip</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>state__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>States</valueSetName>
+        </valueSet>
+    </fields>
+    <label>CleanQuoteUser</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Users</fullName>
+        <columns>NAME</columns>
+        <columns>First_Name__c</columns>
+        <columns>Last_Name__c</columns>
+        <columns>Used_PACE_before__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>Users</label>
+    </listViews>
+    <nameField>
+        <label>CleanQuoteUser Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>CleanQuoteUsers</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Convert</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Convert</masterLabel>
+        <openType>replace</openType>
+        <page>CleanQuoteUserConvertion</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,54 @@
+<apex:page controller="ExternalPartyExtCntr">
+    <apex:form id="theForm">
+      <apex:pageBlock title="New Contractor">
+          <apex:pageMessages />
+          <apex:pageBlockButtons >
+              <apex:commandButton value="Save" rerender="theForm" action="{!save}"/>
+              <apex:commandButton value="Close" action="{!close}" immediate="true"/>
+          </apex:pageBlockButtons>
+        <apex:pageBlockSection collapsible="false">
+    		<apex:inputField value="{!inputExtParty.Account__c}"/>
+    		<apex:inputField value="{!inputExtParty.ExternalParties__c}"/>
+    		<apex:inputField value="{!inputExtParty.Opportunity__c}"/> 
+        </apex:pageBlockSection>
+      </apex:pageBlock>
+    </apex:form>
+        <script type="text/javascript">
+        function openLookup(baseURL, width, modified, searchParam) {
+        /*IE fix */
+            if (!String.prototype.startsWith) {
+                String.prototype.startsWith = function(searchString, position) {
+                    position = position || 0;
+                    return this.indexOf(searchString, position) === position;
+                };
+            }
+
+            var lookupType;
+
+            var urlParams = baseURL.split("&");
+            for (i = 0; i < urlParams.length; i++) {
+                if (urlParams[i].startsWith('lktp')) {
+                    lookupType = urlParams[i].split('=')[1];
+                }
+            }
+
+            // Following "001" is the lookup type for Account object
+            if (lookupType == "001") {
+                var customBaseURL = "{!$Site.BaseUrl}/apex/CustomLookupAccount?frm=" + escapeUTF("{!$Component.ExternalPartyRelationView.ExternalPartyRelationForm}")
+                            + '&' + baseURL.split('?')[1];
+
+                if (modified == '1') {
+                    customBaseURL += searchParam;
+                }
+
+                openPopup(customBaseURL, "lookup", 0, 100, "width=" + width + ",height=500,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            } else {
+                if (modified == '1') {
+                    baseURL = baseURL + searchParam;
+                }
+                openPopup(baseURL, "lookup", 0, 0, "width=" + width + ",height=500,toolbar=no,status=no,directories=no,menubar=no,resizable=yes,scrollable=no", true);
+            }
+        }
+
+    </script>
+</apex:page>

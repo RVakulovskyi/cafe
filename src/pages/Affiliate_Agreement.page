@@ -1,0 +1,4 @@
+<apex:page sidebar="false" showHeader="true" docType="html-4.01-strict">
+<CRMC_PP:Grid ObjectName="Affliate__c" EnableNewButton="true"  EnableNewInline="true"  EnableEdit="true"  EnableActions="true"  EnableFieldChooser="true"  EnableStickyViews="true"  EnableToolbar="true"  EnableViews="true"  EnableFormatting="true"  EnableReadingPane="true"  />
+<CRMC_PP:DrillUp />
+</apex:page>

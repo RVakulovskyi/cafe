@@ -1,0 +1,10 @@
+.THIS .selectWidth {
+    width : 80%;
+    margin-left:1%;
+}
+.THIS .show {
+    display : block;
+}
+.THIS .hide {
+    display : none;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>1000</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>CF Wiki</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom51: Apple</motif>
+    <url>https://c.na54.visual.force.com/apex/CFWiki</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

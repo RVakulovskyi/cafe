@@ -1,0 +1,11 @@
+<apex:page >
+<script>
+
+//URL Goes Here
+var URL = "http://www.cleanfund.com/pace-availability-detail/";
+
+//Call Function
+var win = window.open(URL, "_blank");
+
+</script>
+</apex:page>

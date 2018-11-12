@@ -1,0 +1,449 @@
+<apex:page standardcontroller="Opportunity">
+<apex:messages />
+    <apex:sectionheader title="{!$ObjectType.Opportunity.label} Edit" subtitle="{!IF(ISNULL(Opportunity.Name), 'New Opportunity',Opportunity.Name)}"/>
+    <apex:form >
+        <apex:pageblock mode="edit" title="{!$ObjectType.Opportunity.label} Edit">
+            <apex:pageblockbuttons >
+                <apex:commandbutton value="Save" action="{!Save}"/>
+                <apex:commandbutton value="Cancel" action="{!Cancel}"/>
+            </apex:pageblockbuttons>
+
+            <!-- **********   [Record Type : Master ]   **********  -->
+            <apex:outputpanel >
+                <apex:pageblocksection title="All fields marked in RED are required to change to Initial App" showheader="true" columns="2">
+                </apex:pageblocksection>
+            </apex:outputpanel>
+            <apex:outputpanel >
+                <apex:pageblocksection title="Stage Information" showheader="true" columns="2">
+                    <apex:pageblocksection columns="1">
+                        <apex:inputfield value="{!Opportunity.StageName}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.NextStep}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.LeadSource}" required="true"/>
+                        <apex:inputfield value="{!Opportunity.Sub_Lead_Source__c}" required="false"/>
+                    </apex:pageblocksection>
+                    <apex:pageblocksection columns="1">
+                    
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Project Qualified Date" for="qualDate"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Project_Qualified_Date__c}" id="qualDate"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                         <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Initial App Date" for="appDate"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Initial_App_Date__c}" id="appDate"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+
+                    </apex:pageblocksection>       
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Pricing" showheader="true" columns="2">
+                    <apex:pageblocksection >
+                        <apex:pageblocksection columns="1">
+                            <apex:inputfield value="{!Opportunity.PACE_Program_New__c}" required="true"/>
+                            <apex:inputfield value="{!Opportunity.Proposal_Sent_Date__c}"/>
+                            <apex:inputfield value="{!Opportunity.Current_Benchmark__c}" />
+                            <apex:inputfield value="{!Opportunity.Benchmark_Date_at_Term_Sheet__c}" />
+                            <apex:inputfield value="{!Opportunity.Benchmark_Type__c}" />
+                            <apex:inputfield value="{!Opportunity.Spread_bps__c}" />
+                            <apex:inputfield value="{!Opportunity.Interest_Rate__c}" />
+                            <apex:inputfield value="{!Opportunity.Channel_Partner__c}" />
+                            <apex:inputfield value="{!Opportunity.Total_Financing_Fee__c}" />
+                            <apex:inputfield value="{!Opportunity.Financing_Amount__c}" required="true"/>
+                        </apex:pageblockSection>
+                        <apex:pageblocksection columns="1">
+                            <apex:inputfield value="{!Opportunity.Pricing_Adjustment_Notes__c}" />
+                        </apex:pageblockSection>
+                    </apex:pageblockSection>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Contact Information" showheader="true" columns="2">
+                    <apex:pageblocksection columns="1">
+                        <apex:inputfield value="{!Opportunity.AccountId}" required="true"/>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Main Contact" for="theMainContact"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputField value="{!Opportunity.Property_Owner_Main_Contact__c}" id="theMainContact"/>
+                                </div>
+                            </apex:outputpanel>
+                          </apex:pageBlockSectionItem>
+                          
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Relationship to Main Contact" for="theRelationshipToMainContact"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputField value="{!Opportunity.Relationship_to_Main_Contact__c}" id="theRelationshipToMainContact"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                     
+                        <apex:outputfield value="{!Opportunity.Co_Borrower_1_Name__c}" />
+                        <apex:outputfield value="{!Opportunity.Co_Borrower_1_Phone__c}"/>
+                        <apex:outputfield value="{!Opportunity.Co_Borrower_1_Street_Address__c}"/>
+                        <apex:outputfield value="{!Opportunity.Co_Borrower_1_City__c}"/>
+                        <apex:outputfield value="{!Opportunity.Co_Borrower_1_State__c}"/>
+                        <apex:outputfield value="{!Opportunity.Co_Borrower_1_Zip__c}"/>
+                     </apex:pageblockSection>
+                     <apex:pageblocksection columns="1">
+                        <apex:inputfield value="{!Opportunity.Name}" required="true"/>
+                        <apex:outputfield value="{!Opportunity.OwnerId}"/>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Legal Name" for="legalName"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Legal_Name_of_Property_Owner__c}" id="legalName"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>  
+
+                       
+                     </apex:pageblocksection>
+                 </apex:pageblocksection>
+                 <apex:pageblocksection title="Property Information" showheader="true" columns="2">
+                     <apex:pageblocksection columns="1">
+                         <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Street Address" for="streetAddress"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Physical_Address__c}" id="streetAddress"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem> 
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="City" for="city"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Municipality__c}" id="city"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>  
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="State" for="state"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.State_Prop__c}" id="state"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem> 
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Zip" for="zip"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Zip_Code__c}" id="zip"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>  
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="County" for="county"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.County__c}" id="county"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>  
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Primary Property Type" for="primaryPropertyType"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Primary_Property_Type__c}" id="primaryPropertyType"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem> 
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Property Sub Type" for="propertySubType"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Sub_Vertical_Property_Type__c}" id="propertySubType"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>   
+                              
+                        <apex:inputfield value="{!Opportunity.Building_Size__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Building_Size_Type__c}" required="false"/>
+                        
+                         <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Property Market Value As Is" for="valueAsIs"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Property_Market_Value_Est__c}" id="valueAsIs"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Property Market Value As Is Based Upon" for="valueAsIsBasedOn"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Property_Market_Value_Based_Upon__c}" id="valueAsIsBasedOn"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:inputfield value="{!Opportunity.Last_Appraisal_Date__c}"/>
+                     </apex:pageblockSection>
+                     <apex:pageblocksection columns="1">
+                     
+                         <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Is there a ground lease in place?" for="groundLease"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Is_there_a_groundlease_in_place__c}" id="groundLease"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:inputfield value="{!Opportunity.If_groundlease_expiration_date__c}"/>
+                        <apex:inputfield value="{!Opportunity.Sensitive_Industries__c}" />
+                        <apex:inputfield value="{!Opportunity.Hazardous_Substances__c}" />
+                        <apex:inputfield value="{!Opportunity.Contamination__c}" />
+                        <apex:inputfield value="{!Opportunity.Regulatory_Government_Actions__c}" />
+                        <apex:inputfield value="{!Opportunity.Pending_Proceedings_or_Lawsuits__c}" />
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Existing Phase I Report Completed" for="phase1"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Existing_Phase_I_Report_Completed__c}" id="phase1"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                      
+                        <apex:inputfield value="{!Opportunity.Existing_Phase_I_Report_Date__c}"/>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Existing Phase II Report Completed" for="phase2"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Existing_Phase_II_Report_Completed__c}" id="phase2"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                   
+                        <apex:inputfield value="{!Opportunity.Existing_Phase_II_Report_Date__c}"/>
+                        
+                    </apex:pageblockSection>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Project Information" showheader="true" columns="2">
+                    <apex:pageblocksection columns="1">
+                    
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Project Type" for="projectType"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Project_Type__c}" id="projectType"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                   
+                       <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Project Objective" for="projectObjective"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Project_Objective__c}" id="projectObjective"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Construction Status-Initial Engagement" for="constructionStatus"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Construction_Work_Status__c}" id="constructionStatus"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Project Start Date (Est.)" for="projectStart"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Desired_Project_Start_Date__c}" id="projectStart"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Project Finish Date (Est.)" for="projectEnd"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Desired_Project_Finish_Date__c}" id="projectEnd"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:inputfield value="{!Opportunity.Type_of_Improvements_Multi__c}" required="true"/>
+                        
+                        <apex:pageBlockSectionItem >
+                   
+                            <apex:outputLabel value="Project Overview" for="projectOverview"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Project_Overview__c}" id="projectOverview"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        <apex:pageBlockSectionItem >
+                   
+                            <apex:outputLabel value="Detail of Improvements" for="detailImprov"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Description_of_Improvements__c}" id="detailImprov"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageblockSection>
+                    <apex:pageblocksection columns="1">
+                    
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Improvement Cost (Est.)" for="improvementCost"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Est_Improvement_Cost__c}" id="improvementCost"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+
+                        
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Loan Term" for="loanTerm"/>
+                            <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                                <div>
+                                    <apex:inputfield value="{!Opportunity.Loan_Term__c}" id="loanTerm"/>
+                                </div>
+                            </apex:outputpanel>
+                        </apex:pageBlockSectionItem>
+                        
+                        
+                        <apex:inputfield value="{!Opportunity.Energy_Assessment_Audit_Completed__c}" required="false"/>
+                        <apex:inputfield value="{!Opportunity.Name_of_Audit_Firm__c}"/>
+                        
+                    </apex:pageblockSection>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Solar" showheader="true" columns="2">
+                
+                   <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Solar Component" for="solarComponent"/>
+                        <apex:outputpanel layout="block" styleClass="requiredInput">
+                            <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                            <div>
+                                <apex:inputfield value="{!Opportunity.Solar_Component__c}" id="solarComponent"/>
+                            </div>
+                         </apex:outputpanel>
+                   </apex:pageBlockSectionItem>
+                      
+                   <apex:inputfield value="{!Opportunity.Solar_PV_System_Size_kW__c}"/>
+                   <apex:inputfield value="{!Opportunity.Year_1_Electricity_kWh_Production_Est__c}"/>
+                   <apex:inputfield value="{!Opportunity.Solar_System_Ownershipo__c}"/>
+                   <apex:inputfield value="{!Opportunity.Solar_TPO_Structure__c}"/>
+                   <apex:inputfield value="{!Opportunity.PPA_Services_Term_Yrs__c}"/>
+                   <apex:inputfield value="{!Opportunity.Optional_Partial_Bond_Prepayment__c}"/>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Mortgage (1st)" showheader="true" columns="2">
+                
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="First Mortgage" for="firstMortgage"/>
+                        <apex:outputpanel layout="block" styleClass="requiredInput">
+                         <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                             <div>
+                                 <apex:inputfield value="{!Opportunity.First_Mortgage__c}" id="firstMortgage"/>
+                             </div>
+                         </apex:outputpanel>
+                    </apex:pageBlockSectionItem>
+                    
+                    <apex:inputfield value="{!Opportunity.Type_of_Financing_First__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Loan_Number__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Type_of_Lender__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Type_of_Loan_First__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Mortgage_Lender__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Current_Balance_First_Mortgage__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.First_Mortgage_Lender_Contact_Name__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Interest_Rate_1st__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.First_Mortgage_Lender_Contact_Email__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Annual_1st_Mortgage_Payments__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.First_Mortgage_Lender_Contact_Phone__c}" required="false"/>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Mortgage (2nd)" showheader="true" columns="2">
+                
+                
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Second Mortgage" for="secondMortgage"/>
+                        <apex:outputpanel layout="block" styleClass="requiredInput">
+                         <apex:outputpanel layout="block" styleClass="requiredBlock"></apex:outputpanel>
+                             <div>
+                                 <apex:inputfield value="{!Opportunity.Second_Mortgage__c}" id="secondMortgage"/>
+                             </div>
+                         </apex:outputpanel>
+                    </apex:pageBlockSectionItem>
+                  
+                    <apex:inputfield value="{!Opportunity.Type_of_Financing_Second__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Loan_Number_2nd__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Second_Mortgage_Lender__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Type_of_Loan_Second__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Second_Mortgage_Lender_Contact_Name__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Current_Balance_Second_Mortgage__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Second_Mortgage_Lender_Contact_Email__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Interest_Rate_2nd__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Second_Mortgage_Lender_Contact_Phone__c}" required="false"/>
+                    <apex:inputfield value="{!Opportunity.Annual_2nd_Mortgage_Payments__c}" required="false"/>
+                </apex:pageblocksection>
+                <apex:pageblocksection title="Property Owner Entity Status" showheader="true" columns="2">
+                    <apex:inputfield value="{!Opportunity.Owner_Bankruptcy__c}" required="false"/>
+                    <apex:pageblocksectionitem />
+                    <apex:inputfield value="{!Opportunity.Owner_as_Defendent__c}" required="false"/>
+                    <apex:pageblocksectionitem />
+                    <apex:inputfield value="{!Opportunity.Forclosure_Short_Sale_or_Deed_in_Lieu__c}" required="false"/>
+                    <apex:pageblocksectionitem />
+                    <apex:inputfield value="{!Opportunity.Financial_Crime__c}" required="false"/>
+                    <apex:pageblocksectionitem />
+                    <apex:inputfield value="{!Opportunity.Owner_Status_Explanation__c}" required="false"/>
+                    <apex:pageblocksectionitem />
+                    <apex:inputfield value="{!Opportunity.Tax_Defaults_or_Delinquencies__c}"/>
+                </apex:pageblocksection>
+            </apex:outputpanel>
+        </apex:pageblock>
+    </apex:form>
+    <center><br/>
+        <i style="font-size:10px;color:#aaa;">Generated By LAYOUT PAGE <a href="http://www.clerisoft.com" target="_blank">[http://www.clerisoft.com]</a> (2008-2014) : Wed Nov 02 2016 10:50:11 GMT-0700 (PDT)</i>
+    </center><br/>
+</apex:page>

@@ -1,0 +1,153 @@
+<apex:page standardController="Opportunity" extensions="SourceAndUserCntr">
+   <apex:form >
+      <apex:pageMessages />
+      <apex:pageBlock title="Generate user and source records">
+         <apex:pageBlockButtons >
+            <apex:commandButton value="Generate" action="{!createSourceAndUser}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+         </apex:pageBlockButtons>
+         <apex:pageBlockSection columns="2" title="User and Source">          
+            <apex:outputLabel value="Program Administration Fee (%)" for="inp1">
+               &nbsp;
+             <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!programAdminFee1}" id="inp1" required="true"/>
+              </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Program Administration Fee ($)" for="inp2">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!programAdminFee2}" id="inp2" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Program Legal Counsel Fee (%)" for="inp3">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!legalCouncelFee1}" id="inp3" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Program Legal Counsel Fee ($)" for="inp4">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!legalCouncelFee2}" id="inp4" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Program Legal Counsel Bond Reserve Fee (%)" for="inp5">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!legalCouncelBondFee1}" id="inp5" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Program Legal Counsel Bond Reserve Fee ($)" for="inp6">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!legalCouncelBondFee2}" id="inp6" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Fiscal Agent Fee (%)" for="inp7">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!AgentFee1}" id="inp7" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Fiscal Agent Fee ($)" for="inp8">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!AgentFee2}" id="inp8" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Fiscal Agent Reserve Fee (%)" for="inp9">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!AgentReserveFee1}" id="inp9" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Fiscal Agent Reserve Fee ($)" for="inp10">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!AgentReserveFee2}" id="inp10" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Program Sponsor Fee (%)" for="inp11">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!sponsorFee1}" id="inp11" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Program Sponsor Reserve Fee (%)" for="inp12">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!sponsorResFee1}" id="inp12" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Program Sponsor Mandatory Minimum" for="inp13">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!sponsorMandFee1}" id="inp13" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Program Sponsor Mandatory Maximum" for="inp14">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!sponsorMandFee2}" id="inp14" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Recordation Fee (%)" for="inp15">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!recordationFee1}" id="inp15" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Recordation Fee ($)" for="inp16">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!recordationFee2}" id="inp16" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Tax Administration Fee ($)" for="inp17">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!taxFee1}" id="inp17" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Tax Administration Fee (%)" for="inp18">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!taxFee2}" id="inp18" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Municipal Government Fee ($)" for="inp19">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!govFee}" id="inp19" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+            <apex:outputLabel value="Appraisal Fee ($)" for="inp20">
+                &nbsp;
+                 <apex:outputPanel styleClass="requiredInput" >
+   				<apex:outputPanel styleClass="requiredBlock" />
+               <apex:inputText value="{!appFee}" id="inp20" required="true"/>
+                </apex:outputPanel>
+            </apex:outputLabel>
+         </apex:pageBlockSection>
+      </apex:pageBlock>
+   </apex:form>
+</apex:page>

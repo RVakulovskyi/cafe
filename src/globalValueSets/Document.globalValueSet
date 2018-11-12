@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Borrowing Resolution</fullName>
+        <default>false</default>
+        <label>Borrowing Resolution</label>
+    </customValue>
+    <customValue>
+        <fullName>Certified Rent Roll</fullName>
+        <default>false</default>
+        <label>Certified Rent Roll</label>
+    </customValue>
+    <customValue>
+        <fullName>Application</fullName>
+        <default>false</default>
+        <label>CleanFund Application</label>
+    </customValue>
+    <customValue>
+        <fullName>CleanFund Letter of Intent (LOI) Package</fullName>
+        <default>false</default>
+        <label>CleanFund Letter of Intent (LOI) Package</label>
+    </customValue>
+    <customValue>
+        <fullName>Commitment Letter</fullName>
+        <default>false</default>
+        <label>Commitment Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction Bids</fullName>
+        <default>false</default>
+        <label>Construction Bids</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction Budget</fullName>
+        <default>false</default>
+        <label>Construction Budget</label>
+    </customValue>
+    <customValue>
+        <fullName>Construction Timeline</fullName>
+        <default>false</default>
+        <label>Construction Timeline</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor Acknowledgement of Program Terms</fullName>
+        <default>false</default>
+        <label>Contractor Acknowledgement of Program Terms</label>
+    </customValue>
+    <customValue>
+        <fullName>Contractor Statement of Qualifications</fullName>
+        <default>false</default>
+        <label>Contractor Statement of Qualifications</label>
+    </customValue>
+    <customValue>
+        <fullName>Developer Resume</fullName>
+        <default>false</default>
+        <label>Developer Resume</label>
+    </customValue>
+    <customValue>
+        <fullName>Documentation Showing Completion Guarantees, Performance Bonds</fullName>
+        <default>false</default>
+        <label>Documentation Showing Completion Guarantees, Performance Bonds</label>
+    </customValue>
+    <customValue>
+        <fullName>Due Diligence Deposit</fullName>
+        <default>false</default>
+        <label>Due Diligence Deposit</label>
+    </customValue>
+    <customValue>
+        <fullName>Energy Cost Savings Estimate</fullName>
+        <default>false</default>
+        <label>Energy Cost Savings Estimate</label>
+    </customValue>
+    <customValue>
+        <fullName>Entity Documents: Filed With State</fullName>
+        <default>false</default>
+        <label>Entity Documents: Filed With State</label>
+    </customValue>
+    <customValue>
+        <fullName>Entity Documents: Foreign Filing</fullName>
+        <default>false</default>
+        <label>Entity Documents: Foreign Filing</label>
+    </customValue>
+    <customValue>
+        <fullName>Entity Documents: Good Standing</fullName>
+        <default>false</default>
+        <label>Entity Documents: Good Standing</label>
+    </customValue>
+    <customValue>
+        <fullName>Entity Documents: Operational</fullName>
+        <default>false</default>
+        <label>Entity Documents: Operational</label>
+    </customValue>
+    <customValue>
+        <fullName>Entity Documents: Report</fullName>
+        <default>false</default>
+        <label>Entity Documents: Report</label>
+    </customValue>
+    <customValue>
+        <fullName>Entity Documents: Resolution</fullName>
+        <default>false</default>
+        <label>Entity Documents: Resolution</label>
+    </customValue>
+    <customValue>
+        <fullName>Executed Construction Contracts</fullName>
+        <default>false</default>
+        <label>Executed Construction Contracts</label>
+    </customValue>
+    <customValue>
+        <fullName>Executed EPC Contract</fullName>
+        <default>false</default>
+        <label>Executed EPC Contract</label>
+    </customValue>
+    <customValue>
+        <fullName>Executed Installer Contract</fullName>
+        <default>false</default>
+        <label>Executed Installer Contract</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Phase I &amp; II Environmental Reports</fullName>
+        <default>false</default>
+        <label>Existing Phase I &amp; II Environmental Reports</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Property Appraisal</fullName>
+        <default>false</default>
+        <label>Existing Property Appraisal</label>
+    </customValue>
+    <customValue>
+        <fullName>Final Program Application</fullName>
+        <default>false</default>
+        <label>Final Program Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Financing Agreement/Assessment Contract</fullName>
+        <default>false</default>
+        <label>Financing Agreement/Assessment Contract</label>
+    </customValue>
+    <customValue>
+        <fullName>Franchise Agreement or Application</fullName>
+        <default>false</default>
+        <label>Franchise Agreement or Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Ground Lease</fullName>
+        <default>false</default>
+        <label>Ground Lease</label>
+    </customValue>
+    <customValue>
+        <fullName>Incumbency Certificate</fullName>
+        <default>false</default>
+        <label>Incumbency Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>Investment Memorandum</fullName>
+        <default>false</default>
+        <label>Investment Memorandum</label>
+    </customValue>
+    <customValue>
+        <fullName>Lease Agreement</fullName>
+        <default>false</default>
+        <label>Lease Agreement</label>
+    </customValue>
+    <customValue>
+        <fullName>Lender Acknowledgement</fullName>
+        <default>false</default>
+        <label>Lender Acknowledgement</label>
+    </customValue>
+    <customValue>
+        <fullName>Management Agreement</fullName>
+        <default>false</default>
+        <label>Management Agreement</label>
+    </customValue>
+    <customValue>
+        <fullName>Milestone Payment Schedule</fullName>
+        <default>false</default>
+        <label>Milestone Payment Schedule</label>
+    </customValue>
+    <customValue>
+        <fullName>Mortgage Lender Billing Statement</fullName>
+        <default>false</default>
+        <label>Mortgage Lender Billing Statement</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Owner&apos;s Organizational Chart</fullName>
+        <default>false</default>
+        <label>Owner&apos;s Organizational Chart</label>
+    </customValue>
+    <customValue>
+        <fullName>Power Purchase Agreements (PPA) (Solar Only)</fullName>
+        <default>false</default>
+        <label>Power Purchase Agreements (PPA) (Solar Only)</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Inspection Reports</fullName>
+        <default>false</default>
+        <label>Property Inspection Reports</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Insurance (Acord 28 Form)</fullName>
+        <default>false</default>
+        <label>Property Insurance (Acord 28 Form)</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Operating Statements</fullName>
+        <default>false</default>
+        <label>Property Operating Statements</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Owner Closing Certificate</fullName>
+        <default>false</default>
+        <label>Property Owner Closing Certificate</label>
+    </customValue>
+    <customValue>
+        <fullName>STR/HVS or other Market Report</fullName>
+        <default>false</default>
+        <label>STR/HVS or other Market Report</label>
+    </customValue>
+    <customValue>
+        <fullName>Tax Equity Funds Availability Letter</fullName>
+        <default>false</default>
+        <label>Tax Equity Funds Availability Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>Third Party Authorization Form</fullName>
+        <default>false</default>
+        <label>Third Party Authorization Form</label>
+    </customValue>
+    <customValue>
+        <fullName>Updated Property Appraisal</fullName>
+        <default>false</default>
+        <label>Updated Property Appraisal</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Tax Bill (Most Recent)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Property Tax Bill (Most Recent)</label>
+    </customValue>
+    <customValue>
+        <fullName>Independent Third Party Review  (ITPR)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Independent Third Party Review  (ITPR)</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Operating Statement / Tax Return (FY 2014)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Property Operating Statement / Tax Return (FY 2014)</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Operating Statement / Tax Return (FY 2015)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Property Operating Statement / Tax Return (FY 2015)</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Operating Statement / Tax Return (FY 2016)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Property Operating Statement / Tax Return (FY 2016)</label>
+    </customValue>
+    <customValue>
+        <fullName>Utility Bill</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Utility Bill</label>
+    </customValue>
+    <customValue>
+        <fullName>Resolution of Members of the Company</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Resolution of Members of the Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Articles of Organization</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Articles of Organization</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment to Articles of Organization</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Amendment to Articles of Organization</label>
+    </customValue>
+    <customValue>
+        <fullName>Operating Agreement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Operating Agreement</label>
+    </customValue>
+    <customValue>
+        <fullName>Certificate of Foreign Limited Liability Company</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Certificate of Foreign Limited Liability Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Resolution of the Board of Directors/Officers of the Corporation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Resolution of the Board of Directors/Officers of the Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>Articles of Incorporation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Articles of Incorporation</label>
+    </customValue>
+    <customValue>
+        <fullName>Bylaws of the Corporation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bylaws of the Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>Statement of Information</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Statement of Information</label>
+    </customValue>
+    <customValue>
+        <fullName>Statement and Designation by Foreign Corporation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Statement and Designation by Foreign Corporation</label>
+    </customValue>
+    <customValue>
+        <fullName>Certificate of Limited Partnership</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Certificate of Limited Partnership</label>
+    </customValue>
+    <customValue>
+        <fullName>Amendment to Certificate of Limited Partnership</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Amendment to Certificate of Limited Partnership</label>
+    </customValue>
+    <customValue>
+        <fullName>Certificate of Good Standing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Certificate of Good Standing</label>
+    </customValue>
+    <customValue>
+        <fullName>Foreign Limited Partnership Registration</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Foreign Limited Partnership Registration</label>
+    </customValue>
+    <customValue>
+        <fullName>Resolution of the Partners</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Resolution of the Partners</label>
+    </customValue>
+    <customValue>
+        <fullName>Statement of Partnership Authority</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Statement of Partnership Authority</label>
+    </customValue>
+    <customValue>
+        <fullName>Partnership Agreement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Partnership Agreement</label>
+    </customValue>
+    <customValue>
+        <fullName>Clean Fund Certificate of Trust</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Clean Fund Certificate of Trust</label>
+    </customValue>
+    <customValue>
+        <fullName>Pages of Trust Agreement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pages of Trust Agreement</label>
+    </customValue>
+    <customValue>
+        <fullName>Form of Lender Acknowledgement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Form of Lender Acknowledgement</label>
+    </customValue>
+    <customValue>
+        <fullName>Power Purchase Agreements (EPC)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Power Purchase Agreements (EPC)</label>
+    </customValue>
+    <customValue>
+        <fullName>Power Purchase Agreements (Tax Equity Funds)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Power Purchase Agreements (Tax Equity Funds)</label>
+    </customValue>
+    <customValue>
+        <fullName>PACE Financing Documents</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PACE Financing Documents</label>
+    </customValue>
+    <customValue>
+        <fullName>Independent Third Party Review (ITPR)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Independent Third Party Review (ITPR)</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Operating Statement / Tax Return (YTD 2017)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Property Operating Statement / Tax Return (YTD 2017)</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Tax Bill (Prior Year 1)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Property Tax Bill (Prior Year 1)</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Tax Bill (Prior Year 2)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Property Tax Bill (Prior Year 2)</label>
+    </customValue>
+    <customValue>
+        <fullName>Underwriting Questionnaire</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Underwriting Questionnaire</label>
+    </customValue>
+    <description>The name of the documents</description>
+    <masterLabel>Document Name</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
