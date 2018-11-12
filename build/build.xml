@@ -6,7 +6,7 @@
     <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce" classpathref="ant.additions.classpath"/>
     <property environment="env"/>
     <target name="test">
-        <sf:deploy username="${env.username}" password="${env.password}" serverurl="${env.serverurl}"
+        <sf:deploy username="r.vakulovskyi@svitla.com.cfquoteeng" password="Fcmana5600@kCQFyYKTq8Pb2S2ePTkT5RBj" serverurl="test.salesforce.com"
             maxPoll="500" pollWaitMillis="5000" deployRoot="../src"
 	    testLevel="RunLocalTests" checkOnly="true" />
     </target>
