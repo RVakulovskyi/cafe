@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project name="force-boilerplate" xmlns:sf="antlib:com.salesforce" default="test">
+<project name="Svitla scripts" xmlns:sf="antlib:com.salesforce" default="test">
+	<property file="build.properties"/>
     <path id="ant.additions.classpath">
         <fileset dir="./lib/" includes="*.jar"/>
     </path>
     <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce" classpathref="ant.additions.classpath"/>
     <property environment="env"/>
     <target name="test">
-        <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}"
-            maxPoll="500" pollWaitMillis="5000" deployRoot="../src"
-	    testLevel="RunLocalTests" checkOnly="true" />
+		<echo message="Starting Metadata deployment..." />
+        <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="500" pollWaitMillis="5000" deployRoot="../src" testLevel="RunLocalTests" checkOnly="true" />
     </target>
 </project>
