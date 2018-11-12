@@ -2,7 +2,7 @@
 	<property file="build.properties"/>
       <taskdef resource="com/salesforce/antlib.xml">
       <classpath>
-          <pathelement location="./lib/ant-salesforce.jar" />
+          <pathelement location=".lib/ant-salesforce.jar" />
       </classpath>
   </taskdef>
     <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce" classpathref="ant.additions.classpath"/>
