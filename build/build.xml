@@ -1,8 +1,7 @@
-<project xmlns:sf="antlib:com.salesforce" basedir=".">
+<project xmlns:sf="antlib:com.salesforce">
   <target name="Build">
 	<echo message="Starting Metadata deployment..."/>
-    <taskdef resource="net/sf/antcontrib/antlib.xml" />
-    <property environment="env" />         
+    <taskdef resource="net/sf/antcontrib/antlib.xml" />        
      <sf:deploy username="r.vakulovskyi@svitla.com.cfquoteeng" password="Fcmana5600@" serverurl="https://test.salesforce.com" maxPoll="500" pollWaitMillis="5000" deployRoot="src" checkOnly="true" testLevel="RunAllTestsInOrg" logType="Detail"/> 
   </target>  
 </project>
