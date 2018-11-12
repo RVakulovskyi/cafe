@@ -1,8 +1,10 @@
 <project name="Svitla scripts" xmlns:sf="antlib:com.salesforce" default="test">
 	<property file="build.properties"/>
-    <path id="ant.additions.classpath">
-        <fileset dir="./lib/" includes="*.jar"/>
-    </path>
+      <taskdef resource="com/salesforce/antlib.xml">
+      <classpath>
+          <pathelement location="./lib/ant-salesforce.jar" />
+      </classpath>
+  </taskdef>
     <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce" classpathref="ant.additions.classpath"/>
     <property environment="env"/>
     <target name="test">
