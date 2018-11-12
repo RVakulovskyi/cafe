@@ -1,13 +1,11 @@
 <project name="Svitla scripts" xmlns:sf="antlib:com.salesforce" default="test">
-      <taskdef resource="com/salesforce/antlib.xml">
-      <classpath>
-          <pathelement location=".build/lib/ant-salesforce.jar" />
-      </classpath>
-  </taskdef>
+    <path id="ant.additions.classpath">
+        <fileset dir="./lib/" includes="*.jar"/>
+    </path>
     <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce" classpathref="ant.additions.classpath"/>
     <property environment="env"/>
     <target name="test">
-		<echo message="Starting Metadata deployment..." />
         <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" maxPoll="500" pollWaitMillis="5000" deployRoot="../src" testLevel="RunLocalTests" checkOnly="true" />
     </target>
 </project>
+
