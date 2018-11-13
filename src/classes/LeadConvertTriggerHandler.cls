@@ -1,8 +1,8 @@
 public class LeadConvertTriggerHandler {
     public static void onAfterUpdate(List<Lead> inputList) {
-        executeConvertion(inputList);
+       // executeConvertion(inputList);
     }
-    
+    /*
 	private static void executeConvertion(List<Lead> listOfLeads) {
         LeadConvertClass leadConvert = new LeadConvertClass();
         String queryString = 'SELECT ';
@@ -22,5 +22,5 @@ public class LeadConvertTriggerHandler {
                 itemLead.addError(ex.getMessage());
             }
         }
-    }
+    }*/
 }

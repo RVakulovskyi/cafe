@@ -1,7 +1,0 @@
-<apex:page standardController="Lead" extensions="LeadConvertClass" action="{!convertLead}">
-    <script>
-        alert("{!errorMessage}");
-        window.location = "/{!accId}";
-    </script>
-
-</apex:page>

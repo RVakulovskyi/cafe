@@ -14522,7 +14522,7 @@ OR(ISPICKVAL(StageName,&quot;LOI&quot;),
 ISPICKVAL(StageName,&quot;LOI&quot;),
 ISPICKVAL(StageName,&quot;Committed&quot;))),
 
-AND(ISBLANK(TEXT(Property_Owner_Entity_Type__c)),
+AND(ISBLANK(TEXT(Owner_Entity_Type__c)),
 OR(ISPICKVAL(StageName,&quot;Initial App&quot;),
 ISPICKVAL(StageName,&quot;LOI&quot;),
 ISPICKVAL(StageName,&quot;Committed&quot;))),
