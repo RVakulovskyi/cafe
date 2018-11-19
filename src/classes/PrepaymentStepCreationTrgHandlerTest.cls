@@ -11,7 +11,7 @@ public class PrepaymentStepCreationTrgHandlerTest {
      private static testmethod void testPaymentStepUpdate() {
         Test.startTest();
         	Opportunity opportunityToInsert = createDataForTest();
-         	opportunityToInsert.Prepayment__c = ' 3%(1), 2% (3), 1% (4)';
+         	opportunityToInsert.Prepayment__c = '3% (8), 2% (9), 1% (10)';
          	update opportunityToInsert;
         	List<Prepayment_Step__c> listOfPrepayments = new List<Prepayment_Step__c>([SELECT Id FROM Prepayment_Step__c]);
         	System.assertEquals(3, listOfPrepayments.size(), 'List of records should have size 3 and it is : ' +listOfPrepayments.size());
